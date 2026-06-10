@@ -1,0 +1,20 @@
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+.git
+.DS_Store
+Thumbs.db
+
+# .env contains secrets — never bake into image
+.env
+
+# Model weights are mounted as volumes, not baked into the image.
+# This keeps the image small and prevents accidental inclusion of large binaries.
+models/huggingface/
+models/vectordb/
+
+# Raw data and generated chunks are mounted as volumes too
+data/chunks/

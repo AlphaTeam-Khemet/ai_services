@@ -1,0 +1,83 @@
+topic_id: sneferu
+topic_name: Sneferu
+category: pharaoh
+period: Old Kingdom, 4th Dynasty, c. 2613–2589 BC
+location: Dahshur / Meidum, Egypt
+
+---
+
+Sneferu or Soris (c. 2600 BC) was an ancient Egyptian monarch and the first pharaoh of the Fourth Dynasty of Egypt, during the earlier half of the Old Kingdom period (26th century BC). He introduced major innovations in the design and construction of pyramids, and at least three of his pyramids survive to this day.
+Estimates of his reign vary, with for instance The Oxford History of Ancient Egypt suggesting a reign from around 2613 to 2589 BC, a reign of 24 years, while Rolf Krauss suggests a 30-year reign, and Rainer Stadelmann a 48-year reign.
+
+Sneferu's name
+His name means "He has perfected me", from Ḥr-nb-mꜣꜥt-snfr-wj "Horus, Lord of Maat, has perfected me", and is sometimes read Snefru or Snofru. He is also known under his Hellenized name Soris (Koine Greek: Σῶρις by Manetho).
+
+Reign length
+The 24-year Turin Canon figure for Sneferu's reign is considered today to be an underestimate since this king's highest-known date is an inscription discovered at the Red Pyramid of Dahshur and mentioning Sneferu's 24th cattle count, corresponding to at least 24 full years. Sneferu, however, was known to have a minimum of at least three years after the cattle count dates: his years after the 10th, the 13th and the 18th count are attested at his Meidum pyramid. This would mean that Sneferu ruled Egypt a minimum of 27 full years.
+However, in the Palermo Stone, recto 6 at the bottom of the fragment shows the year of the 7th count of Sneferu while recto 7 on the same following row shows the year of the 8th count of Sneferu. Significantly, there is a previous mostly intact column for Sneferu in recto 5 which also mentions events in this king's reign in a specific year but does not mention the previous (6th) year. This column must, therefore, be dated to the year after the 6th count of Sneferu. Hence, Sneferu's reign would be a minimum of 28 years. Since there are many periods in Sneferu's reigns for which Egyptologists have few dates—only the years of the 2nd, 7th, 8th, 12th, 13th, 14th, 15th, 16th, 17th, 18th, 23rd and 24th count are known for Sneferu before one considers the years after his cattle counts—this pharaoh is most likely to have had a reign in excess of 30 years to manage to build three pyramids in his long rule but not 48 years since the cattle count was not regularly biannual during his kingship. (There are fewer years after the count dates known for Sneferu compared to year of the count or census dates.)
+
+Family and succession
+Sneferu was the first king of the Fourth Dynasty of ancient Egypt, who according to Manetho reigned for 24 years (2613–2589 BC). Manetho was an Egyptian priest, living in the third century BC, who categorized the pharaohs of dynastic Egypt into thirty-one dynasties. Though his schematic has its flaws, modern scholars conventionally follow his method of grouping. The Papyrus Prisse, a Middle Kingdom source, supports the fact that King Huni was indeed Sneferu's predecessor. It states that "the majesty of the king of Upper and Lower Egypt, Huni, came to the landing place (i.e., died), and the majesty of the king of Upper and Lower Egypt, Sneferu, was raised up as a beneficent king in this entire land..." Aside from Sneferu's succession, we learn from this text that later generations considered him to be a "beneficent" ruler. This idea may stem from the etymology of the king's name, for it can be interpreted as the infinitive "to make beautiful". It is uncertain whether Huni was Sneferu's father; however, the Cairo Annals Stone denotes that his mother may have been a woman named Meresankh.
+Hetepheres I was Sneferu's main wife and the mother of Khufu, the builder of the Great Pyramid on the Giza Plateau.
+
+Children
+Sons of Sneferu:
+
+Khufu – son of Sneferu and Hetepheres I, successor to Sneferu.
+Ankhhaf – King's Son of his Body, King's vizier (under his nephew Khafre). Buried in G 7510. A famous bust of Ankhhaf is now in the Boston Museum of Fine Arts. Ankhhaf was married to the King's Daughter Hetepheres.
+Kanefer – King's eldest son and Son of his Body. Buried in tomb 28 in Dashur. Second Vizier of Sneferu, who continued to serve under Khufu.
+Nefermaat I – eldest son of Sneferu and husband of Itet. Titles included: Priest of Bastet, Hereditary Prince, Guardian of Nekhen, great one of the five at the house of Thoth. First Vizier of Sneferu.
+Netjeraperef, buried in Dashur.
+Rahotep – King's Son of his Body, High Priest of Re in Heliopolis. Buried in Meidum with his wife Nofret. Owner of the famous statues now in the Cairo Museum.
+Ranefer. Buried in Meidum.
+Iynefer I. Buried in Dashur.
+Daughters of Sneferu:
+
+Hetepheres A, married Ankhhaf. She was named after her mother, Queen Hetepheres.
+Nefertkau I – King's Daughter of his Body, eldest daughter of Sneferu. Buried in mastaba G 7050 at Giza. Her tomb dates to the time of Khafra. In the tomb Sneferu is mentioned as well as Nefertkau's son Nefermaat II and her grandson Sneferukhaf.
+Nefertnesu – King's daughter, God's Daughter. Had a son named Kaemqed who is known from a false door. He was buried in Dashur during the 5th dynasty.
+Meritites I, Great of Sceptre and King's Wife, married to her brother Khufu.
+Henutsen – King's daughter, married to Khufu.
+Nefertiabet – King's daughter. Buried in mastaba G 1225 at Giza.
+
+Building projects
+The most well known monuments from Sneferu's reign are the three pyramids he is considered to have built. In Dahshur: the Bent Pyramid and the Red Pyramid and in Meidum the Meidum pyramid. Under Sneferu, there was a major evolution in monumental pyramid structures, which would lead to Khufu's Great Pyramid, which would be seen as the pinnacle of the Egyptian Old Kingdom's majesty and splendour, and as one of the Seven Wonders of the Ancient World.
+
+Meidum
+The first of Sneferu's massive undertakings is the Pyramid at Meidum. There is some debate among scholars as to Sneferu's claim to the Meidum pyramid, and many used to credit its origin to King Huni. Nonetheless, the pyramid is a remarkable example of the progression of technology and ideology surrounding the king's burial site. The immense stone structure serves as physical testimony to the transition from the stepped pyramid structure to that of a "true" pyramid structure. Archaeological investigations of the pyramid show that it was first conceived as a seven-stepped structure, built in a similar manner to the Djoser complex at Saqqara. Modifications later were made to add another platform, and at an even later stage limestone facing was added to create the smooth, angled finish characteristic of a "true" pyramid. Complete with a descending northern passage, two underground chambers, and a burial vault, the pyramid mainly follows the conventions of previous tombs in most aspects other than one: instead of being situated underneath the colossal structure, the burial chamber is built directly within the main body albeit very near ground level.
+
+Bent pyramid
+The Bent Pyramid, also known as the Rhomboidal or Blunted Pyramid, attests to an even greater increase in architectural innovations. As the name suggests, the angle of the inclination changes from 55° to about 43° in the upper levels of the pyramid. It is likely that the pyramid initially was not designed to be built this way, but was modified during construction due to unstable accretion layers. This took three construction phases to stabilize the pyramid. As a means of stabilising the structure, the top layers were laid horizontally, marking the abandonment of the step pyramid concept. The internal components of the Rhomboidal pyramid have also evolved. There are two entrances, one from the north and another from the west. The subterranean chambers are much larger, and distinguished by corbel walls and ceilings with more complex diagonal portcullis systems in place. J.P Lepre asserts:
+
+It is apparent that with the interior design of the Bent Pyramid the architect was groping and experimenting, taking maximum advantage of the huge volume of the monument (1.5 million m³), the largest pyramid constructed to that date.
+The satellite pyramid adjacent to Sneferu's Bent Pyramid introduces more change in the architecture of the time, when the passageway is built ascending westward (as opposed to the conventionally descending northward direction of the passages of previously built pyramids) towards the burial chambers.
+Egypt decided to open the Bent Pyramid for tourism in July 2019 for the first time since 1965. Tourists will be able to reach two 4600-year-old chambers through a 79-meter narrow tunnel built from the northern entrance of the pyramid. 18-meter-high "side pyramid", which is assumed that have been built for Sneferu's wife Hetepheres will also be accessible. It is the first time for this adjacent pyramid opened to the public after its excavation in 1956.
+
+Red Pyramid
+Despite being Sneferu's final pyramid, the Red Pyramid has a more simple design compared to its predecessor, with some of the earlier internal innovations missing. Although the chambers and burial vaults are all present in the monument's main body, no ascending passageway has been excavated, nor is there evidence of a western entrance or diagonal portcullis. Although the absence of these features have dissuaded many archaeologists from further studying the Red Pyramid, Lepre is convinced that there are secret chambers waiting to be uncovered within the stone superstructure.
+In 1950, fragments of human remains were found in the passage way of the Red Pyramid and examined by Dr. Ahmed Mahmud el Batrawi. The remains and wrappings were found to be consistent with 4th dynasty mummification techniques. Whether these humain remains belong to Sneferu is uncertain.
+Considering that the remains of King Sneferu have not yet been found or positively identified, it still may be possible that his sarcophagus and actual mummy lie hidden in his Red Pyramid in a hidden chamber. Lepre claims: "the Red pyramid remains one of the chief pyramids that may possibly contain secret chambers, not the least of which may be the true burial chamber of King Sneferu himself."
+Sneferu's architectural innovations served as a catalyst for later pyramid builders to build on. The first king of the fourth dynasty set a challenging precedent for his successors to match, and only Khufu's Great Pyramid can rival Sneferu's accomplishments. As time progressed and ideology changed in Ancient Egypt, the monuments of the kings decreased greatly in size. As the Pyramid of Menkaure is only a fraction of the size of the previous pyramids, the focus of Egyptian ideology might have shifted from the worship of the king to the direct worship of the sun god, Ra.
+
+Foreign relations
+To enable Sneferu to undertake such massive building projects, he would have had to secure an extensive store of labour and materials. According to Guillemette Andreu, this is where the king's foreign policy played a large part. Sneferu's conquests into Libya and Nubia served two purposes: the first goal was to establish an extensive labour force, and the second goal was to gain access to the raw materials and special products that were available in these countries. This is alluded to in the Palermo Stone:
+
+building a 100-cubit 'adoring the two lands' boat and 60 'sixteener' royal boats (of) cedar; smiting Nubia, bringing (in tribute) 7000 male and female live captives, 200,000 sheep and goats; building the wall of the south and north-land called 'the mansions of Sneferu'; bringing 40 ships laden? (with) pine-wood 2 cubits, two fingers
+
+According to this inscription, Sneferu was able to capture large numbers of people from other nations, make them his prisoners and then add them into his labour force. During his raids into Nubia and Libya, he also captured cattle for the sustenance of his massive labour force. Such incursions must have been incredibly devastating to the populations of the raided countries, and it is suggested that the campaigns into Nubia may have contributed to the dissemination of the A-Group culture of that region.
+Sneferu's military efforts in ancient Libya led to the capture of 11,000 prisoners and 13,100 head of cattle. Aside from the extensive import of cedar (most likely from Lebanon) described above, there is evidence of activity in the turquoise mines on the Sinai Peninsula. There would also have been large-scale quarrying projects to provide Sneferu with the stone he needed for his pyramids.
+
+See also
+List of Egyptian pyramids
+List of megalithic sites
+4906 Seneferu, a minor planet named for the pharaoh
+
+References
+Further reading
+
+Andreu, Guillemette. Egypt in the Age of the Pyramids. Cornell University Press: Ithaca, 1997.
+Bard, A. Kathryn. An Introduction to the Archaeology of Ancient Egypt. Blackwell Publishing Ltd: Malden, 2008.
+Lepre, J.P. The Egyptian Pyramids, A Comprehensive Illustrated Reference. McFarland & Company: London, 1990.
+The Complete Royal Families of Ancient Egypt. Ed. Aidan Dodson & Dyan Hilton. Thames and Hudson Ltd: London, 2004.
+"The Instruction of Kagemni." Ancient Egyptian Books of Wisdom. November 16, 2008, https://web.archive.org/web/20081013115157/http://egypt.thetao.info/kagemni.htm
+The Oxford History of Ancient Egypt. Ed. Ian Shaw. Oxford University Press: Oxford, 2000.

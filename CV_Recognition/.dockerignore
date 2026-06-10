@@ -1,0 +1,22 @@
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+.git
+.DS_Store
+Thumbs.db
+README.md
+test_model.py
+compare_models.py
+
+# .env contains secrets — never bake into image
+.env
+
+# The model weights file is large (216 MB) and is mounted as a bind volume at
+# runtime via docker-compose. Excluding it here keeps the image small and fast
+# to build. See the 'volumes' section in docker-compose.yml.
+model/model.h5
+model/*.pt
+model/*.pth

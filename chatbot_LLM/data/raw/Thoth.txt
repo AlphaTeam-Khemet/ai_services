@@ -1,0 +1,81 @@
+topic_id: thoth
+topic_name: Thoth
+category: religion
+period: Old Kingdom onward
+location: Hermopolis, Egypt
+
+---
+
+Thoth (from Koine Greek: Θώθ Thṓth, borrowed from Coptic: Ⲑⲱⲟⲩⲧ Thōout, Ancient Egyptian: Ḏḥwtj, the reflex of ḏḥwtj "[he] is like the ibis") is an ancient Egyptian deity. In art, he was often depicted as a man with the head of an ibis or a baboon, animals sacred to him. His feminine counterpart is Seshat, and his wife is Ma'at. He is the god of the Moon, wisdom, knowledge, writing, hieroglyphs, science, magic, art, and judgement.
+Thoth's chief temple was located in the city of Hermopolis (Ancient Egyptian: ḫmnw /χaˈmaːnaw/, Egyptological pronunciation: Khemenu, Coptic: Ϣⲙⲟⲩⲛ Shmun). Later known as el-Ashmunein in Egyptian Arabic, the Temple of Thoth was mostly destroyed before the beginning of the Christian era. Its very large pronaos was still standing in 1826, but was demolished and used as fill for the foundation of a sugar factory by the mid-19th century.
+Thoth played many vital and prominent roles in Egyptian mythology, such as maintaining the universe, and being one of the two deities (the other being Ma'at) who stood on either side of Ra's solar barque. In the later history of ancient Egypt, Thoth became heavily associated with the arbitration of godly disputes, the arts of magic, the system of writing, and the judgment of the dead.
+
+Name
+The Egyptian pronunciation of ḏḥwty is not fully known, but may be reconstructed as *ḏiḥautī, perhaps pronounced *[t͡ʃʼi.ˈħau.tʰiː] or *[ci.ˈħau.tʰiː]. This reconstruction is based on the Ancient Greek borrowing Thōth ([tʰɔːtʰ]) or Theut and the fact that the name was transliterated into Sahidic Coptic variously as ⲑⲟⲟⲩⲧ Thoout, ⲑⲱⲑ Thōth, ⲑⲟⲟⲧ Thoot, ⲑⲁⲩⲧ Thaut, Taautos (Τααυτος), Thoor (Θωωρ), as well as Bohairic Coptic ⲑⲱⲟⲩⲧ Thōout. These spellings reflect known sound changes from earlier Egyptian such as the loss of ḏ palatalization and merger of ḥ with h i.e. initial ḏḥ > th > tʰ. The loss of pre-Coptic final y/j is also common. Following Egyptological convention, which eschews vowel reconstruction, the consonant skeleton ḏḥwty would be rendered "Djehuti" and the god is sometimes found under this name. However, the Greek form "Thoth" is more common.
+According to Theodor Hopfner, Thoth's Egyptian name written as ḏḥwty originated from ḏḥw, claimed to be the oldest known name for the ibis, normally written as hbj. The addition of -ty denotes that he possessed the attributes of the ibis. Hence Thoth's name would mean "He who is like the ibis", according to this interpretation.
+Other forms of the name ḏḥwty using older transcriptions include Jehuti, Jehuty, Tahuti, Tehuti, Zehuti, Techu, or Tetu. Multiple titles for Thoth, similar to the pharaonic titulary, are also known, including A, Sheps, Lord of Khemennu, Asten, Khenti, Mehi, Hab, and A'an.
+In addition, Thoth was also known by specific aspects of himself, for instance the Moon god Iah-Djehuty (j3ḥ-ḏḥw.ty), representing the Moon for the entire month. The Greeks related Thoth to their god Hermes due to his similar attributes and functions. One of Thoth's titles, "Thrice great", was translated to the Greek τρισμέγιστος (trismégistos), making Hermes Trismegistus.
+
+Depictions
+Thoth has been depicted in many ways depending on the era and on the aspect the artist wished to convey. Usually, he is depicted in his human form with the head of a green ibis. In this form, he can be represented as the reckoner of times and seasons by a headdress of the lunar disk sitting on top of a crescent moon resting on his head. When depicted as a form of Shu or Ankher, he was depicted to be wearing the respective god's headdress. Sometimes he was also seen in art to be wearing the Atef crown or the double crown of Upper and Lower Egypt. When not depicted in this common form, he sometimes takes the form of the ibis directly.
+He also appears as a dog-faced baboon or a man with the head of a baboon when he is A'an, the god of equilibrium. In the form of A'ah-Djehuty, he took a more human-looking form. These forms are all symbolic and are metaphors for Thoth's attributes.  Thoth is often depicted holding an ankh, the Egyptian symbol for life.
+
+Attributes
+Thoth's roles in Egyptian mythology were many. He served as scribe of the gods, credited with the invention of writing, music, and Egyptian hieroglyphs. In the underworld, Duat, he appeared as an ape, Aani, the god of equilibrium, who reported when the scales weighing the deceased's heart against the feather, representing the principle of Maat, was exactly even.
+The ancient Egyptians regarded Thoth as One, self-begotten, and self-produced. He is the master of both physical and moral (i.e. divine law), making proper use of Ma'at. He is credited with making the calculations for the establishment of the heavens, stars, Earth, and everything in them.
+The Egyptians credited him as the author of all works of science, religion, philosophy, and magic. The Greeks further declared him the inventor of astronomy, astrology, the science of numbers, mathematics, geometry, surveying, medicine, botany, theology, civilized government, the alphabet, reading, writing, and oratory. They further claimed he is the true author of every work of every branch of knowledge, human and divine.
+
+Mythology
+The Greek philosopher Plutarch credits Thoth with the creation of the 365-day calendar. Originally, according to the myth, the year was only 360 days long and Nut was sterile during these days, unable to bear children. Thoth gambled with the Moon for ⁠1/72⁠nd of its light (⁠360/72⁠ = 5), or 5 days, and won. During these 5 days, Nut and Geb gave birth to Osiris, Set, Isis, and Nephthys.
+In the central Osiris myth, Thoth gives Isis the words to restore her husband, allowing the pair to conceive Horus. Following a battle between Horus and Set, Thoth offers counsel and provides wisdom.
+
+History
+Thoth is a Moon god. The Moon not only provides light at night, allowing time to still be measured without the Sun, but its phases and prominence gave it a significant importance in early astrology/astronomy. The perceived cycles of the Moon also organized much of Egyptian society's rituals and events, both civil and religious. Consequently, Thoth gradually became seen as a god of wisdom, magic, and the measurement and regulation of events and of time. He was thus said to be the secretary and counselor of the Sun god Ra, and with Ma'at (truth/order) stood next to Ra on the nightly voyage across the sky.
+Thoth became credited by the ancient Egyptians as the inventor of writing (hieroglyphs), and was also considered to have been the scribe of the underworld. For this reason, Thoth was universally worshipped by ancient Egyptian scribes. Many scribes had a painting or a picture of Thoth in their "office". Likewise, one of the symbols for scribes was that of the ibis.
+In art, Thoth was usually depicted with the head of an ibis, possibly because the Egyptians saw the curve of the ibis' beak as a symbol of the crescent moon. Sometimes, he was depicted as a baboon holding up a crescent moon.
+
+During the Late Period of ancient Egypt, a cult of Thoth gained prominence due to its main center, Khmun (Hermopolis Magna), also becoming the capital. Millions of dead ibis were mummified and buried in his honor.
+Thoth was inserted in many tales as the wise counselor and persuader, and his association with learning and measurement led him to be connected with Seshat, the earlier deification of wisdom, who was said to be his daughter, or variably his wife. Thoth's qualities also led to him being identified by the Greeks with their closest matching god Hermes, with whom Thoth was eventually combined as Hermes Trismegistus, leading to the Greeks' naming Thoth's cult center as Hermopolis, meaning city of Hermes.
+In the Papyrus of Ani copy of the Egyptian Book of the Dead the scribe proclaims "I am thy writing palette, O Thoth, and I have brought unto thee thine ink-jar. I am not of those who work iniquity in their secret places; let not evil happen unto me." Plate XXIX Chapter CLXXV (Budge) of the Book of the Dead is the oldest tradition said to be the work of Thoth himself.
+There was also an Egyptian pharaoh of the Sixteenth dynasty named Djehuty (Thoth) after him, and who reigned for three years.
+
+Plato mentions Thoth (as Θεὺθ, "Theuth") in his dialogue Phaedrus. He uses the myth of Thoth to demonstrate that writing leads to laziness and forgetfulness. In the story, Thoth remarks to King Thamus of Egypt that writing is a wonderful substitute for memory. Thamus remarks that it is a remedy for reminding, not remembering, with the appearance but not the reality of wisdom. Future generations will hear much without being properly taught and will appear wise but not be so.
+Artapanus of Alexandria, an Egyptian Jew who lived in the third or second century BC, euhemerized Thoth-Hermes as a historical human being and claimed he was the same person as Moses, based primarily on their shared roles as authors of texts and creators of laws. Artapanus's biography of Moses conflates traditions about Moses and Thoth and invents many details. Many later authors, from late antiquity to the Renaissance, either identified Hermes Trismegistus with Moses or regarded them as contemporaries who expounded similar beliefs.
+
+Archaeology
+Egypt's Minister of Tourism and Antiquities announced the discovery of the collective graves of senior officials and high clergies of the god Thoth in Tuna el-Gebel in Minya in January 2020. An archaeological mission headed by Mostafa Waziri reported that 20 sarcophagi and coffins of various shapes and sizes, including five anthropoid sarcophagi made of limestone and carved with hieroglyphic texts, as well as 16 tombs and five well-preserved wooden coffins were unearthed by their team.
+
+Modern cultural references
+Thoth has been seen as a god of wisdom and has been used in modern literature, especially since the early 20th century when ancient Egyptian ideas were quite popular.
+
+In the 1932 film The Mummy the "scroll of Thoth" is a life-giving scroll. Reading its symbols out loud causes Imhotep to rise from the dead.
+In Croyd by Ian Wallace (Berkeley Medallion, 1968), Thoth is the father of the Galactic Agent hero, Croyd.
+Aleister Crowley's Egyptian style Thoth Tarot deck, and its written description in his 1944 book The Book of Thoth, were named in reference to the theory that Tarot cards were the Egyptian book of Thoth.
+H. P. Lovecraft also used the word "Thoth" as the basis for his alien god, "Yog-Sothoth", an entity associated with sorcery and esoteric knowledge.
+Thoth's other name Jehuty was the name of the playable Orbital Frame mecha in the Zone of the Enders franchise.
+In the manga series JoJo's Bizarre Adventure, Thoth lends his name to the character Boingo's Stand, which manifests as a comic book with premonitory stories.
+In the 2016 film Gods of Egypt, Thoth is played by Chadwick Boseman.
+Thoth appears in the 2021 comic book series God of War: Fallen God, which is based on the God of War video game franchise.
+In the 2002 Ensemble Studios game Age of Mythology, Thoth is one of nine minor gods that can be worshipped by Egyptian players.
+In Neil Gaiman's 2001 novel American Gods and its 2017–2021 TV adaptation, Thoth is portrayed as Mr. Ibis, who runs a funeral parlor alongside Anubis, known as Mr. Jacquel.
+Thoth is one of many playable gods in Hi-Rez Studios' multiplayer online battle arena (MOBA) video game Smite.
+In Welcome to Demon School! Iruma-kun, Thoth is a character who takes the form of a sphinx.
+Thoth is depicted in both Marvel Comics and DC Comics.
+Appears in 2023's Total War: Pharaoh as one of the gods the player can pray to. Thoth decreases construction times and costs, as well as fortifying armor for soldiers.
+
+See also
+Book of Thoth
+Eye of Horus
+Khonsu
+List of lunar deities
+Phaedrus (dialogue)
+Taautus
+Thout, the first month of the Coptic calendar
+
+Explanatory notes
+References
+Works cited
+Further reading
+External links
+ Media related to Thoth at Wikimedia Commons
+ Works related to Thoth: A Romance at Wikisource

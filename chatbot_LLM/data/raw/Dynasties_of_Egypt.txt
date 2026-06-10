@@ -1,0 +1,27 @@
+topic_id: dynasties_of_egypt
+topic_name: Dynasties of Ancient Egypt
+category: historical_era
+period: c. 3150 BC – 30 BC
+location: Egypt
+
+---
+
+In ancient Egyptian history, dynasties are a series of rulers sharing a common origin. They are usually, but not always, traditionally divided into 33 pharaonic dynasties; these dynasties are commonly grouped by modern scholars into "kingdoms" and "intermediate periods".
+The 31 dynastic divisions come from the 3rd century BC Egyptian priest Manetho, whose history Aegyptiaca was probably written for a Greek-speaking Ptolemaic ruler but survives only in fragments and summaries. While widely used and useful, the system does have its shortcomings. Some dynasties only ruled part of Egypt and existed concurrently with other dynasties based in other cities. Some dynasties like the Abydos Dynasty weren't counted; the 7th might not have existed at all, the 10th seems to be a continuation of the 9th, and there might have been one or several Egyptian dynasties before what is termed the 1st Dynasty.
+
+List of dynasties in ancient Egyptian history
+Dates follow the timeline given by the University of Memphis, which is itself based on the work of Rolf Krauss. Figures have been deliberately rounded in order to avoid a misleading appearance of precision. See also the chronologies in Beckerath 1999, pp. 283–289, Bunson 2002, pp. 105–108, Shaw 2003, pp. 481–488, and Hornung, Krauss & Warburton 2006, pp. 490–495.
+
+See also
+List of pharaohs
+Egyptian chronology
+
+Notes
+References
+Works cited
+Bunson, Margaret R. (2002) [1991]. Encyclopedia of Ancient Egypt. Facts on File. ISBN 0-8160-8216-2.
+Ryholt, K. S. B. (1997). The Political Situation in Egypt During the Second Intermediate Period, C. 1800-1550 B.C. Museum Tusculanum Press. ISBN 978-87-7289-421-8.
+Hornung, E.; Krauss, R.; Warburton, D. A., eds. (2006). Ancient Egyptian Chronology. Leiden: BRILL. ISBN 978-90-04-11385-5.
+Beckerath, Jürgen von (1999). Handbuch der ägyptischen Königsnamen (in German). P. von Zabern. ISBN 978-3-8053-2591-2.
+Shaw, Ian, ed. (2003) [2000]. The Oxford History of Ancient Egypt. Oxford: Oxford University Press. pp. 480–489. ISBN 978-0-19-280458-7.
+University College London (2000). "Chronology". Digital Egypt for Universities.

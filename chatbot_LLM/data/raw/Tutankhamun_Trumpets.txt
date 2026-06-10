@@ -1,0 +1,31 @@
+topic_id: tutankhamun_trumpets
+topic_name: Tutankhamun's Trumpets
+category: artifact
+period: New Kingdom, 18th Dynasty
+location: Grand Egyptian Museum, Giza, Egypt
+
+---
+
+Tutankhamun's trumpets are a pair of trumpets found in the burial chamber of the Eighteenth Dynasty Pharaoh Tutankhamun. The trumpets, one of sterling silver and one of bronze or copper, are considered to be the oldest operational trumpets in the world, and the only known surviving examples from ancient Egypt.
+The trumpets were found in 1922 by Howard Carter during the excavation of Tutankhamun's tomb. The bronze trumpet was discovered in the tomb's antechamber in a large chest containing various military objects and walking sticks. The silver trumpet was subsequently found in the burial chamber. Both are finely engraved, with decorative images of the gods Ra-Horakhty, Ptah, and Amun. The silver trumpet's bell is engraved with a whorl of sepals and calices representing a lotus flower and the praenomen and nomen of the king. The bronze trumpet may be made of copper; the metal has not yet been analysed. Similar looking trumpets feature in Egyptian wall paintings that are usually, though not always, associated with military scenes.
+Silent for over 3,000 years, the trumpets were sounded before a live audience of an estimated 150 million listeners through an international BBC broadcast aired on 16 April 1939. The trumpets were played by bandsman James Tappern of Prince Albert's Own 11th Royal Hussars regiment. The recording has been replayed on BBC Radio since, most recently (on 17 July 2023) on  Breakfast. Rex Keating, who presented the 1939 broadcast, later claimed that during a rehearsal, the silver trumpet shattered, and Alfred Lucas, a member of Carter's team who had restored the finds, was so distressed he needed to go to hospital. Due to their fragility, it is unlikely the trumpets will be played again in any official musical reconstructions.
+The instruments were likely played on a single note for military signalling; of three notes that modern trumpeters got out of the instrument, one was poor quality, one was the normally used tone, and the last put so much pressure on the instrument as to destroy it.
+
+== Dimensions, manufacture and performance ==
+The silver trumpet has a length of 22+1⁄2 in (57.2 cm), the bronze/copper trumpet is about 3 in (7.6 cm) shorter. Their tubes are around 1⁄2 in (1.3 cm) in diameter at the mouth end, increasing to about 1 in (2.5 cm) before flaring out to 4 in (10.2 cm) at the extremity. The mouth-ends are strengthened by rings and are large by modern standards – which would have made the trumpets hard to play; Tappern needed to add a modern mouthpiece (with packing to make it fit) before his performance.
+The bronze trumpet was examined in detail by Jeremy Montagu in the 1970s. It consists of two sections. The slightly conical body is from a rolled sheet of copper alloy between 0.2 and 0.25 mm thick. It has been soldered lengthways with a "very skilfully brazed meander joint ... smoothed to a perfect finish", yet is "slightly rough" internally, indicating that (as might be expected in a ceremonial instrument) appearance was of greater value than acoustic performance. The bell is of a different, thinner material: an electrum-like alloy of gold, between 0.1 and 0.13 mm thick. It is without a visible seam, probably "burnished until the gold simply flowed together". The 3.25 mm thick ring that forms the mouthpiece was probably also made of electrum. The ring is apparently not fixed to the body, Montagu suspected that although it was possible to generate three notes on the instrument, the highest note would not have been sounded; besides being an effort to produce, the trumpet's construction could not have tolerated it. The lowest note does not carry far, leading Montagu to hypothesize that only the middle note was used in a rhythmic signalling code.
+
+== Claims of magical powers ==
+The bronze trumpet was among the items stolen from the Egyptian Museum in Cairo during the Egyptian looting and riots of 2011. It mysteriously returned to the museum some weeks later. According to Al-Ahram, after its return Hala Hassan, curator of the Tutankhamun collection at the Egyptian Museum, claimed that it had "magical powers" and that "whenever someone blows into it, a war occurs". During a documenting and photographing process, one of the museum's staff had blown into it, and a revolution broke out a week later. The same thing had happened before with the 1967 war and prior to the 1991 gulf war, when a student was doing a comprehensive research on Tutankhamun's collection."
+
+== See also ==
+Chazozra
+
+== References ==
+
+== Further reading ==
+Kirby, Percival (1947). "The Trumpets of Tut-ankh-amen and their Successors". Journal of the Royal Anthropological Institute. 77.
+Treasures of Tutankhamun: [catalogue of an exhibition] held at the British Museum, 1972. British Museum. 1972. ISBN 9780723000709.
+Manniche, Lise (1991). Music and Musicians in Ancient Egypt. British Museum Press. ISBN 978-0-7141-0949-7.
+Hickmann, Hans (1946). La Trompette dans l'Égypte Ancienne. Cairo: Government Printing Press.{{cite book}}:  CS1 maint: publisher location (link)
+Hawass, Zahi A. (2005). Tutankhamun and the Golden Age of the Pharaohs. National Geographic Books.

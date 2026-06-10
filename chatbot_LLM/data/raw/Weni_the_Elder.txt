@@ -1,0 +1,28 @@
+topic_id: weni_the_elder
+topic_name: Weni the Elder
+category: official
+period: 6th Dynasty
+location: Egypt
+
+---
+
+The Autobiography of Weni is a tomb inscription from Ancient Egypt, which is significant to Egyptology studies. Weni the Elder, or Uni, was a court official of the 6th Dynasty of Ancient Egypt.
+The location of the Tomb of Weni was lost as a result of Auguste Mariette's 1880 description of Weni's tomb being unclear ("[on] the high hill which gives the middle cemetery its name"). It was rediscovered in 1999 by an American archaeologist team led by Dr. Janet Richards. More recent works in the necropolis of Pepi I in Saqqara uncovered a second tomb for Weni with a near-identical copy of his biography.
+
+
+Weni began his career under Teti, and rose through the ranks of the administration under Pepi I Meryre, for whom he was in turn a judge, a general and a vizier. Later, Weni became the governor of Upper Egypt during the reign of Merenre Nemtyemsaf I. As judge he investigated the queen who was apparently suspected of involvement in a conspiracy. While he was general, he reorganized the military into a format that was still in use in the New Kingdom.
+Weni rose through the ranks of the military to become commander in chief of the army. He was considered by both his contemporaries and many Egyptologists to have been a brilliant tactician. His victories earned him the privilege of being shown leading the troops into battle, a right usually reserved for pharaohs. Weni is the first person, other than a pharaoh, known to have been portrayed in this manner. Many of his battles were in the Levant and the Sinai. He is said to have pursued a group of marauders all the way to Mount Carmel. He battled a semi-nomadic people known in Ancient Egyptian texts as "the sand-dwellers" at least five times.
+While he was commander in chief of the army, he made several key reforms to the military. He began training his troops to have a pre-emptive rather than a defensive posture. Weni included Nubian mercenaries in the army for the first time and he reorganized the army to control infighting amongst the troops and to minimise uncontrolled pillaging. He recorded his reorganization of the army in great detail and his reforms lasted until the time of the New Kingdom.
+After the death of Pepi, Weni was appointed the governor of Upper Egypt by Merenre. He made many infrastructure improvements, some of which were beneficial to the military. His most noted project was a canal that ran parallel to the Nile at the First Cataract. He likely died during Merenre's reign.
+
+
+
+
+"Inscription of Uni" in Ancient Records of Egypt by James Henry Breasted, 1906, Part One, sections 291-294, 306-315, 319-324
+L'autobiografia di Uni, principe e governatore dell'Alto Egitto by Patrizia Piacentini, 1990 Giardini Editori Pisa.
+"The Autobiography of Weni" in Ancient Egyptian Literature by M. Lichtheim, vol.1, pp. 18ff.
+Conspiracies in the Egyptian Palace: Unis to Pepy I by Naguib Kanawati, 2003 Routledge (UK), pp. 171ff.
+Texts from the Pyramid Age by Nigel C. Strudwick, 2005 Society of Biblical Literature, Atlanta, pp. 352ff.
+A History of Ancient Egypt by Nicholas Grimal, 1992 Blackwell Publishing, pp. 82ff.
+"Une nouvelle version de l'autobiographie d'Ouni", by Ph. Collombert, in R. Legros (éd.), 50 ans d'éternité. Jubilé de la MafS, BdE 106, 2015, pp. 145ff.
+Knoblauch, Christian (2010). "Preliminary report on the early bronze age III pottery from the contexts of the 6th dynasty in the Abydos middle cemetery". Ägypten und Levante / Egypt and the Levant. 20: 243–261. JSTOR 23789941.

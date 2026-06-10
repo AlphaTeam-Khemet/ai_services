@@ -1,0 +1,28 @@
+topic_id: cartouche
+topic_name: Cartouche
+category: artifact
+period: Old Kingdom onward
+location: Various locations, Egypt
+
+---
+
+In Egyptian hieroglyphs, a cartouche ( kar-TOOSH) is an oval with a line at one end tangent to it, indicating that the text enclosed is a royal name. The first examples of the cartouche are associated with pharaohs at the end of the Third Dynasty, but the feature did not come into common use until the beginning of the Fourth Dynasty under Pharaoh Sneferu. While the cartouche is usually vertical with a horizontal line, if it makes the name fit better it can be horizontal, with a vertical line at the end (in the direction of reading). The ancient Egyptian word for cartouche was shenu (compare with Coptic ϣⲛⲉ šne yielding eventual sound changes), and the cartouche was essentially an expanded shen ring. Demotic script reduced the cartouche to a pair of brackets and a vertical line.
+
+Of the five royal titularies it was the prenomen (the throne name), and the "Son of Ra" titulary (the so-called nomen name given at birth), which were enclosed by a cartouche.
+At times amulets took the form of a cartouche displaying the name of a king and placed in tombs. Archaeologists often find such items important for dating a tomb and its contents. Cartouches were formerly only worn by pharaohs. The oval surrounding their name was meant to protect them from evil spirits in life and after death. The cartouche has become a symbol representing good luck and protection from evil.
+The term "cartouche" was first applied by French soldiers who fancied that the symbol they saw so frequently repeated on the pharaonic ruins they encountered resembled a muzzle-loading firearm's paper powder cartridge (cartouche in French).
+
+As a hieroglyph, a cartouche can represent the Egyptian-language word for "name". It is listed as no. V10 in Gardiner's Sign List.
+
+See also
+Serekh, a predecessor to the cartouche
+Toki Pona, a modern constructed language using cartouches to write proper names
+
+References
+External links
+
+"Cartouche". Merriam-Webster.com Dictionary. Merriam-Webster. OCLC 1032680871.
+"Ancient Egyptian Cartouche Lesson". Artyfactory.com. Archived from the original on 2023-10-19. Retrieved 2024-02-27.
+"Cartouches" (PDF) (in Arabic). Egypt State Information Service. Archived from the original (PDF, 8.87 MB) on June 15, 2011. Retrieved 13 July 2010.
+Ancient Egyptian Cartouche facts
+The Ancient Egyptian Cartouche Archived 2025-06-23 at the Wayback Machine

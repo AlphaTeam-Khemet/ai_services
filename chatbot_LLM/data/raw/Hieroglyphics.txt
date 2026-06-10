@@ -1,0 +1,211 @@
+topic_id: hieroglyphics
+topic_name: Egyptian Hieroglyphics
+category: art
+period: Early Dynastic Period onward, c. 3200 BC
+location: Egypt
+
+---
+
+Ancient Egyptian hieroglyphs (, HY-roh-glifs) were the formal writing system used in Ancient Egypt for writing the Egyptian language. Hieroglyphs combined ideographic, logographic, syllabic, and alphabetic elements, with more than 1,000 distinct characters. Cursive hieroglyphs were used for religious literature on papyrus and wood. The later hieratic and demotic Egyptian scripts were derived from hieroglyphic writing, as was the Proto-Sinaitic script that later evolved into the Phoenician alphabet. Egyptian hieroglyphs are the ultimate ancestor of the Phoenician alphabet, the first widely adopted phonetic writing system. Moreover, owing in large part to the Greek and Aramaic scripts that descended from Phoenician, the majority of the world's living writing systems are descendants of Egyptian hieroglyphs—most prominently the Latin and Cyrillic scripts through Greek, and the Arabic and Brahmic scripts through Aramaic. Hieroglyphs are thought to be one of four writing systems developed without outside influence, the others being Cuneiforms, Chinese characters, and Mayan script.
+The use of hieroglyphic writing derived from proto-literate symbol systems in the Early Bronze Age c. the 33rd century BC (Naqada III), with the first decipherable sentence written in the Egyptian language dating to the 28th century BC (Second Dynasty). Ancient Egyptian hieroglyphs developed into a mature writing system used for monumental inscription in the classical language of the Middle Kingdom period; during this period, the system used about 900 distinct signs. The use of this writing system continued through the New Kingdom and Late Period, and on into the Persian and Ptolemaic periods. Late survivals of hieroglyphic use are found well into the Roman period, extending into the 4th century AD.
+During the 5th century, the permanent closing of pagan temples across Roman Egypt  resulted in the loss of fluent readers and writers (called scribes) in hieroglyphs. Despite attempts at decipherment, the nature of the script remained unknown throughout the Middle Ages and the early modern period. Regardless, mixture of medieval Arab (pre-Islamic) and Egyptian people kept the fascination of hieroglyphics alive. Scholars, spiritualists and treasure hunters collected highly sought-after artifacts in attempts to decode the language based on the phonetic and alphabetical similarities between Coptic and Hieroglyphs. The decipherment of hieroglyphic writing was finally accomplished in the 1820s by Jean-François Champollion, with the help of the Rosetta Stone.
+The entire Ancient Egyptian corpus, including both hieroglyphic and hieratic texts, is approximately 5 million words in length; if counting duplicates (such as the Book of the Dead and the Coffin Texts) as separate, this figure is closer to 10 million. The most complete compendium of Ancient Egyptian, the Wörterbuch der ägyptischen Sprache, contains 1.5–1.7 million words.
+
+Etymology
+The word hieroglyph comes from the Ancient Greek hieroglyphikos (ἱερογλυφικός), meaning 'sacred carving' – a compound of hierós 'sacred' and glýphō 'Ι carve, engrave' (cf. English glyph).
+From the Ptolemaic period (3rd–1st centuries BC), the glyphs themselves were called tà hieroglyphikà grámmata (τὰ ἱερογλυφικὰ γράμματα) 'the sacred engraved letters', the Greek counterpart to the Egyptian term mdw.w-nṯr 'words of gods'. Greek hieróglŭphos meant 'a carver of hieroglyphs'.
+In English, hieroglyph as a noun is recorded from 1590, originally short for nominalized hieroglyphic (1580s, with a plural hieroglyphics), from adjectival use (hieroglyphic character).
+
+History and evolution
+Origin
+Hieroglyphs may have emerged from the preliterate artistic traditions of Egypt. For example, symbols on Gerzean pottery from c. 4000 BC have been argued to resemble hieroglyphic writing.
+
+Proto-writing systems developed in the second half of the 4th millennium BC, such as the clay labels of a Predynastic ruler called "Scorpion I" (Naqada IIIA period, c. 33rd century BC) recovered at Abydos (modern Umm el-Qa'ab) in 1998 or the Narmer Palette (c. 31st century BC).
+The first full sentence written in mature hieroglyphs so far discovered was found on a seal impression in the tomb of Seth-Peribsen at Umm el-Qa'ab, which dates from the Second Dynasty (28th or 27th century BC). Around 800 hieroglyphs are known to date back to the Old Kingdom, Middle Kingdom and New Kingdom eras. By the Greco-Roman period, there were more than 5,000.
+Scholars have long debated whether hieroglyphs were developed independently of any other script, or derived from cuneiform, the earliest writing system in human history that developed to write Sumerian in southern Mesopotamia during the late 4th millennium BC. Scholars like Geoffrey Sampson argued that Egyptian hieroglyphs "came into existence a little after Sumerian script, and, probably, [were] invented under the influence of the latter", and that it is "probable that the general idea of expressing words of a language in writing was brought to Egypt from Sumerian Mesopotamia". Further, Egyptian writing appeared suddenly, while Mesopotamia had a long evolutionary history, with antecedent signs used in tokens for agricultural and accounting purposes as early as c. 8000 BC.
+While there are many instances of early Egypt–Mesopotamia relations, the lack of direct evidence for the transfer of writing means that "no definitive determination has been made as to the origin of hieroglyphics in ancient Egypt". Since the 1990s, the above-mentioned discoveries of glyphs at Abydos, dated between 3400 and 3200 BC, have shed further doubt on the classical notion that the Mesopotamian symbol system predates the Egyptian one. A date of c. 3400 BC for the earliest Abydos glyphs challenges the hypothesis of diffusion from Mesopotamia to Egypt, pointing to an independent development of writing in Egypt.
+Rosalie David has argued that the debate is moot since "If Egypt did adopt the idea of writing from elsewhere, it was presumably only the concept which was taken over, since the forms of the hieroglyphs are entirely Egyptian in origin and reflect the distinctive flora, fauna and images of Egypt's own landscape." Egyptian scholar Gamal Mokhtar argued further that the inventory of hieroglyphic symbols derived from "fauna and flora used in the signs [which] are essentially African" and in "regards to writing, we have seen that a purely Nilotic, hence African origin not only is not excluded, but probably reflects the reality."
+
+Mature writing system
+Hieroglyphs consist of three kinds of glyphs: phonetic glyphs, including single-consonant characters that function like an alphabet; logographs, representing morphemes; and determinatives, which narrow down the meaning of logographic or phonetic words.
+
+Late period
+As writing developed and became more widespread among the Egyptian people, simplified glyph forms developed, resulting in the hieratic (priestly) and demotic (popular) scripts. These variants were also more suited than hieroglyphs for use on papyrus. Hieroglyphic writing was not, however, eclipsed, but existed alongside the other forms, especially in monumental and other formal writing. The Rosetta Stone contains three parallel scripts – hieroglyphs, demotic, and the Greek alphabet.
+
+Late survival
+Hieroglyphs continued to be used intermittently under Persian rule in the 6th and 5th centuries BC, as well as during the ensuing Ptolemaic and Roman periods that followed after Alexander the Great's conquest of Egypt. It appears that the misleading quality of comments from Greek and Roman writers about hieroglyphs came about, at least in part, as a response to the changed political situation. Some believed that hieroglyphs may have functioned as a way to distinguish 'true Egyptians' from some of the foreign conquerors. Another reason may be the refusal to tackle a foreign culture on its own terms, which characterized Greco-Roman approaches to Egyptian culture generally. Having learned that hieroglyphs were sacred writing, Greco-Roman authors imagined the complex but rational system as an allegorical, even magical, system transmitting secret, mystical knowledge.
+By the 4th century AD, few Egyptians were capable of reading hieroglyphs, and the "myth of allegorical hieroglyphs" was ascendant. Monumental use of hieroglyphs ceased after the closing of all non-Christian temples in 391 by the Roman Emperor Theodosius I; the last known inscription is from Philae, known as the Graffito of Esmet-Akhom, from 394.
+The Hieroglyphica of Horapollo (c. 5th century) appears to retain some genuine knowledge about the writing system. It offers an explanation of close to 200 signs. Some are identified correctly, such as the 'goose' hieroglyph (zꜣ) representing the word for 'son'.
+A half-dozen Demotic glyphs are still in use, added to the Greek alphabet when writing Coptic.
+
+Decipherment
+Knowledge of the hieroglyphs had been lost completely in the medieval period. 
+Early attempts at decipherment were made by some such as Dhul-Nun al-Misri and pseudo-Ibn Wahshiyya (9th and 10th century, respectively).
+All medieval and early modern attempts were hampered by the fundamental assumption that hieroglyphs 
+recorded ideas and not the sounds of the language. As no bilingual texts were available, any such symbolic 'translation' could be proposed without the possibility of verification. It was not until Athanasius Kircher in the mid 17th century that scholars began to think the hieroglyphs might also represent sounds. Kircher was familiar with Coptic, and thought that it might be the key to deciphering the hieroglyphs, but was held back by a belief in the mystical nature of the symbols.
+
+The breakthrough in decipherment came only with the discovery of the Rosetta Stone by Napoleon's troops in 1799 (during Napoleon's Egyptian invasion). 
+As the stone presented a hieroglyphic and a demotic version of the same text in parallel with a Greek translation, plenty of material for falsifiable studies in translation was suddenly available. In the early 19th century, scholars such as Silvestre de Sacy, Johan David Åkerblad, and Thomas Young studied the inscriptions on the stone, and were able to make some headway. Finally, Jean-François Champollion made the complete decipherment by the 1820s. In his Lettre à M. Dacier (1822), he wrote:
+
+It is a complex system, writing figurative, symbolic, and phonetic all at once, in the same text, the same phrase, I would almost say in the same word.
+
+Writing system
+Visually, hieroglyphs are all more or less figurative: they represent real or abstract elements, sometimes stylized and simplified, but all generally perfectly recognizable in form. However, the same sign can, according to context, be interpreted in diverse ways: as a phonogram (phonetic reading), as a logogram, or as an ideogram (semagram; "determinative") (semantic reading). The determinative was not read as a phonetic constituent, but facilitated understanding by differentiating the word from its homophones.
+
+Phonetic reading
+Most non-determinative hieroglyphic signs are phonograms, whose meaning is determined by pronunciation, independent of visual characteristics. This follows the rebus principle where, for example, in English, the picture of an eye could stand not only for the word eye, but also for its phonetic equivalent, the first person pronoun I.
+Phonograms formed with one consonant are called uniliteral signs; with two consonants, biliteral signs; with three, triliteral signs.
+Twenty-four uniliteral signs make up the alphabetic elements. Egyptian hieroglyphic writing does not normally indicate vowels, unlike cuneiform, and for that reason has been labelled by some as an abjad, i.e., an alphabet without vowels.
+Thus, hieroglyphic writing representing a pintail duck is read in Egyptian as sꜣ, derived from the main consonants of the Egyptian word for this duck: 's', 'ꜣ' and 't'. (Note that ꜣ or , two half-rings opening to the left, sometimes replaced by the digit '3', is the Egyptian alef.)
+It is also possible to use the hieroglyph of the pintail duck without a link to its meaning in order to represent the two phonemes s and ꜣ, independently of any vowels that could accompany these consonants, and in this way write the word: sꜣ 'son', or when complemented by other signs detailed below sꜣ 'keep', 'watch'; and sꜣṯ.w 'hard ground'. For example:
+
+ – the characters sꜣ;
+ – the same character used only in order to signify, according to the context, 'pintail duck' or, with the appropriate determinative, 'son', two words having the same or similar consonants:
+ – the character sꜣ as used in the word sꜣw 'keep', 'watch'
+As in the Arabic script, not all vowels were written in Egyptian hieroglyphs; it is debatable whether vowels were written at all. Possibly, as with Arabic, the semivowels /w/ and /j/ (as in English W and Y) could double as the vowels /u/ and /i/. In modern transcriptions, an e is added between consonants to aid in their pronunciation. For example, nfr 'good' is typically written nefer. This does not reflect Egyptian vowels, which are obscure, but is merely a modern convention. Likewise, the ꜣ and ꜥ are commonly transliterated as a, as in Ra (rꜥ).
+Hieroglyphs are inscribed in rows of pictures arranged in horizontal lines or vertical columns. Both hieroglyph lines as well as signs contained in the lines are read with upper content having precedence over content below. The lines or columns, and the individual inscriptions within them, read from left to right in rare instances only and for particular reasons at that; ordinarily however, they read from right to left–the Egyptians' preferred direction of writing (although, for convenience, modern texts are often normalized into left-to-right order). The direction toward which asymmetrical hieroglyphs face indicate their proper reading order. For example, when human and animal hieroglyphs face or look toward the left, they almost always must be read from left to right, and vice versa.
+As in many ancient writing systems, words are not separated by blanks or punctuation marks. However, certain hieroglyphs appear particularly common only at the end of words, making it possible to readily distinguish words.
+
+Uniliteral signs
+The Egyptian hieroglyphic script contained 24 uniliterals (symbols that stood for single consonants, much like letters in English). It would have been possible to write all Egyptian words in the manner of these signs, but the Egyptians never did so and never simplified their complex writing into a true alphabet.
+Each uniliteral glyph once had a unique reading, but several of these fell together as Old Egyptian developed into Middle Egyptian. For example, the folded-cloth glyph (𓋴) seems to have originally been an /s/ and the door-bolt glyph (𓊃) a /θ/ sound, but these both came to be pronounced /s/, as the /θ/ sound was lost. A few uniliterals first appear in Middle Egyptian texts.
+Besides the uniliteral glyphs, there are also the biliteral and triliteral signs, to represent a specific sequence of two or three consonants, consonants and vowels, and a few as vowel combinations only, in the language.
+
+Phonetic complements
+Egyptian writing is often redundant: in fact, it happens very frequently that a word is followed by several characters writing the same sounds, in order to guide the reader. For example, the word nfr, "beautiful, good, perfect", was written with a unique triliteral that was read as nfr:
+
+However, it is considerably more common to add to that triliteral, the uniliterals for f and r. The word can thus be written as nfr+f+r, but one still reads it as merely nfr. The two alphabetic characters are adding clarity to the spelling of the preceding triliteral hieroglyph.
+Redundant characters accompanying biliteral or triliteral signs are called phonetic complements (or complementaries). They can be placed in front of the sign (rarely), after the sign (as a general rule), or even framing it (appearing both before and after). Ancient Egyptian scribes consistently avoided leaving large areas of blank space in their writing and might add additional phonetic complements or sometimes even invert the order of signs if this would result in a more aesthetically pleasing appearance (good scribes attended to the artistic, and even religious, aspects of the hieroglyphs, and would not simply view them as a communication tool). Various examples of the use of phonetic complements can be seen below:
+
+ – md +d +w (the complementary d is placed after the sign) → it reads mdw, meaning "tongue".
+ – ḫ +p +ḫpr +r +j (the four complementaries frame the triliteral sign of the scarab beetle) → it reads ḫpr.j, meaning the name "Khepri", with the final glyph being the determinative for 'ruler or god'.
+
+Notably, phonetic complements were also used to allow the reader to differentiate between signs that are homophones, or which do not always have a unique reading. For example, the symbol of "the seat" (or chair):
+
+ – This can be read st, ws or ḥtm, according to the word in which it is found. The presence of phonetic complements—and of the suitable determinative—allows the reader to know which of the three readings to choose:
+1st Reading: st –  – st, written st+t; the last character is the determinative of "the house" or that which is found there, meaning "seat, throne, place";
+ – st (written st+t; the "egg" determinative is used for female personal names in some periods), meaning "Isis";
+2nd Reading: ws –  – wsjr (written ws+jr, with, as a phonetic complement, "the eye", which is read jr, following the determinative of "god"), meaning "Osiris";
+3rd Reading: ḥtm –  – ḥtm.t (written ḥ+ḥtm+m+t, with the determinative of "Anubis" or "the jackal"), meaning a kind of wild animal;
+ – ḥtm (written ḥ +ḥtm +t, with the determinative of the flying bird), meaning "to disappear".
+
+Finally, it sometimes happens that the pronunciation of words might be changed because of their connection to Ancient Egyptian: in this case, it is not rare for writing to adopt a compromise in notation, the two readings being indicated jointly. For example, the adjective bnj, "sweet", became bnr. In Middle Egyptian, one can write:
+
+ – bnrj (written b+n+r+i, with determinative)
+which is fully read as bnr, the j not being pronounced but retained in order to keep a written connection with the ancient word (in the same fashion as the English language words through, knife, or victuals, which are no longer pronounced the way they are written).
+
+Semantic reading
+Besides a phonetic interpretation, characters can also be read for their meaning: in this instance, logograms are being spoken (or ideograms) and semagrams (the latter are also called determinatives).
+
+Logograms
+A hieroglyph used as a logogram defines the object of which it is an image. Logograms are therefore the most frequently used common nouns; they are always accompanied by a mute vertical stroke indicating their status as a logogram (the usage of a vertical stroke is further explained below); in theory, all hieroglyphs would have the ability to be used as logograms. Logograms can be accompanied by phonetic complements. Here are some examples:
+
+ – rꜥ, meaning "sun";
+ – pr, meaning "house";
+ – swt (sw+t), meaning "reed";
+ – ḏw, meaning "mountain".
+In some cases, the semantic connection is indirect (metonymic or metaphoric):
+
+ – nṯr, meaning "god"; the character in fact represents a temple flag (standard);
+ – bꜣ, meaning "Bâ" (soul); the character is the traditional representation of a "bâ" (a bird with a human head);
+ – dšr, meaning "flamingo"; the corresponding phonogram means "red" and the bird is associated by metonymy with this color.
+
+Determinatives
+Determinatives or semagrams (semantic symbols specifying meaning) are placed at the end of a word. These mute characters serve to clarify what the word is about, as homophonic glyphs are common. If a similar procedure existed in English, words with the same spelling would be followed by an indicator that would not be read, but which would fine-tune the meaning: "retort [chemistry]" and "retort [rhetoric]" would thus be distinguished.
+
+Here are several examples of the use of determinatives borrowed from the book, Je lis les hiéroglyphes ("I am reading hieroglyphs") by Jean Capart, which illustrate their importance:
+
+ – nfrw (w and the three strokes are the marks of the plural): [literally] "the beautiful young people", that is to say, the young military recruits. The word has a young-person determinative symbol:  – which is the determinative indicating babies and children;
+ – nfr.t (.t is here the suffix that forms the feminine): meaning "the nubile young woman", with  as the determinative indicating a woman;
+ – nfrw (the tripling of the character serving to express the plural, flexional ending w) : meaning "foundations (of a house)", with the house as a determinative, ;
+ – nfr : meaning "clothing" with    as the determinative for lengths of cloth;
+ – nfr : meaning "wine" or "beer"; with a jug    as the determinative.
+All these words have a meliorative connotation: "good, beautiful, perfect". The Concise Dictionary of Middle Egyptian by Raymond A. Faulkner, gives some twenty words that are read nfr or which are formed from this word.
+
+Additional signs
+Cartouche
+Rarely, the names of gods are placed within a cartouche; the two last names of the sitting king are always placed within a cartouche:
+
+jmn-rꜥ, "Amun-Ra";
+
+qljwꜣpdrꜣ.t, "Cleopatra";
+
+Filling stroke
+A filling stroke is a character indicating the end of a quadrat that would otherwise be incomplete.
+
+Signs joined
+Some signs are the contraction of several others. These signs have, however, a function and existence of their own: for example, a forearm where the hand holds a scepter is used as a determinative for words meaning "to direct, to drive" and their derivatives.
+
+Doubling
+The doubling of a sign indicates its dual; the tripling of a sign indicates its plural.
+
+Grammatical signs
+The vertical stroke indicates that the sign is a logogram.
+Two strokes indicate the dual number, and the three strokes indicate the plural.
+The direct notation of flexional endings, for example:
+
+Spelling
+Standard orthography—"correct" spelling—in Egyptian is much looser than in modern languages. In fact, one or several variants exist for almost every word. One finds:
+
+Redundancies;
+Omission of graphemes, which are ignored whether or not they are intentional;
+Substitutions of one grapheme for another, such that it is impossible to distinguish a "mistake" from an "alternative spelling";
+Errors of omission in the drawing of signs, which are much more problematic when the writing is cursive (hieratic) writing, but especially demotic, where the schematization of the signs is extreme.
+However, many of these apparent spelling errors constitute an issue of chronology. Spelling and standards varied over time, so the writing of a word during the Old Kingdom might be considerably different during the New Kingdom. Furthermore, the Egyptians were perfectly content to include older orthography ("historical spelling") alongside newer practices, as though it were acceptable in English to use archaic spellings in modern texts. Most often, ancient "spelling errors" are simply misinterpretations of context. Today, hieroglyphists use numerous cataloguing systems (notably the Manuel de Codage and Gardiner's Sign List) to clarify the presence of determinatives, ideograms, and other ambiguous signs in transliteration.
+
+Simple examples
+The glyphs in this cartouche are transliterated as:
+
+though ii is considered a single letter and transliterated y.
+Another way in which hieroglyphs work is illustrated by the two Egyptian words pronounced pr (usually vocalised as per). One word is 'house', and its hieroglyphic representation is straightforward:
+
+Here, the 'house' hieroglyph works as a logogram: it represents the word with a single sign. The vertical stroke below the hieroglyph is a common way of indicating that a glyph is working as a logogram.
+Another word pr is the verb 'to go out, leave'. When this word is written, the 'house' hieroglyph is used as a phonetic symbol:
+
+Here, the 'house' glyph stands for the consonants pr. The 'mouth' glyph below it is a phonetic complement: it is read as r, reinforcing the phonetic reading of pr. The third hieroglyph is a determinative: it is an ideogram for verbs of motion that gives the reader an idea of the meaning of the word.
+
+Encoding and font support
+Egyptian hieroglyphs were added to the Unicode Standard in October 2009 with the release of version 5.2 which introduced the Egyptian Hieroglyphs block (U+13000–U+1342F).
+As of July 2013, four fonts, Aegyptus, NewGardiner, Noto Sans Egyptian Hieroglyphs and JSeshFont support this range. Another font, Segoe UI Historic, comes bundled with Windows 10 and also contains glyphs for the Egyptian Hieroglyphs block. Segoe UI Historic excludes three glyphs depicting phallus (Gardiner's D52, D52A D53, Unicode code points U+130B8–U+130BA).
+
+The Egyptian Hieroglyphs Extended-A Unicode block is U+13460-U+143FF. It was added to the Unicode Standard in September 2024 with the release of version 16.0. This added 3995 characters in addition to the original 1072:
+
+The Egyptian Hieroglyph Format Controls Unicode block is U+13430-U+1345F. It was added to the Unicode Standard in March 2019 with the release of version 12.0:
+
+See also
+List of Egyptian hieroglyphs
+Gardiner's sign list
+Egyptian numerals
+Egyptian language
+Proto-Sinaitic script
+Manuel de Codage
+Champollion Museum
+Hieratic
+Cursive Hieroglyphs
+Demotic
+
+Notes and references
+Further reading
+Adkins, Lesley; Adkins, Roy (2000). The Keys of Egypt: The Obsession to Decipher Egyptian Hieroglyphs. HarperCollins Publishers. ISBN 978-0-06-019439-0.
+Allen, James P. (1999). Middle Egyptian: An Introduction to the Language and Culture of Hieroglyphs. Cambridge University Press. ISBN 978-0-521-77483-3.
+Collier, Mark & Bill Manley (1998). How to Read Egyptian Hieroglyphs: a step-by-step guide to teach yourself. British Museum Press. ISBN 978-0-7141-1910-6.
+Davidson, James, "At the British Museum", London Review of Books, vol. 45, no.3 (2 February 2023), pp. 26–27.
+Selden, Daniel L. (2013). Hieroglyphic Egyptian: An Introduction to the Language and Literature of the Middle Kingdom. University of California Press. ISBN 978-0-520-27546-1.
+Faulkner, Raymond O. (1962). Concise Dictionary of Middle Egyptian. Griffith Institute. ISBN 978-0-900416-32-3. {{cite book}}: ISBN / Date incompatibility (help)
+Gardiner, Sir Alan H. (1957). Egyptian Grammar: Being an Introduction to the Study of Hieroglyphs, 3rd ed. revised. The Griffith Institute.
+Hill, Marsha (2007). Gifts for the gods: images from Egyptian temples. New York: The Metropolitan Museum of Art. ISBN 9781588392312.
+Kamrin, Janice (2004). Ancient Egyptian Hieroglyphs: A Practical Guide. Harry N. Abrams, Inc. ISBN 978-0-8109-4961-4.
+McDonald, Angela. Write Your Own Egyptian Hieroglyphs. Berkeley: University of California Press, 2007 (paperback, ISBN 0-520-25235-7).
+Erman, Adolf (1894). Egyptian Grammar: with table of signs, bibliography, exercises for reading and glossary. Williams and Norgate. ISBN 978-3862882045. {{cite book}}: ISBN / Date incompatibility (help)
+
+External links
+
+Egyptra - Egyptian Hieroglyphic Guide and Name Translator
+Ancient Egyptian Hieroglyphics – Aldokkan
+Glyphs and Grammars – Resources for those interested in learning hieroglyphs, compiled by Aayko Eyma
+Hieroglyphics! – Annotated directory of popular and scholarly resources
+Egyptian Language and Writing
+Full-text of The stela of Menthu-weser
+Unicode Compliant Hieroglyphic Font – From the University of St Andrews
+The Thot Sign List - an interactive hieroglyphic sign-list database.
+The Polychrome Hieroglyph Research Project - a database of polychrome hieroglyphs.

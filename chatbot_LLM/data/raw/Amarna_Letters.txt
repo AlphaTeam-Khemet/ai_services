@@ -1,0 +1,152 @@
+topic_id: amarna_letters
+topic_name: Amarna Letters
+category: artifact
+period: Amarna Period
+location: Egypt
+
+---
+
+The Amarna letters (; sometimes referred to as the Amarna correspondence or Amarna tablets, and cited with the abbreviation "EA", for "El Amarna") are an archive, written on clay tablets, primarily consisting of diplomatic correspondence between the Egyptian administration and its representatives in Canaan and Amurru, or neighboring kingdom leaders, during the New Kingdom, spanning a period of no more than thirty years in the middle of the 14th century BC. The letters were found in Upper Egypt at el-Amarna, the modern name for the ancient Egyptian capital of Akhetaten, founded by pharaoh Akhenaten (c. 1351–1334 BC) during the Eighteenth Dynasty of Egypt.
+The Amarna letters are unusual in Egyptological research, because they are written not in the language of ancient Egypt, but in cuneiform, the writing system of ancient Mesopotamia. Most are in a variety of Akkadian sometimes characterised as a mixed language, Canaanite-Akkadian; one especially long letter—abbreviated EA 24—was written in a late dialect of Hurrian, and is the longest contiguous text known to survive in that language.
+The known tablets total 382 and fragments (350 are letters and the rest literary texts
+and school texts), of which 358 have been published by the Norwegian Assyriologist Jørgen Alexander Knudtzon in his work, Die El-Amarna-Tafeln, which came out in two volumes (1907 and 1915) and remains the standard edition to this day. The texts of the remaining 24 complete or fragmentary tablets excavated since Knudtzon have also been made available. Only 26 of the known tablets and fragments were found in their archaeological context, Building Q42.21.
+The Amarna letters are of great significance for biblical studies as well as Semitic linguistics because they shed light on the culture and language of the Canaanite peoples in this time period. Though most are written in Akkadian, the Akkadian of the letters is heavily colored by the mother tongue of their writers, who probably spoke an early form of Proto-Canaanite, the language(s) which would later evolve into the mother languages of Hebrew and Phoenician. These "Canaanisms" provide valuable insights into the proto-stage of those languages several centuries prior to their first actual manifestation.
+
+
+
+The letters, comprising cuneiform tablets written primarily in Akkadian—the regional language of diplomacy for this period—were first discovered around 1887 by local Egyptians who secretly dug most of them from the ruined city of Amarna, and sold them in the antiquities market. They had originally been stored in an ancient building that archaeologists have since called the Bureau of Correspondence of Pharaoh. Once the location where they were found was determined, the ruins were explored for more. The first archaeologist who successfully recovered more tablets was Flinders Petrie, who in 1891 and 1892 uncovered 21 fragments. Émile Chassinat, then director of the French Institute for Oriental Archaeology in Cairo, acquired two more tablets in 1903. Since Knudtzon's edition, some 24 more tablets, or fragments, have been found, either in Egypt, or identified in the collections of various museums.
+The initial group of letters recovered by local Egyptians have been scattered among museums in Germany, the United Kingdom, Egypt, France, Russia, and the United States:
+
+202 or 203 tablets are at the Vorderasiatisches Museum in Berlin;
+99 are at the British Museum in London;
+49 or 50 are at the Egyptian Museum in Cairo;
+7 at the Louvre in Paris;
+3 at the Pushkin Museum in Moscow;
+1 in the collection of the Institute for the Study of Ancient Cultures in Chicago.
+A few tablets are at the Ashmolean Museum in Oxford and the Royal Museums of Art and History in Brussels.
+The archive contains a wealth of information about cultures, kingdoms, events and individuals in a period from which few written sources survive. It includes correspondence from Akhenaten (also titled Amenhotep IV)'s reign, as well as his predecessor Amenhotep III's reign. The tablets consist of over 300 diplomatic letters; the remainder comprise miscellaneous literary and educational materials. These tablets shed much light on Egyptian relations with Babylonia, Assyria,  Syria, Canaan, and Alashiya (Cyprus) as well as relations with the Mitanni, and the Hittites. The letters have been important in establishing both the history and the chronology of the period. Letters from the Babylonian king, Kadashman-Enlil I, anchor the timeframe of Akhenaten's reign to the mid-14th century BC. They also contain the first mention of a Near Eastern group known as the Habiru, whose possible connection with the Hebrews—due to the similarity of the words and their geographic location—remains debated. Other rulers involved in the letters include Tushratta of Mitanni, Lib'ayu of Shechem, Abdi-Heba of Jerusalem, and the quarrelsome king, Rib-Hadda, of Byblos, who, in over 58 letters, continuously pleads for Egyptian military help. Specifically, the letters include requests for military help in the north against Hittite invaders, and in the south to fight against the Habiru.
+
+
+During excavation in 1993 a small, damaged, clay cylinder (first thought to be a cylinder seal) was found. It was inscribed with "Amarna Cuneiform" and held a letter which appears to be part of the Amarna correspondence.
+
+"To Lab'aya, my lord, speak. Message of Tagi: To the King (Pharaoh), my lord: "I have listened carefully to your missive to me ...(illegible traces)"
+
+
+
+Amarna Letters are politically arranged in a rough counterclockwise fashion:
+
+001–014 Babylonia
+015–016 Assyria
+017–030 Mitanni
+031–032 Arzawa
+033–040 Alashiya
+041–044 Hatti
+045–380+ Syria/Lebanon/Canaan
+Amarna Letters from Syria/Lebanon/Canaan are distributed roughly:
+
+045–067 Syria
+068–227 Lebanon (where 68–140 are from Gubla aka Byblos)
+227–380 Canaan (written mostly in the Canaano-Akkadian language).
+
+
+Early in his reign, Akhenaten, the pharaoh of Egypt, had conflicts with Tushratta, the king of Mitanni, who had courted favor with his father, Amenhotep III, against the Hittites. Tushratta complains in numerous letters that Akhenaten had sent him gold-plated statues rather than statues made of solid gold; the statues formed part of the bride-price that Tushratta received for letting his daughter Tadukhepa marry Amenhotep III and then later marry Akhenaten.
+An Amarna letter preserves a complaint by Tushratta to Akhenaten about the situation:
+
+I...asked your father Mimmureya [i.e., Amenhotep III] for statues of solid cast gold, ... and your father said, 'Don't talk of giving statues just of solid cast gold. I will give you ones made also of lapis lazuli. I will give you too, along with the statues, much additional gold and [other] goods beyond measure.' Every one of my messengers that were staying in Egypt saw the gold for the statues with their own eyes. ... But my brother [i.e., Akhenaten] has not sent the solid [gold] statues that your father was going to send. You have sent plated ones of wood. Nor have you sent me the goods that your father was going to send me, but you have reduced [them] greatly. Yet there is nothing I know of in which I have failed my brother. ... May my brother send me much gold. ... In my brother's country gold is as plentiful as dust. May my brother cause me no distress. May he send me much gold in order that my brother [with the gold and m]any [good]s may honour me.
+
+
+A significant cluster of the Amarna letters (EA 285–290) was written by Abdi-Heba, the Canaanite chieftain of Jerusalem (referred to in the tablets as Urusalim).
+In his correspondence, Abdi-Heba repeatedly pleads with the pharaoh—likely Akhenaten—for military assistance, specifically requesting archers to defend against the Habiru, a nomadic or semi-nomadic group of marauders and mercenaries who were attacking Egyptian vassal territories throughout Canaan.
+Abdi-Heba expresses deep frustration with Egyptian officials who he claims are slandering him to the pharaoh, and he warns that without immediate reinforcements, all of the pharaoh's lands in the region will be lost. In EA 287, he emphasizes the city's importance to the Egyptian crown, stating: "As the king has placed his name in Jerusalem forever, he cannot abandon it—the land of Jerusalem."
+
+
+Note: Many assignments are tentative; spellings vary widely. This is just a guide.
+
+
+William L. Moran summarizes the state of the chronology of these tablets as follows:
+
+Despite a long history of inquiry, the chronology of the Amarna letters, both relative and absolute, presents many problems, some of bewildering complexity, that still elude definitive solution. Consensus obtains only about what is obvious, certain established facts, and these provide only a broad framework within which many and often quite different reconstructions of the course of events reflected in the Amarna letters are possible and have been defended. ...The Amarna archive, it is now generally agreed, spans at most about thirty years, perhaps only fifteen or so.
+From the internal evidence, the earliest possible date for this correspondence is the final decade of the reign of Amenhotep III, who ruled from  1388 to 1351 BC (or 1391 to 1353 BC), possibly as early as this king's 30th regnal year; the latest date any of these letters were written is the desertion of the city of Amarna, commonly believed to have happened in the second year of the reign of Tutankhamun later in the same century in 1332 BC. Moran notes that some scholars believe one tablet, EA 16, may have been addressed to Tutankhamun's successor Ay or Smenkhkare. However, this speculation appears improbable because the Amarna archives were closed by Year 2 of Tutankhamun, when this king transferred Egypt's capital from Amarna to Thebes.
+
+
+A small number of the Amarna letters are in the class of poetry. An example is EA 153, entitled: "Ships on hold", from Abimilku of Tyre. This is a short, 20-line letter. Lines 6–8 and 9-11 are parallel phrases, each ending with "...before the troops of the king, my lord."-('before', then line 8, line 11). Both sentences are identical, and repetitive, with only the subject statement changing.
+The entire corpus of Amarna letters has many standard phrases. It also has some phrases, and quotations used only once. Some are parables: (EA 252: "...when an ant is pinched (struck), does it not fight back and bite the hand of the man that struck it?"....)
+
+
+A bird in a cage (Trap)—Rib-Hadda subcorpus of letters. (Rib-Hadda was trapped in Gubla-(Byblos), unable to move freely.)
+
+
+A brick may move from under its partner, still I will not move from under the feet of the king, my lord.—Used in letters EA 266, 292, and 296. EA 292 by Adda-danu of Gazru.
+
+
+"For the lack of a cultivator, my field is like a woman without a husband."—Rib-Hadda letter EA 75
+
+
+"And know that the King-(pharaoh) is hale like the Sun in the Sky. For his troops and his chariots in multitude all goes very well...."—See: Endaruta, for the Short Form; See: Milkilu, for a Long Form. Also found in EA 99: entitled: "From the Pharaoh to a vassal". (with addressee damaged)
+
+
+"I looked this way, and I looked that way, and there was no light. Then I looked towards the king, my lord, and there was light."—EA 266 by Tagi (Ginti mayor); EA 296 by Yahtiru.
+
+
+"May the Lady of Gubla grant power to the king, my lord."—varieties of the phrase in the Rib-Hadda letters
+
+
+a pot held in pledge—The Pot of a Debt. EA 292 by Adda-danu of Gazru.
+
+
+7 times and 7 times—Over and over again
+7 times plus 7—EA 189, See: "Etakkama of Kadesh"(title)-(Qidšu)
+
+
+I fall, at the feet, ... 7 times and 7 times, "on the back and on the stomach"—EA 316, by Pu-Ba'lu, and used in numerous letters to pharaoh. See: Commissioner: Tahmašši.
+
+
+"...when an ant is pinched (struck), does it not fight back and bite the hand of the man that struck it?"—A phrase used by Labayu defending his actions of overtaking cities, EA 252. Title: "Sparing one's enemies".
+
+
+Amarna letter EA 15, from Ashur-uballit I; see also Amarna letter EA 153.
+
+
+
+Abdi-Heba
+Amarna letters–localities and their rulers
+Ashur-uballit I
+Amarna Period
+Hittite inscriptions
+Labaya
+List of Amarna letters by size
+List of inscriptions in biblical archaeology
+Mari tablets
+Mutbaal
+Šuwardata
+Ugaritic texts
+
+
+
+
+Aruz, Joan, Kim Benzel, and Jean M. Evans, eds. Beyond Babylon: Art, Trade, and Diplomacy in the Second Millennium B.C. New Haven, CT: Yale University Press, 2008.
+[8] Bristowe, Sydney, Mrs, "The Oldest Letters In The World", LONDON: GEORGE ALLEN & UNWIN, LTD, 1923
+Budge, E.A.W., "On cuneiform despatches from Tûshratta, king of Mitanni, Burraburiyasch, the son of Kuri-Galzu, and the king of Alashiya, to Amenophis III, king of Egypt, and on the cuneiform tablets from Tell el-Amarna", Proceedings of the Society of Biblical Archaeology 10, pp. 540–569, 1887–88
+Cohen, Raymond, and Raymond Westbrook, eds. Amarna Diplomacy: The Beginnings of International Relations. Baltimore: Johns Hopkins University Press, 2000
+Gordon, C.H., "Eight new cuneiform fragments from Tell el Amarna", Journal of Egyptian Archaeology 20, pp. 137–138, 1934
+[9] Gordon, Cyrus H., "The new Amarna tablets", Orientalia 16.1, pp. 1–21, 1947
+Goren, Y., Finkelstein, I. & Na'aman, N., Inscribed in Clay – Provenance Study of the Amarna Tablets and Other Ancient Near Eastern Texts, Tel Aviv: Sonia and Marco Nadler Institute of Archaeology, Tel Aviv University, 2004. ISBN 965-266-020-5
+Hagen, F., "The hieratic dockets on the cuneiform tablets from Amarna", Journal of Egyptian Archaeology 97, pp. 214–216, 2011
+[10] Handcock, Percy, "Selections from the Tell-el-Amarna letters", London: Society for promoting Christian knowledge; New York, The Macmillan company, 1920
+Mynářová, J., "Egyptians and the cuneiform tradition: On the palaeography of the Amarna documents", in Current research in cuneiform palaeography, eds. E. Devecchi, G.G.W. Müller, and J. Mynářová. Gladbeck: PeWe, pp. 89–102, 2015
+Mynářová, Jana. Language of Amarna – Language of Diplomacy: Perspectives On the Amarna Letters. Prague: Czech Institute of Egyptology; Faculty of Arts, Charles University in Prague, 2007
+[11] Petrie, W. M. Flinders Syria and Egypt From the Tell El Amarna Letters, Methuen & co, 1898
+Rainey, Anson F. Canaanite in the Amarna Tablets: A Linguistic Analysis of the Mixed Dialect Used by Scribes from Canaan. 4 vols. Atlanta: Society of Biblical Literature, 2010
+Sayce, A.H., "The cuneiform inscriptions of Tel el-Amarna", Journal of the Transactions of the Victoria Institute, or Philosophical Society of Great Britain 24, pp. 12–31, 1890
+Smith, Janet (2011). Dust or dew: Immortality in the Ancient Near East and in Psalm 49. Eugene, OR, US: Wipf and Stock. p. 286. ISBN 978-1-60899-661-2.
+Vita, Juan-Pablo. Canaanite Scribes In the Amarna Letters. Münster: Ugarit-Verlag, 2015
+
+
+
+"The Tell el-Amarna Tablets" . Catholic Encyclopedia. 1913.
+CDLI, Chicago Digital Library Listing of the Amarna letters
+Electronic version of the Amarna tablets, Akkadian in English transliteration.
+High-resolution images, from the Vorderasiatisches Museum Berlin.
+Mineralogical and Chemical Study of the Amarna Tablets – Provenance Study of the Amarna Tablets – University of Tel Aviv web page
+Sample letter
+Text of some letters, archive.org

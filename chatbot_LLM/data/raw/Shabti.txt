@@ -1,0 +1,66 @@
+topic_id: shabti
+topic_name: Shabti (Ushabti)
+category: artifact
+period: Middle Kingdom onward
+location: Various locations, Egypt
+
+---
+
+The ushabti (also called shabti or shawabti, with a number of variant spellings) was an ancient Egyptian funerary figurine. The Egyptological term is derived from the Egyptian word 𓅱𓈙𓃀𓏏𓏭𓀾 wšbtj, which replaced earlier 𓆷𓍯𓃀𓏏𓏭𓀾 šwbtj, perhaps the nisba of 𓈙𓍯𓃀𓆭 šwꜣb (persea tree).
+Ushabtis were placed in tombs among the grave goods and were intended to act as servants or minions for the deceased, should they be called upon to do manual labor in the afterlife. The figurines frequently carried a hoe on their shoulder and a basket on their backs, implying they were intended to farm for the dead. They typically featured hieroglyphic writing on the legs. They carried inscriptions asserting their readiness to answer the gods' summons to work.
+The practice of using ushabtis originated in the Old Kingdom of Egypt (c. 2600 to 2100 BC), with the use of life-sized reserve heads made from limestone, which were buried with the mummy. Most ushabtis were small, and many produced in multiples – they sometimes covered the floor around a sarcophagus. Exceptional ushabtis are larger, or were produced as a unique masterwork.
+Ushabtis were produced in large quantities throughout Egyptian eras. Alongside scarabs, they rank among the most common ancient Egyptian artifacts and frequently appear in museum exhibits.
+
+Etymology and usage of the terms
+The term shabti applies to these figures prior to the Twenty-first Dynasty of Egypt, but only after the end of the First Intermediate Period (c. 2181–2055 BCE), and really only to those figurines inscribed with Chapter Six of the Book of the Dead. Otherwise, they might better be defined by the generic term "funerary figurines".
+Shabtis were servant figures that carried out the tasks required of the deceased in the underworld. It was necessary for the owner's name to be inscribed on an ushabti, along with a phrase sending them to action, written in the hieratic script.
+The shawabti were a distinct class of funerary figurines within the area of Thebes during the New Kingdom.
+The term ushabti became prevalent after the 21st Dynasty and remained in use until the Ptolemaic Kingdom.
+It is thought by some that the term ushabti meant "follower" or "answerer" in Ancient Egyptian, because the figurine "answered" for the deceased person and performed all the routine chores of daily life for its master in the afterlife that the gods had planned for them, although it would be difficult to reconcile this derivation with the form shawabti.
+
+Inscriptions
+Ushabti inscriptions often contain the 6th chapter of the Book of the Dead, translated as:
+
+Illumine the Osiris [name of the deceased], whose word is truth. Hail, Shabti Figure! If the Osiris [name of the deceased] be decreed to do any of the work which is to be done in Khert-Neter, let everything which standeth in the way be removed from him – whether it be to plough the fields, or to fill the channels with water, or to carry sand from the East to the West. The Shabti Figure replieth: "I will do it, verily I am here when thou callest".
+(Example: the deceased Ramses would have been described as "Osiris Ramses").
+In rare cases different chapters of the Book of the Dead are written. Furthermore, ushabtis often mention the name and the titles of the owner, without the spells of the Book of the Dead.
+Before being inscribed on funerary figurines, the spell was written on some mid-Twelfth Dynasty coffins from Deir el-Bersha (about 1850 BC) and is known today as spell 472 of the Coffin Texts.
+
+Usage
+Mentioned first in spell 472 of the Coffin Texts, they were included in the grave goods of the dead as small figurines since the reign of Mentuhotep II of the 11th Dynasty. Some think that originally they may have symbolically replaced human sacrificial burials, called retainer sacrifices, a somewhat improbable theory as centuries had passed between the last known sacrificial burials and the appearance of the ushabtis. They were generally distinguished from other statuettes by being inscribed with the name of the deceased, his titles, and often with spell 472 of the Coffin Texts or the speech of the ushabti figure found in Chapter Six of the Book of the Dead.
+In the 18th Dynasty during the reign of Akhenaten, the figurines were inscribed with an offering addressed to the sun disk Aten, rather than the traditional speech of the ushabti figure. The ushabti was believed to magically animate after the dead had been judged, and work for the dead person as a substitute labourer in the fields of Osiris. From the New Kingdom onwards, it was often referred to as servant.
+From the 21st Dynasty on, ushabtis became common and numerous in graves. In some tombs the floor was covered with a great many ushabti figurines; in others the ushabtis were neatly packed into ushabti boxes. At times, several hundred ushabti were placed in a deceased Ancient Egyptian's tomb, but pharaohs had considerably more of these servants than commoners, and king Taharqa had more than a thousand. Some tombs contained overseer or 'reis' ushabtis holding a whip, which were responsible for groups of ten ushabti each (ten being a common administrative division, for example in the armies). These overseers became rare during the Late Period.
+The tomb of Tutankhamun had a large number of ushabtis of varying sizes, and most were ornate, with hieroglyph statements. They were divided into groups: some honored Osiriform gods, gold-foiled; some were more simple of wood, or faience.
+
+Shape and material
+Ushabtis were mostly mummiform, but during the Dynasty XVIII reign of Thutmose IV, they began to be fashioned as servants with baskets, sacks, and other agricultural tools. Some ushabtis were very ornate in form, and in colour, when made of enamel. They were also made of clay, wood and stone and early ones were sometimes made from wax. Later figurines were often made of less perishable materials: stone, terracotta, metal, glass and, most frequently, glazed earthenware (Egyptian faience). While ushabtis manufactured for the rich were often miniature works of art, the great mass of cheaply made ushabtis became standardised—made from single molds with little detail. The level of standardisation varied, a compositional and morphological study of faience ushabtis suggested that mass-production is an oversimplification of a complex process that may more accurately be described as batch-processing.
+
+See also
+Individual Ushabtis
+Ushabtis of Yuya
+
+Other Burial Figurines
+Dogū
+Haniwa
+Shikigami
+Stick shabti
+Terracotta Army
+Totem
+Wooden tomb model
+
+Notes
+References
+Sources
+Brier, Bob (1998). The Encyclopedia of Mummies. Checkmark Books. ISBN 978-0-8160-3906-7.
+Gale, R.; Gasson, P.; Hepper, N.; Killen, G. (2000). "Wood". In Nicholson, P.; Shaw, I. (eds.). Ancient Egyptian Materials and Technology. Cambridge University Press. pp. 334–371. ISBN 978-0521452571.
+James, T.G.H. (2000). "List of Objects". Tutankhamun. Photographs by Araldo de Luca. Friedman/Fairfax Publishers. pp. 316–319. ISBN 1-58663-032-6.
+Taylor, Richard (2000). "SHABTI (USHABTI, SHAWABTI)". Death and the Afterlife: a cultural encyclopedia. California: ABC-CLIO. pp. 320–321. ISBN 978-0-87436-939-7.
+
+Further reading
+Stewart, Harry M. (1995). Egyptian Shabtis. Princes Risborough. ISBN 978-0-7478-0301-0.
+Whelan, Paul (2007). Mere Scraps of Rough Wood?: 17th - 18th Dynasty Stick Shabtis in the Petrie Museum and Other Collections. London: Golden House. ISBN 978-1-906137-00-7.
+Whitford, Michelle F.; Wyatt-Spratt, Simon; Gore, Damian B.; Johnsson, Mattias T.; Power, Ronika K.; Rampe, Michael; Richards, Candace; Withford, Michael J. (October 2020). "Assessing the standardisation of Egyptian shabti manufacture via morphology and elemental analyses". Journal of Archaeological Science: Reports. 33 102541. Bibcode:2020JArSR..33j2541W. doi:10.1016/j.jasrep.2020.102541. S2CID 224873688.
+
+External links
+
+Official website of Ushabtis
