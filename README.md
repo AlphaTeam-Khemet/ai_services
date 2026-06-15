@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0725aac71cd5b505995bee6a2774b3458245b893
 # KHEMET AI Services
 
 This directory (`AI_services/`) contains the internal Python-based machine learning microservices for the KHEMET Egyptian artifact tourism platform.
@@ -76,3 +79,7 @@ docker-compose up --build cv-recognition chatbot-llm hieroglyph-translator voice
 
 **Important Note on Models:**
 Large model weights (like `.h5`, `.pt` files, and HuggingFace cache directories) are typically mounted as Docker volumes rather than baked into the Docker images. Ensure the weights are placed in the correct directories (e.g., `CV_Recognition/model/`, `hieroglyph_translator/model/`) before starting the containers.
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0725aac71cd5b505995bee6a2774b3458245b893
