@@ -17,6 +17,8 @@ logger = logging.getLogger("khemet.hieroglyph.pipeline")
 async def run_pipeline(
     image_bytes: bytes,
     context_hint: str | None = None,
+    min_confidence: float = 0.33,
+    reading_direction: str = "ltr",
 ) -> HieroglyphPipelineResponse:
     """Run the full hieroglyph detection + translation pipeline.
 
@@ -36,7 +38,7 @@ async def run_pipeline(
     logger.info("Pipeline start [image_id=%s]", image_id)
 
     # ── Stage 1: Detection ────────────────────────────────────────────────────
-    detection: DetectionResult = await detect_symbols(image_bytes)
+    detection: DetectionResult = await detect_symbols(image_bytes, min_confidence=min_confidence, reading_direction=reading_direction)
 
     # ── Stage 2: Early exit if no symbols detected ────────────────────────────
     if not detection.symbol_sequence:

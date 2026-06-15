@@ -84,10 +84,11 @@ def _load_model_with_compatibility(model_path: str):
         return tf.keras.models.load_model(patched_path, compile=False)
 
 
-_model = _load_model_with_compatibility(_MODEL_PATH)
-
 with open(_CLASS_NAMES_PATH, "r", encoding="utf-8") as f:
     _class_names: list[str] = json.load(f)
+
+_model = None
+_model_load_error: str | None = None
 
 
 def _shape_to_list(shape: Any) -> list[Any]:
@@ -99,6 +100,7 @@ def _shape_to_list(shape: Any) -> list[Any]:
 
 
 def _model_input_shape() -> list[Any]:
+    _ensure_model_loaded()
     shape = _model.input_shape
     if isinstance(shape, list):
         shape = shape[0]
@@ -106,6 +108,7 @@ def _model_input_shape() -> list[Any]:
 
 
 def _model_output_shape() -> list[Any]:
+    _ensure_model_loaded()
     shape = _model.output_shape
     if isinstance(shape, list):
         shape = shape[0]
@@ -119,54 +122,81 @@ def _iter_layers(layer):
 
 
 def _layer_class_names() -> list[str]:
+    _ensure_model_loaded()
     return [layer.__class__.__name__ for layer in _iter_layers(_model)]
 
 
-_LAYER_CLASS_NAMES = _layer_class_names()
-_HAS_INTERNAL_RESCALING = "Rescaling" in _LAYER_CLASS_NAMES
-_HAS_INTERNAL_CENTER_CROP = "CenterCrop" in _LAYER_CLASS_NAMES
-_INPUT_SHAPE = _model_input_shape()
-_OUTPUT_SHAPE = _model_output_shape()
-_INPUT_HEIGHT = int(_INPUT_SHAPE[1])
-_INPUT_WIDTH = int(_INPUT_SHAPE[2])
+def _ensure_model_loaded() -> None:
+    global _model, _model_load_error
 
-logger.info("Loaded artifact model from %s", _MODEL_PATH)
-logger.info("Model input shape: %s", _INPUT_SHAPE)
-logger.info("Model output shape: %s", _OUTPUT_SHAPE)
-logger.info("Loaded class_names order: %s", _class_names)
-logger.info(
-    "Internal preprocessing layers: rescaling=%s center_crop=%s",
-    _HAS_INTERNAL_RESCALING,
-    _HAS_INTERNAL_CENTER_CROP,
-)
+    if _model is not None:
+        return
+
+    if not os.path.isfile(_MODEL_PATH):
+        _model_load_error = f"Model file not found: {_MODEL_PATH}"
+        raise RuntimeError(_model_load_error)
+
+    try:
+        _model = _load_model_with_compatibility(_MODEL_PATH)
+        _model_load_error = None
+        logger.info("Loaded artifact model from %s", _MODEL_PATH)
+        logger.info("Model input shape: %s", _model_input_shape())
+        logger.info("Model output shape: %s", _model_output_shape())
+        logger.info("Loaded class_names order: %s", _class_names)
+        logger.info(
+            "Internal preprocessing layers: rescaling=%s center_crop=%s",
+            "Rescaling" in _layer_class_names(),
+            "CenterCrop" in _layer_class_names(),
+        )
+    except Exception as exc:
+        _model_load_error = str(exc)
+        _model = None
+        raise
 
 
 def is_model_ready() -> bool:
-    return os.path.isfile(_MODEL_PATH)
+    try:
+        _ensure_model_loaded()
+        return True
+    except Exception:
+        return False
 
 
 def get_model_info() -> dict:
+    ready = is_model_ready()
+    input_shape = _model_input_shape() if ready else None
+    output_shape = _model_output_shape() if ready else None
+    layer_class_names = _layer_class_names() if ready else []
+
     return {
         "model_path": _MODEL_PATH,
         "model_filename": _MODEL_FILENAME,
-        "model_input_shape": _INPUT_SHAPE,
-        "model_output_shape": _OUTPUT_SHAPE,
+        "model_ready": ready,
+        "model_load_error": _model_load_error,
+        "model_input_shape": input_shape,
+        "model_output_shape": output_shape,
         "number_of_classes": len(_class_names),
         "class_names": _class_names,
-        "has_internal_rescaling": _HAS_INTERNAL_RESCALING,
-        "has_internal_center_crop": _HAS_INTERNAL_CENTER_CROP,
-        "layer_classes": _LAYER_CLASS_NAMES,
+        "has_internal_rescaling": "Rescaling" in layer_class_names,
+        "has_internal_center_crop": "CenterCrop" in layer_class_names,
+        "layer_classes": layer_class_names,
     }
 
 
 def _preprocess_image(image_bytes: bytes) -> np.ndarray:
+    _ensure_model_loaded()
+    input_shape = _model_input_shape()
+    input_height = int(input_shape[1])
+    input_width = int(input_shape[2])
+    has_internal_rescaling = "Rescaling" in _layer_class_names()
+
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
-    image = image.resize((_INPUT_WIDTH, _INPUT_HEIGHT))
+    image = image.resize((input_width, input_height))
 
     img_array = np.asarray(image, dtype=np.float32)
     img_array = np.expand_dims(img_array, axis=0)
 
-    if not _HAS_INTERNAL_RESCALING:
+    if not has_internal_rescaling:
         img_array = img_array / 255.0
 
     logger.info("Input image shape before prediction: %s", img_array.shape)
@@ -190,6 +220,7 @@ def _top_predictions(probabilities: np.ndarray, limit: int = 3) -> list[dict]:
 
 
 def predict_image(image_bytes: bytes) -> dict:
+    _ensure_model_loaded()
     img_array = _preprocess_image(image_bytes)
     predictions = _model.predict(img_array, verbose=0)
     probabilities = np.asarray(predictions[0], dtype=np.float32)

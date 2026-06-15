@@ -19,3 +19,7 @@ uvicorn[standard]>=0.30.0
 pydantic>=2.8.0
 
 # NOTE: langchain was removed — it is not used anywhere in this service.
+
+# ── Voice Tour Guide ──────────────────────────────────────────────────────────
+# REMOVED — voice narration has been moved to AI_services/voice_tour_guide/
+# elevenlabs, sqlalchemy, httpx are no longer needed here.

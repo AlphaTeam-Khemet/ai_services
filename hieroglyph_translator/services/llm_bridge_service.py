@@ -53,6 +53,12 @@ async def request_translation(
         data = response.json()
 
     return TranslationResponse(
+        detected_glyphs=data.get("detected_glyphs", []),
+        combined_phonetics=data.get("combined_phonetics", ""),
         translation=data.get("translation", ""),
         confidence_note=data.get("confidence_note", ""),
+        cultural_context=data.get("cultural_context", ""),
+        transliteration=data.get("transliteration", ""),
+        type=data.get("type", ""),
+        unknown_codes=data.get("unknown_codes", [])
     )

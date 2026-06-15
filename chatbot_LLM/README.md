@@ -48,25 +48,25 @@
 
 ---
 
-## 🔑 Required environment variable
+## 🔑 Required environment variables
 
-Before running, set your Groq API key:
+Before running, export the following keys (or add them to the root `.env` file):
 
 ```bash
-# Linux / macOS
+# Required — Groq LLM API key (RAG answers + narration text generation)
 export GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
-# Windows (PowerShell)
-$env:GROQ_API_KEY="gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+# Required for Voice Tour Guide audio (optional — service degrades gracefully without these)
+export ELEVENLABS_API_KEY=sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export ELEVENLABS_VOICE_EN=<english-voice-id>   # ElevenLabs voice ID for English TTS
+export ELEVENLABS_VOICE_AR=<arabic-voice-id>    # ElevenLabs voice ID for Arabic TTS
 ```
 
-Or add it to the `.env` file in the project root:
+Get a free Groq key at 👉 [console.groq.com/keys](https://console.groq.com/keys)  
+Get a free ElevenLabs key at 👉 [elevenlabs.io](https://elevenlabs.io)
 
-```
-GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-Get a free key at 👉 [console.groq.com/keys](https://console.groq.com/keys)
+> [!NOTE]
+> If `ELEVENLABS_API_KEY` is not set, the `/narrate` endpoint still works — it returns `narration_text` with `audio_url: null`.
 
 ---
 
@@ -90,12 +90,22 @@ chatbot_LLM/
 │   └── rag_engine.py               ← Groq client + ChromaDB, handles RAG logic
 │
 ├── models/
+│   ├── db_models.py                ← SQLAlchemy model: ArtifactNarration
 │   └── vectordb/                   ← ChromaDB persistent storage (auto-generated)
 │
+├── routers/
+│   └── narration.py                ← POST /api/artifacts/{id}/narrate endpoint
+│
+├── services/
+│   └── voice_service.py            ← Groq narration + ElevenLabs TTS pipeline
+│
+├── scripts/
+│   └── pregenerate_narrations.py   ← Batch pre-generate narrations for all monuments
+│
+├── database.py                     ← SQLite session / engine for narration cache
 ├── main.py                         ← FastAPI server entry point
 ├── requirements.txt                ← Python dependencies
 ├── Dockerfile                      ← container build file
-├── docker-compose.yml              ← one-command deployment
 └── README.md                       ← this file
 ```
 
@@ -304,6 +314,57 @@ For the **computer vision team**: takes a detected monument name (English) + a q
   "monument": "Great Pyramid of Giza",
   "latency_ms": 980.1
 }
+```
+
+---
+
+### POST /api/artifacts/{artifact_id}/narrate
+
+**Voice Tour Guide** — Generate an AI narration for an artifact and convert it to speech.
+
+Narrations are cached in the local SQLite database (`khemet.db`). Subsequent calls for the same `artifact_id` + `language` pair return the cached result instantly with `cached: true`.
+
+**Request body:**
+
+```json
+{
+  "language": "en",
+  "artifact_name": "Mask of Tutankhamun",
+  "artifact_description": "Golden burial mask of the pharaoh Tutankhamun."
+}
+```
+
+`language` must be `"en"` or `"ar"`.
+
+**Response (first call — generates narration):**
+
+```json
+{
+  "narration_text": "Before you stands one of the most iconic treasures of ancient Egypt...",
+  "audio_url": "/static/audio/narration_<id>_en.mp3",
+  "cached": false
+}
+```
+
+**Response (subsequent calls — cache hit):**
+
+```json
+{
+  "narration_text": "Before you stands one of the most iconic treasures of ancient Egypt...",
+  "audio_url": "/static/audio/narration_<id>_en.mp3",
+  "cached": true
+}
+```
+
+`audio_url` is `null` if `ELEVENLABS_API_KEY` is not set or TTS fails. The service still returns `narration_text` in that case.
+
+**curl example:**
+
+```bash
+curl -X POST http://localhost:8001/api/artifacts/test-uuid-123/narrate \
+  -H "Content-Type: application/json" \
+  -d '{"language": "en", "artifact_name": "Mask of Tutankhamun",
+       "artifact_description": "Golden burial mask of the pharaoh Tutankhamun."}'
 ```
 
 ---

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # KHEMET AI Services
 
 This directory (`AI_services/`) contains the internal Python-based machine learning microservices for the KHEMET Egyptian artifact tourism platform.
@@ -27,12 +27,22 @@ All services are built with **FastAPI** and run completely locally using Docker.
 
 ### 3. `hieroglyph_translator/` (Hieroglyph Detection and Translation)
 *   **Purpose:** Detects Egyptian hieroglyphs in images and translates them into English.
-*   **Architecture:** A two-stage pipeline.
-    *   **Stage 1 (Detection):** Uses a local YOLOv11 model (`best_V2.pt`) to detect bounding boxes and classify 805 distinct Gardiner codes. Sorts symbols into reading order (left-to-right, top-to-bottom).
-    *   **Stage 2 (Translation):** Forwards the ordered Gardiner codes to the `chatbot_LLM` service for English translation.
+*   **Architecture:** A three-stage pipeline.
+    *   **Stage 1 (Detection & Sorting):** Uses a local YOLOv11 model (`best_V2.pt`) to detect bounding boxes for Gardiner codes. It automatically deduplicates overlapping predictions (keeping the highest confidence) and spatially sorts symbols dynamically (LTR or RTL).
+    *   **Stage 2 (Knowledge Base):** Cross-references codes against `gardiner_master.json` in the `chatbot_LLM` to extract raw English meanings and phonetics.
+    *   **Stage 3 (LLM Refinement):** The `chatbot_LLM` service analyzes the sequence using Llama 3 to identify Royal Titles, Deity Names, or Common Phrases, outputting structured JSON with transliterations and cultural context.
 *   **Key Endpoints:**
     *   `POST /api/v1/hieroglyph/translate`: Runs the full detection + translation pipeline.
     *   `POST /api/v1/hieroglyph/detect-only`: Runs only YOLO detection.
+
+### 4. `voice_tour_guide/` (AI Audio Narration)
+*   **Purpose:** Generates immersive, emotion-rich audio narrations for artifacts.
+*   **Architecture:**
+    *   **Generation:** Uses Groq (Llama 3) to rewrite artifact descriptions into compelling tour guide narratives complete with emotional cues (e.g., `[sighs]`).
+    *   **Synthesis:** Streams the narrative to ElevenLabs for lifelike multilingual TTS (English & Arabic).
+    *   **Fallback:** Uses Coqui TTS locally if external APIs fail.
+*   **Key Endpoints:**
+    *   `POST /api/v1/voice/narrate`: Generates and caches the audio file.
 
 ## Internal Architecture & Communication flow
 
@@ -44,12 +54,13 @@ graph TD
         Backend -->|POST /predict| CV_Recognition
         Backend -->|POST /api/v1/hieroglyph/translate| Hieroglyph_Translator
         Backend -->|POST /ask, /describe| Chatbot_LLM
+        Backend -->|POST /api/v1/voice/narrate| Voice_Tour_Guide
 
         Hieroglyph_Translator -->|POST /api/v1/llm/translate-hieroglyphs| Chatbot_LLM
     end
 
     classDef service fill:#f9f,stroke:#333,stroke-width:2px;
-    class CV_Recognition,Chatbot_LLM,Hieroglyph_Translator service;
+    class CV_Recognition,Chatbot_LLM,Hieroglyph_Translator,Voice_Tour_Guide service;
 ```
 
 ## Running the Services
@@ -60,12 +71,8 @@ To build and run all AI services:
 
 ```bash
 cd .. # Go to project root
-docker-compose up --build cv-recognition chatbot-llm hieroglyph-translator
+docker-compose up --build cv-recognition chatbot-llm hieroglyph-translator voice-tour-guide
 ```
 
 **Important Note on Models:**
 Large model weights (like `.h5`, `.pt` files, and HuggingFace cache directories) are typically mounted as Docker volumes rather than baked into the Docker images. Ensure the weights are placed in the correct directories (e.g., `CV_Recognition/model/`, `hieroglyph_translator/model/`) before starting the containers.
-=======
-# ai_services
-All AI services in one place 
->>>>>>> c127e323756cf9b26a91a073d5cbd08c70c36089

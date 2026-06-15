@@ -14,8 +14,8 @@ Run:
     uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 """
 
-import logging
 import os
+import signal
 import sys
 import time
 from contextlib import asynccontextmanager
@@ -25,35 +25,36 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-# ── Logging setup ─────────────────────────────────────────────────────────────
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)-8s | %(name)s | %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-)
-logger = logging.getLogger("khemet.api")
+from middleware.request_id import RequestIDMiddleware
+from utils.logger import get_logger
+from utils.startup import validate_env
+
+logger = get_logger(__name__)
 
 # ── Ensure the project root is importable ───────────────────────────────
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, SCRIPT_DIR)
 
 from core.rag_engine import RAGEngine  # noqa: E402
+from core.hieroglyph_translator import translate_sequence  # noqa: E402
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """
-    Lifespan hook: loads RAGEngine (ChromaDB + embedder + Groq client).
+    Lifespan hook: validates env then loads RAGEngine
+    (ChromaDB + embedder + Groq client).
     """
-    logger.info("🚀 Starting KHEMET Egyptian RAG server ...")
+    validate_env()
+    logger.info("Starting KHEMET Egyptian RAG server")
     t0 = time.time()
 
-    logger.info("Loading RAG engine ...")
+    logger.info("Loading RAG engine")
     app.state.engine = RAGEngine()
-    logger.info("✅ RAG engine ready in %.1fs\n", time.time() - t0)
+    logger.info("RAG engine ready", extra={"elapsed_s": round(time.time() - t0, 1)})
 
     yield
-    logger.info("🛑 Shutting down KHEMET Egyptian RAG server.")
+    logger.info("Shutting down KHEMET Egyptian RAG server")
 
 
 # ── FastAPI app ───────────────────────────────────────────────────────────────
@@ -64,18 +65,33 @@ app = FastAPI(
     ),
     version="3.0.0",
     lifespan=lifespan,
+    # Disable interactive docs in production
+    docs_url="/docs" if os.getenv("ENV") != "production" else None,
+    redoc_url="/redoc" if os.getenv("ENV") != "production" else None,
 )
 
-# ── CORS ──────────────────────────────────────────────────────────────────────
-allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").split(",")
+# ── Middleware ────────────────────────────────────────────────────────────────
 
+# Request ID — must be registered first
+app.add_middleware(RequestIDMiddleware)
+
+# CORS — read from env, never hardcode *
+allowed_origins = [
+    o.strip()
+    for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
+    if o.strip()
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["POST", "GET", "OPTIONS"],
     allow_headers=["*"],
 )
+
+# ── NOTE ─────────────────────────────────────────────────────────────────────
+# Voice narration has been moved to AI_services/voice_tour_guide (port 8003).
+# This service handles only RAG (Retrieval-Augmented Generation) queries.
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -118,6 +134,15 @@ class DescribeResponse(BaseModel):
     description: str
 
 
+
+class StoryRequest(BaseModel):
+    artifact_name: str = Field(..., description="Name of the artifact")
+    base_description: str = Field(..., description="Current dry description")
+    language: str = Field(..., description="'en' or 'ar'")
+
+class StoryResponse(BaseModel):
+    story: str
+
 class IdentifyRequest(BaseModel):
     monument_name: str = Field(..., description="Monument name detected by the CV model (English)")
     question: str = Field(..., description="Question about the identified monument.")
@@ -147,9 +172,25 @@ class TranslateHieroglyphsRequest(BaseModel):
     )
 
 
+class GlyphInfo(BaseModel):
+    code: str
+    english_name: Optional[str] = None
+    phonetic: Optional[str] = None
+    unicode: Optional[str] = None
+    meaning: Optional[str] = None
+    category: Optional[str] = None
+    determinative: Optional[bool] = None
+    found: bool
+
 class TranslateHieroglyphsResponse(BaseModel):
+    detected_glyphs: list[GlyphInfo] = []
+    combined_phonetics: str = ""
     translation: str = Field(..., description="English translation of the symbol sequence")
     confidence_note: str = Field(..., description="LLM confidence or caveat note")
+    cultural_context: str = ""
+    transliteration: Optional[str] = None
+    type: Optional[str] = None
+    unknown_codes: list[str] = []
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -169,9 +210,12 @@ async def ask_question(req: AskRequest, request: Request):
     latency_ms = (time.time() - t0) * 1000
 
     logger.info(
-        "POST /ask | latency=%.0fms | query='%s'",
-        latency_ms,
-        req.question[:60],
+        "POST /ask",
+        extra={
+            "request_id": getattr(request.state, "request_id", "unknown"),
+            "latency_ms": round(latency_ms),
+            "query_preview": req.question[:60],
+        },
     )
 
     sources = [
@@ -199,10 +243,51 @@ async def describe_monument(req: DescribeRequest, request: Request):
 
     description = engine.describe_monument(req.monument_name)
 
-    logger.info("POST /describe | monument='%s'", req.monument_name)
+    logger.info(
+        "POST /describe",
+        extra={
+            "request_id": getattr(request.state, "request_id", "unknown"),
+            "monument": req.monument_name,
+        },
+    )
 
     return DescribeResponse(description=description)
 
+
+
+@app.post("/story", response_model=StoryResponse)
+async def generate_story(req: StoryRequest, request: Request):
+    """Rewrite a dry description into an engaging tour guide narrative."""
+    engine: RAGEngine = getattr(request.app.state, "engine", None)
+    if engine is None:
+        raise HTTPException(status_code=503, detail="Engine not initialised yet.")
+
+    prompt_ar = (
+        f"أنت مرشد سياحي خبير في المتحف المصري الكبير. "
+        f"قم بإعادة كتابة الوصف التالي عن '{req.artifact_name}' إلى قصة مشوقة ومثيرة بصوت مرشد سياحي (فقرة أو فقرتين كحد أقصى). "
+        f"أنت تتحدث في ملف صوتي. استخدم المؤثرات الصوتية الخاصة بنظام ElevenLabs بوضعها بين قوسين معقوفين (مثل: [تنهد]، [يضحك بخفة]، [يتوقف قليلاً للتشويق]). "
+        f"تحذير هام جدًا: يجب أن تركز فقط على هذه القطعة الأثرية. لا تخرج عن السياق ولا تخترع معلومات غير موجودة في الوصف الأساسي أو السياق المسترجع. لا تتحدث عن تاريخ مصر العام. "
+        f"الوصف الأساسي: {req.base_description}"
+    )
+    prompt_en = (
+        f"You are an expert tour guide at the Grand Egyptian Museum. "
+        f"Rewrite this description of '{req.artifact_name}' into a captivating, immersive short story (1-2 paragraphs max) that feels like a live tour guide speaking to visitors. "
+        f"CRITICAL RULES:\n"
+        f"1. You MUST sprinkle in 'expression cues' in brackets to make the performance lifelike! Examples: [laughs softly], [sighs], [pauses for dramatic effect]. Use them naturally.\n"
+        f"2. DO NOT go out of context. Focus STRICTLY on the artifact itself.\n"
+        f"3. DO NOT invent new facts. Use only the base description and the retrieved context.\n"
+        f"4. DO NOT talk about general Egyptian history or unrelated topics.\n"
+        f"Base description: {req.base_description}"
+    )
+
+    question = prompt_en if req.language == "en" else prompt_ar
+
+    # Retrieve context specifically about the artifact to enrich the story!
+    chunks = engine.retrieve(req.artifact_name)
+    story = engine.answer(question, chunks=chunks, max_tokens=300)
+
+    logger.info("POST /story generated narrative for %s", req.artifact_name)
+    return StoryResponse(story=story)
 
 @app.post("/identify", response_model=IdentifyResponse)
 async def identify_monument(req: IdentifyRequest, request: Request):
@@ -223,9 +308,12 @@ async def identify_monument(req: IdentifyRequest, request: Request):
     latency_ms = (time.time() - t0) * 1000
 
     logger.info(
-        "POST /identify | monument='%s' | latency=%.0fms",
-        req.monument_name,
-        latency_ms,
+        "POST /identify",
+        extra={
+            "request_id": getattr(request.state, "request_id", "unknown"),
+            "monument": req.monument_name,
+            "latency_ms": round(latency_ms),
+        },
     )
 
     return IdentifyResponse(
@@ -239,58 +327,115 @@ async def identify_monument(req: IdentifyRequest, request: Request):
 async def translate_hieroglyphs(
     req: TranslateHieroglyphsRequest, request: Request
 ):
-    """Translate a sequence of Gardiner hieroglyph codes into English.
-
-    Called internally by the hieroglyph_translator service — not exposed to clients.
-    """
     engine: RAGEngine = getattr(request.app.state, "engine", None)
     if engine is None:
         raise HTTPException(status_code=503, detail="Engine not initialised yet.")
 
-    codes_str = ", ".join(req.symbol_sequence)
+    filtered_codes = req.symbol_sequence
+
+    # 1. Map to gardiner_master.json
+    resolved = translate_sequence(filtered_codes)
+    glyphs        = resolved["glyphs"]
+    combined      = resolved["combined_phonetics"]
+    meanings      = resolved["meanings"]
+    unknown_codes = resolved["unknown_codes"]
+
+    known_glyphs = [g for g in glyphs if g["found"]]
+    if not known_glyphs:
+        return TranslateHieroglyphsResponse(
+            translation="Uncertain translation",
+            confidence_note="None of the provided codes were found in the master list.",
+            unknown_codes=unknown_codes
+        )
+
+    glyph_summary_lines = []
+    for g in known_glyphs:
+        glyph_summary_lines.append(f"- {g['code']} ({g['english_name']}, phonetic: {g['phonetic'] or '?'})")
+    
+    glyph_details = "\n".join(glyph_summary_lines)
+
     context_str = req.context_hint or "general hieroglyphic inscription"
+    
+    prompt = f"""You are an expert Egyptologist with deep knowledge of ancient Egyptian hieroglyphs.
+Detected hieroglyphs in correct reading order:
+{glyph_details}
 
-    prompt = (
-        f"You are an expert Egyptologist. Translate the following sequence of "
-        f"Egyptian hieroglyph Gardiner codes into English. "
-        f"Codes: {codes_str}. "
-        f"Context: {context_str}. "
-        f"Provide a concise translation and any relevant notes. "
-        f"Respond in JSON with exactly two keys: \\'translation\\' and \\'confidence_note\\'."
-    )
+Combined phonetics: {combined}
+User Context: {context_str}
 
-    messages = [
-        {"role": "system", "content": "You are KHEMET, an expert Egyptologist at the Grand Egyptian Museum."},
-        {"role": "user", "content": prompt},
-    ]
+Instructions:
+1. Ignore any glyphs that are likely false positives based on context.
+2. Check if this sequence matches any known Egyptian royal titles, deity names, or common phrases.
+3. If you recognize a known phrase or name, use that.
+4. The 'translation' field MUST be the exact, literal English meaning of the word (e.g. 'Wood', 'Things', 'House', 'King'). NEVER put the Egyptian pronunciation/phonetics in the translation field! If you are translating to Arabic because of the context, provide the Arabic meaning.
+5. The 'transliteration' field MUST be the Egyptian phonetic pronunciation (e.g. 'ḫt', 'pr', 'nswt').
+
+Respond ONLY in this exact JSON format:
+{{
+  "translation": "exact English/Arabic meaning of the word",
+  "transliteration": "Egyptian phonetic spelling/pronunciation",  
+  "type": "royal title / deity name / common phrase / uncertain",
+  "confidence": "high / medium / low",
+  "context": "one sentence of cultural context explaining the symbols"
+}}"""
 
     try:
         response = engine.groq_client.chat.completions.create(
             model=engine.llm_model,
-            messages=messages,
-            max_tokens=400,
-            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": "You are an expert Egyptologist. You respond only with the requested JSON."},
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=300,
+            temperature=0.2,
         )
         raw = response.choices[0].message.content.strip()
-        import json as _json
-        data = _json.loads(raw)
-        translation = data.get("translation", raw)
-        confidence_note = data.get(
-            "confidence_note",
-            "Translation generated by LLM based on Gardiner sign list.",
-        )
-    except Exception as exc:
-        logger.error("Hieroglyph translation failed: %s", exc)
-        raise HTTPException(status_code=500, detail=f"Translation failed: {exc}")
 
-    logger.info(
-        "POST /api/v1/llm/translate-hieroglyphs | codes=%s",
-        codes_str[:80],
-    )
+        if raw.startswith("```"):
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+        raw = raw.strip()
+
+        import json as _json
+        llm_data = _json.loads(raw)
+        translation = llm_data.get("translation", "").strip()
+        cultural_context    = llm_data.get("context",     "").strip()
+        transliteration     = llm_data.get("transliteration", "").strip()
+        type_str            = llm_data.get("type", "").strip()
+        confidence_str      = llm_data.get("confidence", "").strip()
+
+    except Exception as exc:
+        translation = "Uncertain translation (error)"
+        confidence_str = "low"
+        cultural_context = str(exc)
+        transliteration = ""
+        type_str = ""
+
+    # Convert glyphs to response objects
+    detected_glyphs = [
+        GlyphInfo(
+            code=g["code"],
+            english_name=g["english_name"],
+            phonetic=g["phonetic"],
+            unicode=g["unicode"],
+            meaning=g["meaning"],
+            category=g["category"],
+            determinative=g["determinative"],
+            found=g["found"],
+        )
+        for g in glyphs
+    ]
 
     return TranslateHieroglyphsResponse(
+        detected_glyphs=detected_glyphs,
+        combined_phonetics=combined,
         translation=translation,
-        confidence_note=confidence_note,
+        confidence_note=confidence_str,
+        cultural_context=cultural_context,
+        transliteration=transliteration,
+        type=type_str,
+        unknown_codes=unknown_codes
     )
 
 
@@ -309,6 +454,16 @@ async def health_check(request: Request):
     )
 
 
+# ── Graceful Shutdown ─────────────────────────────────────────────────────────
+def _handle_shutdown(signum, frame):
+    logger.info("Shutdown signal received", extra={"signal": signum})
+    sys.exit(0)
+
+
+signal.signal(signal.SIGTERM, _handle_shutdown)
+signal.signal(signal.SIGINT, _handle_shutdown)
+
+
 # ── Run directly ──────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     import uvicorn
@@ -318,4 +473,5 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=8001,
         reload=False,
+        access_log=False,  # Logging is handled via structured middleware
     )

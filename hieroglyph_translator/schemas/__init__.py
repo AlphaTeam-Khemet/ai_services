@@ -40,13 +40,26 @@ class TranslationRequest(BaseModel):
     )
 
 
+class GlyphInfo(BaseModel):
+    code: str
+    english_name: str | None = None
+    phonetic: str | None = None
+    unicode: str | None = None
+    meaning: str | None = None
+    category: str | None = None
+    determinative: bool | None = None
+    found: bool
+
 class TranslationResponse(BaseModel):
     """Output of the LLM translation stage."""
-
+    detected_glyphs: list[GlyphInfo] = Field(default_factory=list)
+    combined_phonetics: str = ""
     translation: str = Field(..., description="English translation of the symbol sequence")
-    confidence_note: str = Field(
-        ..., description="Confidence or caveat note from the LLM"
-    )
+    confidence_note: str = Field(..., description="Confidence or caveat note from the LLM")
+    cultural_context: str = ""
+    transliteration: str | None = None
+    type: str | None = None
+    unknown_codes: list[str] = Field(default_factory=list)
 
 
 class HieroglyphPipelineResponse(BaseModel):

@@ -41,21 +41,27 @@ def load_model() -> None:
     logger.info("✅ YOLO model loaded — %d classes", len(_model.names))
 
 
-def _run_inference(image_bytes: bytes) -> DetectionResult:
-    """Synchronous YOLO inference.  Must be wrapped with asyncio.to_thread()."""
+def sort_glyphs_by_position(symbols: list[DetectedSymbol], reading_direction: str = "ltr") -> list[DetectedSymbol]:
+    """Sort glyphs spatially based on bounding boxes. Top to bottom, then Left/Right."""
+    if reading_direction == "rtl":
+        return sorted(symbols, key=lambda s: (s.bbox[1], -s.bbox[0]))
+    else:
+        return sorted(symbols, key=lambda s: (s.bbox[1], s.bbox[0]))
+
+def _run_inference(image_bytes: bytes, min_confidence: float = 0.33, reading_direction: str = "ltr") -> DetectionResult:
+    """Synchronous YOLO inference. Must be wrapped with asyncio.to_thread()."""
     global _model
     if _model is None:
         load_model()
 
-    conf_threshold = float(os.getenv("YOLO_CONF_THRESHOLD", "0.35"))
-
-    # Decode bytes → PIL image
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     img_w, img_h = image.size
 
-    results = _model(image, conf=conf_threshold, verbose=False)
+    # Always use a low threshold for the raw YOLO call so we can deduplicate properly,
+    # then filter strictly using min_confidence
+    results = _model(image, conf=0.10, verbose=False)
 
-    symbols: list[DetectedSymbol] = []
+    raw_symbols: list[DetectedSymbol] = []
     for result in results:
         boxes = result.boxes
         if boxes is None:
@@ -65,16 +71,13 @@ def _run_inference(image_bytes: bytes) -> DetectionResult:
             gardiner_code: str = result.names[cls_id]
             confidence = float(box.conf[0])
 
-            # Absolute pixel coords → normalised [0, 1]
-            x1, y1, x2, y2 = box.xyxy[0].tolist()
-            bbox = [
-                x1 / img_w,
-                y1 / img_h,
-                x2 / img_w,
-                y2 / img_h,
-            ]
+            if confidence < min_confidence:
+                continue
 
-            symbols.append(
+            x1, y1, x2, y2 = box.xyxy[0].tolist()
+            bbox = [x1 / img_w, y1 / img_h, x2 / img_w, y2 / img_h]
+
+            raw_symbols.append(
                 DetectedSymbol(
                     gardiner_code=gardiner_code,
                     label=get_symbol_label(gardiner_code),
@@ -83,26 +86,37 @@ def _run_inference(image_bytes: bytes) -> DetectionResult:
                 )
             )
 
-    # Sort into reading order (left→right, top→bottom)
-    symbols = sort_symbols_reading_order(symbols)
+    # Sort spatially first
+    sorted_symbols = sort_glyphs_by_position(raw_symbols, reading_direction)
+
+    # Deduplicate: Keep highest confidence detection per unique code, preserving order
+    seen = {}
+    symbols: list[DetectedSymbol] = []
+    
+    # Pass 1: Find max confidence for each code
+    max_confs = {}
+    for s in sorted_symbols:
+        if s.gardiner_code not in max_confs or s.confidence > max_confs[s.gardiner_code]:
+            max_confs[s.gardiner_code] = s.confidence
+
+    # Pass 2: Keep only the symbol if it is the max confidence one (and only keep it once)
+    for s in sorted_symbols:
+        if s.gardiner_code not in seen and s.confidence >= max_confs[s.gardiner_code]:
+            seen[s.gardiner_code] = True
+            symbols.append(s)
+
     symbol_sequence = [s.gardiner_code for s in symbols]
 
     logger.info(
-        "Detection complete: %d symbols detected (conf≥%.2f)",
+        "Detection complete: %d symbols detected (conf≥%.2f) - Reading: %s",
         len(symbols),
-        conf_threshold,
+        min_confidence,
+        reading_direction
     )
 
     return DetectionResult(symbols=symbols, symbol_sequence=symbol_sequence)
 
 
-async def detect_symbols(image_bytes: bytes) -> DetectionResult:
-    """Run YOLO detection asynchronously (offloads blocking call to a thread).
-
-    Args:
-        image_bytes: Raw image bytes (JPEG / PNG / WebP).
-
-    Returns:
-        :class:`~schemas.DetectionResult` with detected symbols in reading order.
-    """
-    return await asyncio.to_thread(_run_inference, image_bytes)
+async def detect_symbols(image_bytes: bytes, min_confidence: float = 0.33, reading_direction: str = "ltr") -> DetectionResult:
+    """Run YOLO detection asynchronously."""
+    return await asyncio.to_thread(_run_inference, image_bytes, min_confidence, reading_direction)

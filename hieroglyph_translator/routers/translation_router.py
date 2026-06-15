@@ -23,6 +23,8 @@ router = APIRouter(tags=["hieroglyph"])
 async def translate(
     image: UploadFile = File(..., description="Hieroglyph image (JPEG/PNG/WebP)"),
     context_hint: str | None = Form(None, description="Optional context, e.g. 'tomb inscription'"),
+    min_confidence: float = Form(0.33, description="Minimum confidence threshold"),
+    reading_direction: str = Form("ltr", description="Reading direction ('ltr' or 'rtl')"),
 ) -> HieroglyphPipelineResponse:
     """Full pipeline: YOLO detection → LLM translation.
 
@@ -43,7 +45,7 @@ async def translate(
         if not image_bytes:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
 
-        result = await run_pipeline(image_bytes, context_hint=context_hint)
+        result = await run_pipeline(image_bytes, context_hint=context_hint, min_confidence=min_confidence, reading_direction=reading_direction)
         return result
 
     except HTTPException:
