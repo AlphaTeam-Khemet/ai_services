@@ -68,3 +68,11 @@ This service is designed to be run as part of the broader KHEMET `docker-compose
 *   **No External APIs:** All inference (both YOLO and LLM) happens locally within the Docker network.
 *   **Client Communication:** Mobile/Web clients **do not** call this service directly. They communicate with the Node.js `backend`, which acts as an API gateway and proxies requests to this service.
 *   **Gardiner Classes:** The system supports 805 distinct Gardiner hieroglyph classes, mapped in `utils/gardiner_lookup.py`.
+
+## Production Hardening & Middleware
+
+This service includes enterprise-grade architectural improvements for production:
+*   **UUID Request Tracing**: Every request is tagged with a UUID by `middleware/request_id.py` for distributed tracing.
+*   **Structured Logging**: Utilizes JSON-formatted logs for robust monitoring.
+*   **Graceful Shutdown**: Implements safe termination hooks to prevent data corruption during container stops.
+*   **Environment & Resource Validation**: Ensures required variables and YOLO weights are mounted correctly before boot.

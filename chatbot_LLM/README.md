@@ -18,9 +18,8 @@
 
 **This service connects with:**
 
-- 🖼️ A **computer vision** module that identifies Egyptian monuments from images
-- 🌐 A **frontend web application** that displays answers to users
-- 📱 Any **mobile or desktop client** via the REST API
+- 🪨 The **Hieroglyph Translator** service (to provide context-aware LLM translations for Gardiner codes)
+- 🌐 The **Node.js backend gateway** which proxies requests from frontend/mobile clients
 
 **Key technologies:**
 
@@ -55,18 +54,9 @@ Before running, export the following keys (or add them to the root `.env` file):
 ```bash
 # Required — Groq LLM API key (RAG answers + narration text generation)
 export GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-
-# Required for Voice Tour Guide audio (optional — service degrades gracefully without these)
-export ELEVENLABS_API_KEY=sk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-export ELEVENLABS_VOICE_EN=<english-voice-id>   # ElevenLabs voice ID for English TTS
-export ELEVENLABS_VOICE_AR=<arabic-voice-id>    # ElevenLabs voice ID for Arabic TTS
 ```
 
 Get a free Groq key at 👉 [console.groq.com/keys](https://console.groq.com/keys)  
-Get a free ElevenLabs key at 👉 [elevenlabs.io](https://elevenlabs.io)
-
-> [!NOTE]
-> If `ELEVENLABS_API_KEY` is not set, the `/narrate` endpoint still works — it returns `narration_text` with `audio_url: null`.
 
 ---
 
@@ -90,19 +80,8 @@ chatbot_LLM/
 │   └── rag_engine.py               ← Groq client + ChromaDB, handles RAG logic
 │
 ├── models/
-│   ├── db_models.py                ← SQLAlchemy model: ArtifactNarration
 │   └── vectordb/                   ← ChromaDB persistent storage (auto-generated)
 │
-├── routers/
-│   └── narration.py                ← POST /api/artifacts/{id}/narrate endpoint
-│
-├── services/
-│   └── voice_service.py            ← Groq narration + ElevenLabs TTS pipeline
-│
-├── scripts/
-│   └── pregenerate_narrations.py   ← Batch pre-generate narrations for all monuments
-│
-├── database.py                     ← SQLite session / engine for narration cache
 ├── main.py                         ← FastAPI server entry point
 ├── requirements.txt                ← Python dependencies
 ├── Dockerfile                      ← container build file
@@ -155,7 +134,7 @@ export GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ### Step 4: Prepare the data
 
 ```bash
-python scripts/step1_prepare_data.py
+python pipeline/build_chunks.py
 ```
 
 **Output:** Creates `data/chunks/all_chunks.json` with ~5,493 text chunks from 70 Wikipedia articles.
@@ -165,7 +144,7 @@ python scripts/step1_prepare_data.py
 ### Step 5: Build the vector database
 
 ```bash
-python scripts/step2_build_vectordb.py
+python pipeline/build_vectordb.py
 ```
 
 **Output:** Creates `models/vectordb/` with embedded vectors for all chunks. Takes ~20 seconds on CPU.
@@ -318,56 +297,7 @@ For the **computer vision team**: takes a detected monument name (English) + a q
 
 ---
 
-### POST /api/artifacts/{artifact_id}/narrate
 
-**Voice Tour Guide** — Generate an AI narration for an artifact and convert it to speech.
-
-Narrations are cached in the local SQLite database (`khemet.db`). Subsequent calls for the same `artifact_id` + `language` pair return the cached result instantly with `cached: true`.
-
-**Request body:**
-
-```json
-{
-  "language": "en",
-  "artifact_name": "Mask of Tutankhamun",
-  "artifact_description": "Golden burial mask of the pharaoh Tutankhamun."
-}
-```
-
-`language` must be `"en"` or `"ar"`.
-
-**Response (first call — generates narration):**
-
-```json
-{
-  "narration_text": "Before you stands one of the most iconic treasures of ancient Egypt...",
-  "audio_url": "/static/audio/narration_<id>_en.mp3",
-  "cached": false
-}
-```
-
-**Response (subsequent calls — cache hit):**
-
-```json
-{
-  "narration_text": "Before you stands one of the most iconic treasures of ancient Egypt...",
-  "audio_url": "/static/audio/narration_<id>_en.mp3",
-  "cached": true
-}
-```
-
-`audio_url` is `null` if `ELEVENLABS_API_KEY` is not set or TTS fails. The service still returns `narration_text` in that case.
-
-**curl example:**
-
-```bash
-curl -X POST http://localhost:8001/api/artifacts/test-uuid-123/narrate \
-  -H "Content-Type: application/json" \
-  -d '{"language": "en", "artifact_name": "Mask of Tutankhamun",
-       "artifact_description": "Golden burial mask of the pharaoh Tutankhamun."}'
-```
-
----
 
 ## 🔗 CV team integration
 
@@ -441,8 +371,8 @@ Your Wikipedia or reference text goes here...
 ### 2. Re-process and rebuild
 
 ```bash
-python scripts/step1_prepare_data.py
-python scripts/step2_build_vectordb.py
+python pipeline/build_chunks.py
+python pipeline/build_vectordb.py
 ```
 
 ### 3. Restart the server
@@ -470,7 +400,7 @@ export GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 **Fix:** The vector database has not been built yet. Run:
 
 ```bash
-python scripts/step2_build_vectordb.py
+python pipeline/build_vectordb.py
 ```
 
 ---
@@ -532,6 +462,16 @@ curl -X POST http://localhost:8001/identify \
 | CV Team Lead       | _____________ | ___@___.com |
 | Frontend Lead      | _____________ | ___@___.com |
 | Project Supervisor | _____________ | ___@___.com |
+
+---
+
+## 🛡️ Production Hardening & Middleware
+
+This AI backend is built to strict production standards:
+- **Request Tracing**: All API requests are processed by a custom UUID middleware (`middleware/request_id.py`) for cross-service observability.
+- **Structured JSON Logs**: Logs are natively formatted in JSON to support ingestion into monitoring stacks.
+- **CORS Management**: Handled dynamically via `.env` rather than hardcoded rules, securely restricting access to the internal gateway.
+- **Graceful Shutdown**: Properly shuts down ChromaDB connections and flushes persistent states on SIGINT/SIGTERM.
 
 ---
 

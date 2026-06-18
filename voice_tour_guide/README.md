@@ -32,6 +32,11 @@ POST /api/voice/artifacts/{id}/narrate  (Node.js backend — port 3000)
       │
       │  Cache miss ─────────────────────────────────────┐
       │                                                   ▼
+      │                                 POST /story  (chatbot-llm — port 8001, internal)
+      │                                                   │
+      │                                        Returns { story } to backend
+      │                                                   │
+      │                                                   ▼
       │                              POST /generate  (voice-tour-guide — port 8003, internal)
       │                                                   │
       │                                            ElevenLabs TTS API
@@ -165,3 +170,13 @@ voice_tour_guide/
 This service is part of the **KHEMET** platform, developed as a graduation project
 at the **Faculty of Computers and Artificial Intelligence, University of Sadat City**,
 under the supervision of **Dr. Sara Shehab** and **Eng. Abanoub Shawky**.
+
+---
+
+## Production Hardening & Middleware
+
+This microservice has been fully hardened for production:
+- **UUID Tracing Middleware**: Intercepts requests to inject unique tracing IDs (`middleware/request_id.py`).
+- **Structured JSON Logging**: Centralized, machine-readable logs for better debugging.
+- **Graceful Shutdown Hooks**: Safely cleans up pending requests and processes on termination signals.
+- **Strict Environment Validation**: Service immediately fails on boot if critical keys (like the ElevenLabs API) are incorrectly formatted or missing when strictly required.

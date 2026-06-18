@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 0725aac71cd5b505995bee6a2774b3458245b893
 # KHEMET AI Services
 
 This directory (`AI_services/`) contains the internal Python-based machine learning microservices for the KHEMET Egyptian artifact tourism platform.
@@ -39,13 +36,12 @@ All services are built with **FastAPI** and run completely locally using Docker.
     *   `POST /api/v1/hieroglyph/detect-only`: Runs only YOLO detection.
 
 ### 4. `voice_tour_guide/` (AI Audio Narration)
-*   **Purpose:** Generates immersive, emotion-rich audio narrations for artifacts.
+*   **Purpose:** Converts artifact narratives into MP3 audio using Text-to-Speech (TTS).
 *   **Architecture:**
-    *   **Generation:** Uses Groq (Llama 3) to rewrite artifact descriptions into compelling tour guide narratives complete with emotional cues (e.g., `[sighs]`).
-    *   **Synthesis:** Streams the narrative to ElevenLabs for lifelike multilingual TTS (English & Arabic).
-    *   **Fallback:** Uses Coqui TTS locally if external APIs fail.
+    *   **Synthesis:** Uses ElevenLabs API (`eleven_multilingual_v2`) for lifelike multilingual TTS (English & Arabic).
+    *   **Design:** A lightweight, single-responsibility microservice. All story generation (LLM) is done by `chatbot_LLM`, and all caching/database work is handled by the Node.js backend. No local fallback model is used.
 *   **Key Endpoints:**
-    *   `POST /api/v1/voice/narrate`: Generates and caches the audio file.
+    *   `POST /generate`: Converts text to an MP3 audio file and returns the static file URL.
 
 ## Internal Architecture & Communication flow
 
@@ -79,7 +75,13 @@ docker-compose up --build cv-recognition chatbot-llm hieroglyph-translator voice
 
 **Important Note on Models:**
 Large model weights (like `.h5`, `.pt` files, and HuggingFace cache directories) are typically mounted as Docker volumes rather than baked into the Docker images. Ensure the weights are placed in the correct directories (e.g., `CV_Recognition/model/`, `hieroglyph_translator/model/`) before starting the containers.
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0725aac71cd5b505995bee6a2774b3458245b893
+
+## Production Hardening & Middleware
+
+All AI microservices have been hardened for production to ensure stability, observability, and security. Standardized architectural improvements across all services include:
+
+*   **Structured JSON Logging:** Using advanced logging mechanisms for consistent, machine-readable log outputs across all services.
+*   **Request Tracing (UUID):** Every incoming request is assigned a unique UUID via the `request_id.py` middleware, allowing seamless end-to-end tracing across the microservice ecosystem.
+*   **CORS Management:** Handled dynamically via environment variables to restrict and secure access exclusively to the backend gateway.
+*   **Graceful Shutdown Routines:** Intercepts termination signals (SIGINT/SIGTERM) to safely close database connections, release models, and flush logs before exiting.
+*   **Environment Validation:** Strict startup checks ensure that critical environment variables (e.g., API keys, model paths) are present before the application initializes.
