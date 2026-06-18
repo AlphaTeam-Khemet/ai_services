@@ -15,3 +15,7 @@ h5py>=3.10.0
 
 # ── Training only (not needed at inference time — kept for reference) ──────────
 # scikit-learn>=1.4.0   # used by model/train.py for compute_class_weight
+
+# ── CLIP Zero-Shot Fallback ────────────────────────────────────────────────────
+transformers>=4.38.0
+torch>=2.2.0

@@ -18,6 +18,7 @@ import h5py
 import numpy as np
 from PIL import Image
 import tensorflow as tf
+from transformers import pipeline
 
 logger = logging.getLogger(__name__)
 logger.setLevel(os.getenv("LOG_LEVEL", "INFO").upper())
@@ -26,6 +27,7 @@ _MODEL_DIR = os.path.dirname(os.path.abspath(__file__))
 _MODEL_FILENAME = os.getenv("MODEL_FILENAME", "model.h5")
 _MODEL_PATH = os.path.join(_MODEL_DIR, _MODEL_FILENAME)
 _CLASS_NAMES_PATH = os.path.join(_MODEL_DIR, "class_names.json")
+_CLIP_CANDIDATE_LABELS_PATH = os.path.join(_MODEL_DIR, "clip_candidate_labels.json")
 
 
 def _patch_legacy_h5_config(value):
@@ -87,8 +89,31 @@ def _load_model_with_compatibility(model_path: str):
 with open(_CLASS_NAMES_PATH, "r", encoding="utf-8") as f:
     _class_names: list[str] = json.load(f)
 
+_clip_candidate_labels: list[str] = []
+if os.path.isfile(_CLIP_CANDIDATE_LABELS_PATH):
+    with open(_CLIP_CANDIDATE_LABELS_PATH, "r", encoding="utf-8") as f:
+        _clip_candidate_labels = json.load(f)
+else:
+    _clip_candidate_labels = [name.replace("_", " ") for name in _class_names]
+
 _model = None
 _model_load_error: str | None = None
+
+_clip_pipeline = None
+_clip_load_error: str | None = None
+
+def _ensure_clip_loaded() -> None:
+    global _clip_pipeline, _clip_load_error
+    if _clip_pipeline is not None:
+        return
+    try:
+        logger.info("Loading CLIP Zero-Shot model (openai/clip-vit-large-patch14)...")
+        _clip_pipeline = pipeline("zero-shot-image-classification", model="openai/clip-vit-large-patch14")
+        _clip_load_error = None
+        logger.info("CLIP Zero-Shot model loaded successfully.")
+    except Exception as exc:
+        _clip_load_error = str(exc)
+        logger.error("Failed to load CLIP Zero-Shot model: %s", _clip_load_error)
 
 
 def _shape_to_list(shape: Any) -> list[Any]:
@@ -241,8 +266,45 @@ def predict_image(image_bytes: bytes) -> dict:
     logger.info("Prediction probabilities for all classes: %s", all_probabilities)
     logger.info("Top 3 predicted classes: %s", top_predictions)
 
-    return {
+    result = {
         "class_name": _class_names[predicted_index],
         "confidence": round(confidence, 4),
         "top_predictions": top_predictions,
     }
+
+    if confidence < 0.90:
+        logger.info("Confidence is below 0.90 (%.4f). Triggering CLIP Zero-Shot fallback.", confidence)
+        _ensure_clip_loaded()
+        if _clip_pipeline is not None:
+            try:
+                # Prepare image for CLIP
+                image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+                
+                # Use the expanded list of artifacts from the database
+                candidate_labels = _clip_candidate_labels
+                
+                clip_results = _clip_pipeline(image, candidate_labels=candidate_labels)
+                
+                formatted_clip_results = [
+                    {"class_name": res["label"].replace(" ", "_"), "confidence": round(res["score"], 4)}
+                    for res in clip_results[:3]
+                ]
+                
+                # Overwrite the primary result with the CLIP result so the backend uses it!
+                result["class_name"] = formatted_clip_results[0]["class_name"]
+                result["confidence"] = formatted_clip_results[0]["confidence"]
+                
+                result["fallback_triggered"] = True
+                result["clip_predictions"] = formatted_clip_results
+                result["message"] = "Primary model confidence low. CLIP Zero-Shot fallback triggered and used as final result."
+            except Exception as e:
+                logger.error("CLIP Zero-Shot fallback failed: %s", str(e))
+                result["fallback_triggered"] = False
+                result["message"] = "Primary model confidence low, but CLIP Zero-Shot fallback failed."
+        else:
+            result["fallback_triggered"] = False
+            result["message"] = "Primary model confidence low. CLIP Zero-Shot model unavailable."
+    else:
+        result["fallback_triggered"] = False
+
+    return result
