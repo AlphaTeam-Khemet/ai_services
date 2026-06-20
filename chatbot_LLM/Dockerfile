@@ -9,8 +9,8 @@ ENV PYTHONUNBUFFERED=1 \
     SENTENCE_TRANSFORMERS_HOME=/app/models/huggingface
 
 # ── System dependencies ───────────────────────────────────────────────────────
-# build-essential  → needed to compile some Python C extensions (e.g. hnswlib inside chromadb)
-# curl             → used by the HEALTHCHECK below
+# build-essential: needed to compile Python C extensions (e.g. hnswlib inside chromadb)
+# curl: used by the HEALTHCHECK below
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     curl \

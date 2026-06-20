@@ -1,17 +1,19 @@
 # Egyptian Artifact Recognition API
 
-FastAPI service for artifact classification using a dual-model architecture: a primary **TensorFlow Keras** model (`model/model.h5`) and a **HuggingFace CLIP Zero-Shot** fallback mechanism.
+FastAPI service for artifact classification using a **HuggingFace CLIP Zero-Shot** classification model.
 
-- **Primary Framework:** TensorFlow CPU (Keras)
-- **Fallback Framework:** HuggingFace Transformers (using `openai/clip-vit-large-patch14`)
-- **Primary Model:** Local `.h5` image classification model
-- **Classes:** Dynamically loaded from `model/class_names.json` and `model/clip_candidate_labels.json`
+- **Framework:** HuggingFace Transformers (PyTorch)
+- **Model:** `openai/clip-vit-base-patch32` (configurable via `CLIP_MODEL` env var)
+- **Classes:** Dynamically loaded from `model/clip_candidate_labels.json`
 
 ## Architecture
 
-1. **Primary Inference:** The uploaded image is preprocessed (rescaling, resizing) and passed through the primary `model.h5` Keras model.
-2. **Confidence Check:** If the confidence of the top prediction is `>= 0.90`, the result is returned immediately.
-3. **CLIP Fallback:** If the confidence is `< 0.90`, the system automatically triggers a zero-shot classification using the `openai/clip-vit-large-patch14` model against a broad set of candidate labels, returning the CLIP prediction as the final result to ensure high accuracy.
+1. **Upload:** The client sends an image file via `POST /predict`.
+2. **Preprocessing:** The image is decoded and converted to RGB.
+3. **CLIP Inference:** The image is classified zero-shot against all candidate labels in `clip_candidate_labels.json` using the CLIP model.
+4. **Response:** Returns the top predicted class, confidence score, and a ranked list of top predictions.
+
+> **Note:** The previous dual-model architecture (TensorFlow primary + CLIP fallback) has been consolidated into a single CLIP-only pipeline. There is no `model.h5` file required.
 
 ## Run Locally
 

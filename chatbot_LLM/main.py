@@ -7,13 +7,16 @@ REST API for the Egyptian knowledge RAG system.
 Endpoints:
     POST /ask        → answer free-form questions
     POST /describe   → visitor description for a monument
+    POST /story      → immersive tour-guide narrative
     POST /identify   → CV team: monument name + question
+    POST /api/v1/llm/translate-hieroglyphs → YOLO codes → translation
     GET  /health     → service health check
 
 Run:
     uvicorn main:app --host 0.0.0.0 --port 8001 --reload
 """
 
+import json
 import os
 import signal
 import sys
@@ -134,14 +137,15 @@ class DescribeResponse(BaseModel):
     description: str
 
 
-
 class StoryRequest(BaseModel):
     artifact_name: str = Field(..., description="Name of the artifact")
     base_description: str = Field(..., description="Current dry description")
     language: str = Field(..., description="'en' or 'ar'")
 
+
 class StoryResponse(BaseModel):
     story: str
+
 
 class IdentifyRequest(BaseModel):
     monument_name: str = Field(..., description="Monument name detected by the CV model (English)")
@@ -158,6 +162,7 @@ class HealthResponse(BaseModel):
     status: str
     version: str
     total_chunks: int
+    supported_languages: list[str]
     response_time_ms: float
 
 
@@ -181,6 +186,7 @@ class GlyphInfo(BaseModel):
     category: Optional[str] = None
     determinative: Optional[bool] = None
     found: bool
+
 
 class TranslateHieroglyphsResponse(BaseModel):
     detected_glyphs: list[GlyphInfo] = []
@@ -254,7 +260,6 @@ async def describe_monument(req: DescribeRequest, request: Request):
     return DescribeResponse(description=description)
 
 
-
 @app.post("/story", response_model=StoryResponse)
 async def generate_story(req: StoryRequest, request: Request):
     """Rewrite a dry description into an engaging tour guide narrative."""
@@ -281,13 +286,12 @@ async def generate_story(req: StoryRequest, request: Request):
     )
 
     question = prompt_en if req.language == "en" else prompt_ar
-
-    # Retrieve context specifically about the artifact to enrich the story!
     chunks = engine.retrieve(req.artifact_name)
     story = engine.answer(question, chunks=chunks, max_tokens=300)
 
     logger.info("POST /story generated narrative for %s", req.artifact_name)
     return StoryResponse(story=story)
+
 
 @app.post("/identify", response_model=IdentifyResponse)
 async def identify_monument(req: IdentifyRequest, request: Request):
@@ -300,8 +304,6 @@ async def identify_monument(req: IdentifyRequest, request: Request):
         raise HTTPException(status_code=503, detail="Engine not initialised yet.")
 
     t0 = time.time()
-    # Build a monument-focused query so retrieval is anchored to the
-    # detected monument, not just the raw question alone.
     focused_query = f"{req.monument_name}: {req.question}"
     chunks = engine.retrieve(focused_query)
     answer = engine.answer(req.question, chunks=chunks)
@@ -333,11 +335,10 @@ async def translate_hieroglyphs(
 
     filtered_codes = req.symbol_sequence
 
-    # 1. Map to gardiner_master.json
-    resolved = translate_sequence(filtered_codes)
+    # 1. Map codes to gardiner_master.json
+    resolved      = translate_sequence(filtered_codes)
     glyphs        = resolved["glyphs"]
     combined      = resolved["combined_phonetics"]
-    meanings      = resolved["meanings"]
     unknown_codes = resolved["unknown_codes"]
 
     known_glyphs = [g for g in glyphs if g["found"]]
@@ -345,17 +346,20 @@ async def translate_hieroglyphs(
         return TranslateHieroglyphsResponse(
             translation="Uncertain translation",
             confidence_note="None of the provided codes were found in the master list.",
-            unknown_codes=unknown_codes
+            unknown_codes=unknown_codes,
         )
 
-    glyph_summary_lines = []
-    for g in known_glyphs:
-        glyph_summary_lines.append(f"- {g['code']} ({g['english_name']}, phonetic: {g['phonetic'] or '?'})")
-    
+    glyph_summary_lines = [
+        f"- {g['code']} ({g['english_name']}, phonetic: {g['phonetic'] or '?'})"
+        for g in known_glyphs
+    ]
     glyph_details = "\n".join(glyph_summary_lines)
+    context_str   = req.context_hint or "general hieroglyphic inscription"
 
-    context_str = req.context_hint or "general hieroglyphic inscription"
-    
+    # ── Improved prompt: instructs the LLM to check for compound royal titles
+    #    (e.g. Nesu Bity = King of Upper and Lower Egypt) BEFORE translating
+    #    individual glyphs in isolation. This matches the hero_v5 approach that
+    #    produced correct translations.
     prompt = f"""You are an expert Egyptologist with deep knowledge of ancient Egyptian hieroglyphs.
 Detected hieroglyphs in correct reading order:
 {glyph_details}
@@ -365,15 +369,17 @@ User Context: {context_str}
 
 Instructions:
 1. Ignore any glyphs that are likely false positives based on context.
-2. Check if this sequence matches any known Egyptian royal titles, deity names, or common phrases.
-3. If you recognize a known phrase or name, use that.
-4. The 'translation' field MUST be the exact, literal English meaning of the word (e.g. 'Wood', 'Things', 'House', 'King'). NEVER put the Egyptian pronunciation/phonetics in the translation field! If you are translating to Arabic because of the context, provide the Arabic meaning.
-5. The 'transliteration' field MUST be the Egyptian phonetic pronunciation (e.g. 'ḫt', 'pr', 'nswt').
+2. Check if this sequence matches any known Egyptian royal titles, deity names, or common phrases (e.g. Nesu Bity = King of Upper and Lower Egypt, Ankh = Life, Sa Ra = Son of Ra).
+3. If you recognize a known phrase or title, use that — do not translate individual glyphs in isolation.
+4. The 'translation' field MUST be the exact, literal English meaning (e.g. 'King of Upper and Lower Egypt', 'Life', 'Son of Ra'). NEVER put Egyptian pronunciation/phonetics in the translation field.
+5. The 'transliteration' field MUST be the Egyptian phonetic pronunciation (e.g. 'nsw-bity', 'ꜥnḫ', 'sꜣ rꜥ').
+6. If unsure, say "uncertain translation" rather than guessing.
+7. Keep translation short and accurate.
 
 Respond ONLY in this exact JSON format:
 {{
-  "translation": "exact English/Arabic meaning of the word",
-  "transliteration": "Egyptian phonetic spelling/pronunciation",  
+  "translation": "short accurate English meaning",
+  "transliteration": "Egyptian phonetic spelling/pronunciation",
   "type": "royal title / deity name / common phrase / uncertain",
   "confidence": "high / medium / low",
   "context": "one sentence of cultural context explaining the symbols"
@@ -383,7 +389,10 @@ Respond ONLY in this exact JSON format:
         response = engine.groq_client.chat.completions.create(
             model=engine.llm_model,
             messages=[
-                {"role": "system", "content": "You are an expert Egyptologist. You respond only with the requested JSON."},
+                {
+                    "role": "system",
+                    "content": "You are an expert Egyptologist. You respond only with the requested JSON — no markdown fences, no commentary.",
+                },
                 {"role": "user", "content": prompt},
             ],
             max_tokens=300,
@@ -397,22 +406,21 @@ Respond ONLY in this exact JSON format:
                 raw = raw[4:]
         raw = raw.strip()
 
-        import json as _json
-        llm_data = _json.loads(raw)
-        translation = llm_data.get("translation", "").strip()
-        cultural_context    = llm_data.get("context",     "").strip()
-        transliteration     = llm_data.get("transliteration", "").strip()
-        type_str            = llm_data.get("type", "").strip()
-        confidence_str      = llm_data.get("confidence", "").strip()
+        llm_data         = json.loads(raw)
+        translation      = llm_data.get("translation", "").strip()
+        cultural_context = llm_data.get("context", "").strip()
+        transliteration  = llm_data.get("transliteration", "").strip()
+        type_str         = llm_data.get("type", "").strip()
+        confidence_str   = llm_data.get("confidence", "").strip()
 
     except Exception as exc:
-        translation = "Uncertain translation (error)"
-        confidence_str = "low"
+        logger.error("LLM call failed in /translate-hieroglyphs: %s", exc)
+        translation      = "Uncertain translation (error)"
+        confidence_str   = "low"
         cultural_context = str(exc)
-        transliteration = ""
-        type_str = ""
+        transliteration  = ""
+        type_str         = ""
 
-    # Convert glyphs to response objects
     detected_glyphs = [
         GlyphInfo(
             code=g["code"],
@@ -435,7 +443,7 @@ Respond ONLY in this exact JSON format:
         cultural_context=cultural_context,
         transliteration=transliteration,
         type=type_str,
-        unknown_codes=unknown_codes
+        unknown_codes=unknown_codes,
     )
 
 
@@ -450,6 +458,7 @@ async def health_check(request: Request):
         status="ok",
         version="3.0.0",
         total_chunks=total,
+        supported_languages=["ar", "de", "en", "es", "fr", "ru", "zh"],
         response_time_ms=round(latency, 2),
     )
 

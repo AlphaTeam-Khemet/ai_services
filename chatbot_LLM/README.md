@@ -26,7 +26,7 @@
 | Component       | Technology                       |
 |-----------------|----------------------------------|
 | LLM             | Groq API — llama-3.3-70b-versatile  |
-| Embeddings      | paraphrase-multilingual-MiniLM-L12-v2 |
+| Embeddings      | Qwen/Qwen3-Embedding-0.6B (local, GPU/CPU) |
 | Vector Database | ChromaDB (persistent)            |
 | Backend Server  | FastAPI + Uvicorn                |
 
@@ -199,9 +199,9 @@ Check if the server is running and the knowledge base is loaded.
 ```json
 {
   "status": "ok",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "total_chunks": 5493,
-  "supported_languages": ["ar", "de", "en", "ru"],
+  "supported_languages": ["ar", "de", "en", "es", "fr", "ru", "zh"],
   "response_time_ms": 1.2
 }
 ```
@@ -405,12 +405,12 @@ python pipeline/build_vectordb.py
 
 ---
 
-### `ModuleNotFoundError: No module named 'step3_rag_engine'`
+### `ValueError: Collection 'egyptian_knowledge_qwen3' does not exist`
 
 **Fix:** Run the server from inside the `chatbot_LLM/` directory:
 
 ```bash
-cd chatbot_LLM
+cd AI_services/chatbot_LLM
 uvicorn main:app --host 0.0.0.0 --port 8001
 ```
 

@@ -3,7 +3,10 @@
 
 This directory (`AI_services/`) contains the internal Python-based machine learning microservices for the KHEMET Egyptian artifact tourism platform.
 
-All services are built with **FastAPI** and run completely locally using Docker. **No external APIs are used.** They communicate with each other and with the Node.js backend over the internal Docker network. Mobile and Web clients *never* connect to these AI services directly.
+All services are built with **FastAPI** and run completely locally using Docker. They communicate with each other and with the Node.js backend over the internal Docker network. Mobile and Web clients *never* connect to these AI services directly.
+
+> **External API dependencies:** LLM inference is provided by the **Groq cloud API** (`chatbot_LLM`), and audio synthesis is provided by the **ElevenLabs API** (`voice_tour_guide`). Both require valid API keys configured in the root `.env` file.
+
 
 ## Service Overview
 

@@ -32,7 +32,7 @@ hieroglyph_translator/
 ├── .env.example                    # Example environment variables
 ├── Dockerfile                      # Docker image definition
 ├── .dockerignore                   # Files to exclude from Docker build
-├── models/
+├── model/
 │   └── best_V2.pt                  # YOLOv11 weights (NOT in Git, mounted at runtime)
 ├── routers/
 │   ├── __init__.py

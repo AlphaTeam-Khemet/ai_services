@@ -5,17 +5,9 @@ fastapi==0.115.0
 uvicorn[standard]==0.30.0
 python-multipart==0.0.9
 
-# ── ML / Image inference ───────────────────────────────────────────────────────
-# Use tensorflow-cpu in the container (no GPU attached to this service).
-# Switch to tensorflow==2.16.2 only if you add GPU support.
-tensorflow-cpu==2.16.2
+# ── Image processing ───────────────────────────────────────────────────────────
 pillow>=10.0.0
-numpy>=1.24.0
-h5py>=3.10.0
 
-# ── Training only (not needed at inference time — kept for reference) ──────────
-# scikit-learn>=1.4.0   # used by model/train.py for compute_class_weight
-
-# ── CLIP Zero-Shot Fallback ────────────────────────────────────────────────────
+# ── CLIP Zero-Shot Classification ─────────────────────────────────────────────
 transformers>=4.38.0
 torch>=2.2.0

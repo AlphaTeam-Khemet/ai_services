@@ -23,7 +23,7 @@ router = APIRouter(tags=["hieroglyph"])
 async def translate(
     image: UploadFile = File(..., description="Hieroglyph image (JPEG/PNG/WebP)"),
     context_hint: str | None = Form(None, description="Optional context, e.g. 'tomb inscription'"),
-    min_confidence: float = Form(0.33, description="Minimum confidence threshold"),
+    min_confidence: float | None = Form(None, description="Minimum confidence threshold (defaults to YOLO_CONF_THRESHOLD env var = 0.33)"),
     reading_direction: str = Form("ltr", description="Reading direction ('ltr' or 'rtl')"),
 ) -> HieroglyphPipelineResponse:
     """Full pipeline: YOLO detection → LLM translation.

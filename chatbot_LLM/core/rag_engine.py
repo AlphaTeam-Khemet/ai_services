@@ -18,7 +18,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 VECTORDB_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, "..", "models", "vectordb"))
 
 EMBEDDING_MODEL = os.getenv("RAG_EMBEDDING_MODEL", "Qwen/Qwen3-Embedding-0.6B")
-RERANKER_MODEL = os.getenv("RAG_RERANKER_MODEL", "BAAI/bge-reranker-v2-m3")
+RERANKER_MODEL = os.getenv("RAG_RERANKER_MODEL", "BAAI/bge-reranker-base")
 LLM_MODEL = os.getenv("RAG_LLM_MODEL", "llama-3.3-70b-versatile")
 COLLECTION_NAME = os.getenv("RAG_COLLECTION_NAME", "egyptian_knowledge_qwen3")
 
@@ -29,7 +29,7 @@ MODEL_DTYPE = torch.float16 if DEVICE == "cuda" else torch.float32
 # Retrieval & Reranking Limits
 INITIAL_RETRIEVAL_K = 20
 DEFAULT_TOP_K = 5
-MAX_TOKENS = 300
+MAX_TOKENS = 512
 SIMILARITY_THRESHOLD = 0.15  # Lenient baseline threshold for ChromaDB
 RERANK_THRESHOLD = -5.0      # Baseline threshold for CrossEncoder logits
 MAX_CONTEXT_CHARS = 12000    # Rough character limit for context
@@ -82,9 +82,9 @@ class RAGEngine:
         )
 
         # 3. Init Reranker (Cross-Encoder)
-        # NOTE: Run reranker on CPU — Qwen3-Embedding-0.6B is much lighter than
-        # bge-m3 (~3.6 GiB) but we still keep the reranker on CPU to leave the
-        # GPU fully available for the embedder and avoid CUDA OOM on low-VRAM machines.
+        # NOTE: Force reranker to CPU — bge-reranker-v2-m3 requires ~3.6 GB VRAM,
+        # which exceeds the remaining headroom on a 4 GB GTX 1650 when the Qwen3
+        # embedder is already loaded on GPU. CPU is the safe, correct trade-off here.
         logger.info("Loading Reranker model: %s (device=cpu)", reranker_model)
         self.reranker = CrossEncoder(reranker_model, device="cpu")
 
@@ -92,7 +92,7 @@ class RAGEngine:
         api_key = os.environ.get("GROQ_API_KEY")
         if not api_key:
             raise RuntimeError(
-                "API_KEY is not set. "
+                "GROQ_API_KEY is not set. "
                 "Set it via the environment variable or a .env file before starting the server."
             )
         self.groq_client = Groq(api_key=api_key)
@@ -199,7 +199,7 @@ class RAGEngine:
 
         # Inject safely filtered history
         if history:
-            for turn in history[-6:]:  # Keep last 3 turns
+            for turn in history[-6:]:  # Keep last 6 messages (3 user+assistant exchanges)
                 role = turn.get("role", "user")
                 if role not in ["user", "assistant"]:
                     role = "user"

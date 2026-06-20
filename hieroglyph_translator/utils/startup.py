@@ -15,7 +15,7 @@ logger = get_logger(__name__)
 
 # Variables required for the service to function correctly
 REQUIRED_ENV_VARS = [
-    "LLM_SERVICE_URL",
+    "RAG_SERVICE_URL",
 ]
 
 

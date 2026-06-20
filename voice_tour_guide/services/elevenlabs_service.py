@@ -71,32 +71,45 @@ async def _generate_with_elevenlabs(
 
         el_client = ElevenLabs(api_key=api_key)
 
-        # The ElevenLabs SDK is synchronous — wrap in asyncio.to_thread so it
-        # does not block the FastAPI event loop during network I/O
-        audio_data = await asyncio.to_thread(
-            el_client.text_to_speech.convert,
-            text=text,
-            voice_id=voice_id,
-            model_id="eleven_multilingual_v2",
-        )
+        def _call_elevenlabs() -> bytes:
+            """
+            Call the ElevenLabs API and drain the response generator fully
+            inside the worker thread — safe to block here.
+            The generator MUST be consumed in the same thread that called
+            convert() otherwise it may stall or be exhausted prematurely.
+            """
+            audio_generator = el_client.text_to_speech.convert(
+                text=text,
+                voice_id=voice_id,
+                model_id="eleven_multilingual_v2",
+            )
+            # Drain the generator into a single bytes object
+            chunks = []
+            for chunk in audio_generator:
+                if isinstance(chunk, bytes):
+                    chunks.append(chunk)
+            return b"".join(chunks)
+
+        audio_bytes = await asyncio.to_thread(_call_elevenlabs)
+
+        if not audio_bytes:
+            logger.warning("ElevenLabs returned empty audio for %s [%s]", artifact_id, language)
+            return None
 
         audio_dir = "static/audio"
         os.makedirs(audio_dir, exist_ok=True)
 
-        # Filename encodes artifact_id and language to prevent collisions
-        filename = f"narration_{artifact_id}_{language}.mp3"
+        # Sanitize artifact_id: replace spaces and non-alphanumeric chars
+        # so the filename is always safe on any filesystem.
+        safe_id = "".join(c if c.isalnum() or c in "-_" else "_" for c in str(artifact_id))
+        filename = f"narration_{safe_id}_{language}.mp3"
         filepath = os.path.join(audio_dir, filename)
 
-        # The SDK may return raw bytes or a generator of chunks depending on
-        # the response mode — handle both cases uniformly before writing
-        audio_bytes = (
-            audio_data if isinstance(audio_data, bytes) else b"".join(list(audio_data))
-        )
         with open(filepath, "wb") as f:
             f.write(audio_bytes)
 
         audio_url = f"/static/audio/{filename}"
-        logger.info("ElevenLabs audio saved → %s", filepath)
+        logger.info("ElevenLabs audio saved → %s (%d bytes)", filepath, len(audio_bytes))
         return audio_url
 
     except Exception as exc:

@@ -1,14 +1,13 @@
 """
 Egyptian Artifact Recognition — FastAPI Application
 =====================================================
-A lightweight REST API with a single endpoint:
+A lightweight REST API backed by CLIP zero-shot image classification.
 
-    POST /predict
-        Accepts an uploaded image file and returns the
-        predicted artifact class name with confidence.
-
-CORS is enabled so that a separate frontend can call this API.
-No database code is included — only classification.
+Endpoints:
+    GET  /health          Service liveness check
+    GET  /debug/model-info  CLIP model metadata
+    POST /predict         Classify an uploaded image
+    POST /translate       Alias for /predict (hieroglyph translation flow)
 """
 
 import os
@@ -17,8 +16,6 @@ import sys
 from contextlib import asynccontextmanager
 
 # ── Ensure project root (CV_Recognition/) is on sys.path ─────────────────────
-# api/main.py lives one level below the project root. Adding the parent here
-# makes utils/ and middleware/ at the CV_Recognition/ level importable.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -29,7 +26,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from middleware.request_id import RequestIDMiddleware
 from utils.logger import get_logger
 from utils.startup import validate_env
-from model.predict import get_model_info, predict_image, is_model_ready
+from model.predict import get_model_info, predict_image
 
 logger = get_logger(__name__)
 
@@ -37,31 +34,24 @@ logger = get_logger(__name__)
 # ── Lifespan ──────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # ── Startup ───────────────────────────────────────────────────────────────
     validate_env()
-    logger.info("CV Recognition service started", extra={"port": 8000})
+    logger.info("CV Recognition service started (CLIP Zero-Shot only)", extra={"port": 8000})
     yield
-    # ── Shutdown ──────────────────────────────────────────────────────────────
     logger.info("CV Recognition service shutting down")
 
 
 app = FastAPI(
     title="Egyptian Artifact Recognition API",
-    description="Upload an image and get the predicted artifact class.",
-    version="1.0.0",
+    description="Upload an image and get the predicted artifact class via CLIP zero-shot classification.",
+    version="2.0.0",
     lifespan=lifespan,
-    # Disable interactive docs in production
     docs_url="/docs" if os.getenv("ENV") != "production" else None,
     redoc_url="/redoc" if os.getenv("ENV") != "production" else None,
 )
 
 # ── Middleware ─────────────────────────────────────────────────────────────────
-
-# Request ID — must be registered first
 app.add_middleware(RequestIDMiddleware)
 
-# CORS — read from env, never hardcode *
-# In production set: ALLOWED_ORIGINS=http://localhost:3000,http://localhost:5173
 allowed_origins = [
     o.strip()
     for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
@@ -90,33 +80,38 @@ signal.signal(signal.SIGINT, _handle_shutdown)
 
 @app.get("/health")
 async def health():
+    # NOTE: Do NOT call is_model_ready() here — CLIP model loading is slow
+    # (~30-120s on first pull) and would cause health checks to fail during
+    # startup. The service is "healthy" as soon as uvicorn is accepting requests.
+    # Use GET /debug/model-info to check whether the model is loaded.
     return {
         "status": "ok",
         "service": "cv_recognition",
         "port": 8000,
-        "version": "1.0.0",
-        "model_ready": is_model_ready(),
+        "version": "2.0.0",
+        "model_type": "CLIP Zero-Shot",
     }
 
 
 @app.get("/debug/model-info")
 async def debug_model_info():
+    """Return CLIP model metadata and candidate label list."""
     return get_model_info()
 
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...), request: None = None):
+async def predict(file: UploadFile = File(...)):
     """
-    Accept an uploaded image and return the predicted class name
-    with a confidence score.
+    Accept an uploaded image and return the predicted class name with confidence.
 
     **Request:** `multipart/form-data` with a field named `file`.
 
     **Response:**
     ```json
     {
-      "class_name": "Mask of Tutankhamun",
-      "confidence": 0.94
+      "class_name": "Mask_of_Tutankhamun",
+      "confidence": 0.87,
+      "top_predictions": [...]
     }
     ```
     """
@@ -128,7 +123,6 @@ async def predict(file: UploadFile = File(...), request: None = None):
 
     try:
         image_bytes = await file.read()
-
         if not image_bytes:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
 
@@ -143,16 +137,10 @@ async def predict(file: UploadFile = File(...), request: None = None):
         raise
     except RuntimeError as e:
         logger.error("Prediction service unavailable", extra={"error": str(e)})
-        raise HTTPException(
-            status_code=503,
-            detail=f"Prediction model is unavailable: {str(e)}",
-        )
+        raise HTTPException(status_code=503, detail=f"CLIP model is unavailable: {str(e)}")
     except Exception as e:
         logger.error("Prediction failed", extra={"error": str(e)})
-        raise HTTPException(
-            status_code=500,
-            detail=f"Prediction failed: {str(e)}",
-        )
+        raise HTTPException(status_code=500, detail=f"Prediction failed: {str(e)}")
 
 
 @app.post("/translate")
@@ -167,7 +155,7 @@ async def translate(file: UploadFile = File(...)):
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
         result = predict_image(image_bytes)
         result["note"] = (
-            "Classification-based result. "
+            "CLIP zero-shot classification result. "
             "A dedicated hieroglyph translation model is not yet integrated."
         )
         return result
@@ -175,7 +163,7 @@ async def translate(file: UploadFile = File(...)):
         raise
     except RuntimeError as e:
         logger.error("Translation service unavailable", extra={"error": str(e)})
-        raise HTTPException(status_code=503, detail=f"Prediction model is unavailable: {str(e)}")
+        raise HTTPException(status_code=503, detail=f"CLIP model is unavailable: {str(e)}")
     except Exception as e:
         logger.error("Translation failed", extra={"error": str(e)})
         raise HTTPException(status_code=500, detail=f"Translation failed: {str(e)}")

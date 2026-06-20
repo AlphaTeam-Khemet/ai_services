@@ -14,9 +14,10 @@ compare_models.py
 # .env contains secrets — never bake into image
 .env
 
-# The model weights file is large (216 MB) and is mounted as a bind volume at
-# runtime via docker-compose. Excluding it here keeps the image small and fast
-# to build. See the 'volumes' section in docker-compose.yml.
+# model.h5 is not used (CLIP zero-shot only) — exclude all large model files
 model/model.h5
 model/*.pt
 model/*.pth
+
+# HuggingFace model cache is mounted as a named volume at runtime
+model/huggingface

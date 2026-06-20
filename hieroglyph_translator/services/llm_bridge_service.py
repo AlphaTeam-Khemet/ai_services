@@ -34,7 +34,7 @@ async def request_translation(
         httpx.HTTPStatusError: On non-2xx response from the LLM service.
         httpx.RequestError: On network / connection failure.
     """
-    llm_url = os.getenv("LLM_SERVICE_URL", "http://chatbot-llm:8001")
+    llm_url = os.getenv("RAG_SERVICE_URL", "http://chatbot-llm:8001")
     endpoint = f"{llm_url.rstrip('/')}/api/v1/llm/translate-hieroglyphs"
 
     payload: dict = {"symbol_sequence": symbol_sequence}

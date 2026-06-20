@@ -22,6 +22,15 @@ logger = logging.getLogger("khemet.hieroglyph.detection")
 # ── Singleton state ───────────────────────────────────────────────────────────
 _model = None  # ultralytics YOLO instance
 
+# ── Default confidence threshold ──────────────────────────────────────────────
+# Read from YOLO_CONF_THRESHOLD env var (set in docker-compose).
+# Falls back to 0.33 if the env var is missing or invalid.
+_DEFAULT_CONF_THRESHOLD: float = 0.33
+try:
+    _DEFAULT_CONF_THRESHOLD = float(os.getenv("YOLO_CONF_THRESHOLD", "0.33"))
+except ValueError:
+    logger.warning("Invalid YOLO_CONF_THRESHOLD env var — using default 0.33")
+
 
 def load_model() -> None:
     """Load the YOLO model into the module-level singleton.
@@ -48,8 +57,10 @@ def sort_glyphs_by_position(symbols: list[DetectedSymbol], reading_direction: st
     else:
         return sorted(symbols, key=lambda s: (s.bbox[1], s.bbox[0]))
 
-def _run_inference(image_bytes: bytes, min_confidence: float = 0.33, reading_direction: str = "ltr") -> DetectionResult:
+def _run_inference(image_bytes: bytes, min_confidence: float | None = None, reading_direction: str = "ltr") -> DetectionResult:
     """Synchronous YOLO inference. Must be wrapped with asyncio.to_thread()."""
+    if min_confidence is None:
+        min_confidence = _DEFAULT_CONF_THRESHOLD
     global _model
     if _model is None:
         load_model()
@@ -117,6 +128,6 @@ def _run_inference(image_bytes: bytes, min_confidence: float = 0.33, reading_dir
     return DetectionResult(symbols=symbols, symbol_sequence=symbol_sequence)
 
 
-async def detect_symbols(image_bytes: bytes, min_confidence: float = 0.33, reading_direction: str = "ltr") -> DetectionResult:
+async def detect_symbols(image_bytes: bytes, min_confidence: float | None = None, reading_direction: str = "ltr") -> DetectionResult:
     """Run YOLO detection asynchronously."""
     return await asyncio.to_thread(_run_inference, image_bytes, min_confidence, reading_direction)
