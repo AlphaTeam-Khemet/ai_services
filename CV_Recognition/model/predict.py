@@ -1,7 +1,7 @@
 """
 Prediction utilities for the Egyptian artifact recognition API.
 
-Uses CLIP zero-shot image classification (openai/clip-vit-large-patch14) as the
+Uses CLIP zero-shot image classification (openai/clip-vit-base-patch32) as the
 sole inference engine. No model.h5 or TensorFlow is required.
 """
 
@@ -25,6 +25,10 @@ _CLASS_NAMES_PATH = os.path.join(_MODEL_DIR, "class_names.json")
 _DEVICE = 0 if torch.cuda.is_available() else -1  # 0 = first GPU, -1 = CPU
 _DEVICE_NAME = f"cuda:{_DEVICE}" if _DEVICE >= 0 else "cpu"
 
+# Optimize PyTorch for CPU
+if _DEVICE == -1:
+    torch.set_num_threads(8)
+
 # ── Candidate labels ──────────────────────────────────────────────────────────
 with open(_CLASS_NAMES_PATH, "r", encoding="utf-8") as _f:
     _class_names: list[str] = json.load(_f)
@@ -39,7 +43,7 @@ else:
 _clip_pipeline = None
 _clip_load_error: str | None = None
 
-_CLIP_MODEL = os.getenv("CLIP_MODEL", "openai/clip-vit-large-patch14")
+_CLIP_MODEL = os.getenv("CLIP_MODEL", "openai/clip-vit-base-patch32")
 
 
 def _ensure_clip_loaded() -> None:

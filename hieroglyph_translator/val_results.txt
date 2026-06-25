@@ -1,0 +1,817 @@
+Ultralytics 8.4.64 🚀 Python-3.12.3 torch-2.12.0+cu130 CUDA:0 (NVIDIA GeForce GTX 1650, 3716MiB)
+YOLO11s summary (fused): 101 layers, 9,724,335 parameters, 0 gradients, 23.0 GFLOPs
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 4051.4±1509.8 MB/s, size: 57.0 KB)
+[K[34m[1mval: [0mScanning /home/msm/Documents/Universty/Graduaiton project/final_hero_data/test/labels.cache... 4240 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 4240/4240 1.2Git/s 0.0s
+[34m[1mval: [0m/home/msm/Documents/Universty/Graduaiton project/final_hero_data/test/images/wall_section_373_jpg.rf.2723baf7ab5ec9c84f8a59790f05b8d2.jpg: 1 duplicate labels removed
+[34m[1mval: [0m/home/msm/Documents/Universty/Graduaiton project/final_hero_data/test/images/wall_section_451_jpg.rf.b880686898fcbed64a4a8fd77e546f19.jpg: 1 duplicate labels removed
+WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 1393, len(boxes) = 86892. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 0% ──────────── 1/265 1.5s/it 0.4s<6:26[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 0% ──────────── 2/265 1.1it/s 0.9s<3:49[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 3/265 1.5it/s 1.3s<2:53[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 4/265 1.8it/s 1.7s<2:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 1% ──────────── 5/265 2.1it/s 2.1s<2:01[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 2% ──────────── 6/265 2.4it/s 2.4s<1:49[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 2% ──────────── 7/265 2.5it/s 2.7s<1:42[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 8/265 2.6it/s 3.1s<1:39[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 9/265 2.6it/s 3.5s<1:37[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 3% ──────────── 10/265 2.7it/s 3.8s<1:35[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ──────────── 11/265 2.7it/s 4.2s<1:33[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ╸─────────── 12/265 2.8it/s 4.5s<1:31[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 4% ╸─────────── 13/265 2.8it/s 4.9s<1:29[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 5% ╸─────────── 14/265 2.8it/s 5.2s<1:29[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 5% ╸─────────── 15/265 2.9it/s 5.6s<1:27[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 6% ╸─────────── 16/265 2.9it/s 5.9s<1:27[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 6% ╸─────────── 17/265 2.9it/s 6.3s<1:26[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 6% ╸─────────── 18/265 2.9it/s 6.6s<1:26[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 7% ╸─────────── 19/265 2.9it/s 6.9s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 7% ╸─────────── 20/265 2.9it/s 7.3s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 7% ╸─────────── 21/265 2.9it/s 7.6s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 8% ╸─────────── 22/265 2.9it/s 8.0s<1:24[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 8% ━─────────── 23/265 2.9it/s 8.3s<1:23[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 24/265 2.9it/s 8.7s<1:22[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 25/265 2.9it/s 9.0s<1:22[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 9% ━─────────── 26/265 2.8it/s 9.4s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 27/265 2.8it/s 9.8s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 28/265 2.8it/s 10.1s<1:25[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 10% ━─────────── 29/265 2.8it/s 10.5s<1:24[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 30/265 2.9it/s 10.8s<1:22[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 11% ━─────────── 31/265 2.9it/s 11.1s<1:21[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 32/265 2.9it/s 11.5s<1:20[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━─────────── 33/265 2.9it/s 11.8s<1:20[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 12% ━╸────────── 34/265 2.9it/s 12.2s<1:20[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 13% ━╸────────── 35/265 2.9it/s 12.5s<1:20[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 13% ━╸────────── 36/265 2.9it/s 12.9s<1:19[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 13% ━╸────────── 37/265 2.8it/s 13.2s<1:20[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 14% ━╸────────── 38/265 2.9it/s 13.6s<1:19[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 14% ━╸────────── 39/265 2.9it/s 13.9s<1:18[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 15% ━╸────────── 40/265 2.9it/s 14.3s<1:17[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 15% ━╸────────── 41/265 2.9it/s 14.6s<1:16[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 15% ━╸────────── 42/265 2.9it/s 15.0s<1:18[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━╸────────── 43/265 2.9it/s 15.3s<1:17[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━╸────────── 44/265 2.9it/s 15.6s<1:16[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 16% ━━────────── 45/265 2.9it/s 16.0s<1:17[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 17% ━━────────── 46/265 2.9it/s 16.3s<1:16[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 17% ━━────────── 47/265 2.9it/s 16.7s<1:15[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 18% ━━────────── 48/265 2.9it/s 17.0s<1:15[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 18% ━━────────── 49/265 2.9it/s 17.4s<1:14[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 18% ━━────────── 50/265 2.9it/s 17.7s<1:15[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 19% ━━────────── 51/265 2.9it/s 18.1s<1:14[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 19% ━━────────── 52/265 2.9it/s 18.4s<1:13[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 53/265 2.9it/s 18.8s<1:13[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 54/265 2.9it/s 19.1s<1:12[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 20% ━━────────── 55/265 2.9it/s 19.4s<1:12[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 21% ━━╸───────── 56/265 2.9it/s 19.8s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 21% ━━╸───────── 57/265 2.9it/s 20.1s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 21% ━━╸───────── 58/265 2.9it/s 20.5s<1:12[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 59/265 2.9it/s 20.8s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 22% ━━╸───────── 60/265 2.9it/s 21.2s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 61/265 2.9it/s 21.5s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 62/265 2.9it/s 21.9s<1:10[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 23% ━━╸───────── 63/265 2.9it/s 22.2s<1:10[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 24% ━━╸───────── 64/265 2.9it/s 22.6s<1:09[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 24% ━━╸───────── 65/265 2.9it/s 22.9s<1:09[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 24% ━━╸───────── 66/265 2.8it/s 23.3s<1:11[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 67/265 2.8it/s 23.6s<1:10[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 68/265 2.9it/s 24.0s<1:09[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 69/265 2.9it/s 24.3s<1:08[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 70/265 2.9it/s 24.7s<1:07[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 26% ━━━───────── 71/265 2.9it/s 25.0s<1:07[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 27% ━━━───────── 72/265 2.9it/s 25.3s<1:06[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 27% ━━━───────── 73/265 2.9it/s 25.7s<1:06[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 27% ━━━───────── 74/265 2.9it/s 26.0s<1:07[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 28% ━━━───────── 75/265 2.9it/s 26.4s<1:06[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 28% ━━━───────── 76/265 2.9it/s 26.7s<1:05[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 29% ━━━───────── 77/265 2.9it/s 27.1s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 29% ━━━╸──────── 78/265 2.9it/s 27.4s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 29% ━━━╸──────── 79/265 2.9it/s 27.8s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 80/265 2.9it/s 28.1s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 81/265 2.9it/s 28.4s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 30% ━━━╸──────── 82/265 2.8it/s 28.8s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 31% ━━━╸──────── 83/265 2.9it/s 29.2s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 31% ━━━╸──────── 84/265 2.8it/s 29.5s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 32% ━━━╸──────── 85/265 2.7it/s 29.9s<1:06[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 32% ━━━╸──────── 86/265 2.7it/s 30.3s<1:07[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 32% ━━━╸──────── 87/265 2.7it/s 30.7s<1:07[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━╸──────── 88/265 2.7it/s 31.1s<1:06[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 89/265 2.7it/s 31.4s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 33% ━━━━──────── 90/265 2.7it/s 31.8s<1:05[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 34% ━━━━──────── 91/265 2.7it/s 32.2s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 34% ━━━━──────── 92/265 2.7it/s 32.5s<1:03[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 35% ━━━━──────── 93/265 2.7it/s 32.9s<1:04[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 35% ━━━━──────── 94/265 2.7it/s 33.3s<1:03[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 35% ━━━━──────── 95/265 2.8it/s 33.6s<1:01[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 96/265 2.7it/s 34.0s<1:01[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 97/265 2.8it/s 34.3s<1:00[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 36% ━━━━──────── 98/265 2.7it/s 34.7s<1:01[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━──────── 99/265 2.6it/s 35.1s<1:03[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 37% ━━━━╸─────── 100/265 2.6it/s 35.5s<1:03[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 38% ━━━━╸─────── 101/265 2.7it/s 35.9s<1:01[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 38% ━━━━╸─────── 102/265 2.8it/s 36.2s<59.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 38% ━━━━╸─────── 103/265 2.7it/s 36.6s<59.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 39% ━━━━╸─────── 104/265 2.7it/s 37.0s<58.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 39% ━━━━╸─────── 105/265 2.8it/s 37.3s<57.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 106/265 2.8it/s 37.7s<57.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 107/265 2.8it/s 38.0s<56.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 40% ━━━━╸─────── 108/265 2.9it/s 38.3s<55.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━╸─────── 109/265 2.8it/s 38.7s<54.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━╸─────── 110/265 2.9it/s 39.0s<54.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 41% ━━━━━─────── 111/265 2.9it/s 39.4s<53.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 42% ━━━━━─────── 112/265 2.9it/s 39.7s<52.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 42% ━━━━━─────── 113/265 2.9it/s 40.1s<52.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 114/265 2.8it/s 40.4s<53.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 115/265 2.9it/s 40.8s<52.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 43% ━━━━━─────── 116/265 2.9it/s 41.1s<51.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 117/265 2.9it/s 41.5s<51.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 118/265 2.9it/s 41.8s<50.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 44% ━━━━━─────── 119/265 2.9it/s 42.2s<50.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 45% ━━━━━─────── 120/265 2.9it/s 42.5s<50.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 45% ━━━━━─────── 121/265 2.9it/s 42.9s<49.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 46% ━━━━━╸────── 122/265 2.7it/s 43.3s<53.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 46% ━━━━━╸────── 123/265 2.7it/s 43.7s<52.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 46% ━━━━━╸────── 124/265 2.8it/s 44.0s<51.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 47% ━━━━━╸────── 125/265 2.8it/s 44.4s<49.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 47% ━━━━━╸────── 126/265 2.9it/s 44.7s<48.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 47% ━━━━━╸────── 127/265 2.9it/s 45.1s<47.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 48% ━━━━━╸────── 128/265 2.9it/s 45.4s<47.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 48% ━━━━━╸────── 129/265 2.9it/s 45.8s<47.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 49% ━━━━━╸────── 130/265 2.8it/s 46.2s<48.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 49% ━━━━━╸────── 131/265 2.8it/s 46.5s<48.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 49% ━━━━━╸────── 132/265 2.8it/s 46.9s<47.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 133/265 2.8it/s 47.2s<46.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 134/265 2.8it/s 47.6s<46.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 135/265 2.9it/s 47.9s<45.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 51% ━━━━━━────── 136/265 2.9it/s 48.2s<45.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 51% ━━━━━━────── 137/265 2.9it/s 48.6s<44.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 52% ━━━━━━────── 138/265 2.9it/s 48.9s<44.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 52% ━━━━━━────── 139/265 2.9it/s 49.3s<43.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 52% ━━━━━━────── 140/265 2.9it/s 49.6s<43.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 53% ━━━━━━────── 141/265 2.9it/s 50.0s<42.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 53% ━━━━━━────── 142/265 2.9it/s 50.3s<42.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 53% ━━━━━━────── 143/265 2.8it/s 50.7s<43.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 54% ━━━━━━╸───── 144/265 2.8it/s 51.0s<42.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 54% ━━━━━━╸───── 145/265 2.8it/s 51.4s<42.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 146/265 2.8it/s 51.8s<43.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 147/265 2.8it/s 52.2s<42.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 55% ━━━━━━╸───── 148/265 2.8it/s 52.5s<42.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 149/265 2.8it/s 52.9s<41.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 150/265 2.8it/s 53.2s<40.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 56% ━━━━━━╸───── 151/265 2.9it/s 53.5s<39.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 57% ━━━━━━╸───── 152/265 2.9it/s 53.9s<39.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 57% ━━━━━━╸───── 153/265 2.9it/s 54.2s<38.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━╸───── 154/265 2.9it/s 54.6s<38.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━━───── 155/265 2.9it/s 54.9s<38.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 58% ━━━━━━━───── 156/265 2.9it/s 55.3s<38.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 59% ━━━━━━━───── 157/265 2.9it/s 55.6s<37.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 59% ━━━━━━━───── 158/265 2.9it/s 56.0s<36.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 159/265 2.9it/s 56.3s<36.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 160/265 2.9it/s 56.6s<35.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 60% ━━━━━━━───── 161/265 2.9it/s 57.0s<35.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 61% ━━━━━━━───── 162/265 2.9it/s 57.3s<35.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 61% ━━━━━━━───── 163/265 2.9it/s 57.7s<35.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 61% ━━━━━━━───── 164/265 2.9it/s 58.0s<34.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━───── 165/265 2.9it/s 58.4s<34.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 62% ━━━━━━━╸──── 166/265 2.9it/s 58.7s<34.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 63% ━━━━━━━╸──── 167/265 2.9it/s 59.1s<34.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 63% ━━━━━━━╸──── 168/265 2.8it/s 59.4s<34.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 63% ━━━━━━━╸──── 169/265 2.8it/s 59.8s<34.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 170/265 2.8it/s 1:00<34.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 171/265 2.7it/s 1:01<34.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 64% ━━━━━━━╸──── 172/265 2.7it/s 1:01<34.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 65% ━━━━━━━╸──── 173/265 2.7it/s 1:01<33.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 65% ━━━━━━━╸──── 174/265 2.8it/s 1:02<33.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━╸──── 175/265 2.8it/s 1:02<32.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━╸──── 176/265 2.8it/s 1:02<32.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 66% ━━━━━━━━──── 177/265 2.8it/s 1:03<31.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 178/265 2.7it/s 1:03<32.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 179/265 2.7it/s 1:03<32.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 67% ━━━━━━━━──── 180/265 2.7it/s 1:04<32.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 68% ━━━━━━━━──── 181/265 2.6it/s 1:04<32.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 68% ━━━━━━━━──── 182/265 2.6it/s 1:05<32.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 183/265 2.6it/s 1:05<31.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 184/265 2.7it/s 1:05<30.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 69% ━━━━━━━━──── 185/265 2.7it/s 1:06<29.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 186/265 2.7it/s 1:06<29.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━──── 187/265 2.7it/s 1:06<28.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 70% ━━━━━━━━╸─── 188/265 2.8it/s 1:07<28.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 71% ━━━━━━━━╸─── 189/265 2.8it/s 1:07<27.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 71% ━━━━━━━━╸─── 190/265 2.8it/s 1:08<27.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 72% ━━━━━━━━╸─── 191/265 2.8it/s 1:08<26.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 72% ━━━━━━━━╸─── 192/265 2.8it/s 1:08<26.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 72% ━━━━━━━━╸─── 193/265 2.7it/s 1:09<26.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 194/265 2.6it/s 1:09<27.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 195/265 2.7it/s 1:09<26.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 73% ━━━━━━━━╸─── 196/265 2.6it/s 1:10<26.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 74% ━━━━━━━━╸─── 197/265 2.6it/s 1:10<25.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 74% ━━━━━━━━╸─── 198/265 2.7it/s 1:11<25.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 199/265 2.7it/s 1:11<24.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 200/265 2.8it/s 1:11<23.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 201/265 2.8it/s 1:12<23.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 76% ━━━━━━━━━─── 202/265 2.8it/s 1:12<22.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 76% ━━━━━━━━━─── 203/265 2.8it/s 1:12<22.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 76% ━━━━━━━━━─── 204/265 2.8it/s 1:13<21.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 77% ━━━━━━━━━─── 205/265 2.8it/s 1:13<21.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 77% ━━━━━━━━━─── 206/265 2.8it/s 1:13<20.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 207/265 2.8it/s 1:14<21.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 208/265 2.8it/s 1:14<20.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 78% ━━━━━━━━━─── 209/265 2.8it/s 1:15<20.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 79% ━━━━━━━━━╸── 210/265 2.8it/s 1:15<19.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 79% ━━━━━━━━━╸── 211/265 2.8it/s 1:15<19.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 212/265 2.8it/s 1:16<18.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 213/265 2.8it/s 1:16<18.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 80% ━━━━━━━━━╸── 214/265 2.8it/s 1:16<17.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 81% ━━━━━━━━━╸── 215/265 2.9it/s 1:17<17.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 81% ━━━━━━━━━╸── 216/265 2.9it/s 1:17<17.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 81% ━━━━━━━━━╸── 217/265 2.9it/s 1:17<16.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 218/265 2.8it/s 1:18<16.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 82% ━━━━━━━━━╸── 219/265 2.8it/s 1:18<16.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 83% ━━━━━━━━━╸── 220/265 2.8it/s 1:18<15.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 83% ━━━━━━━━━━── 221/265 2.9it/s 1:19<15.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 83% ━━━━━━━━━━── 222/265 2.9it/s 1:19<14.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 84% ━━━━━━━━━━── 223/265 2.9it/s 1:19<14.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 84% ━━━━━━━━━━── 224/265 2.9it/s 1:20<14.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 84% ━━━━━━━━━━── 225/265 2.9it/s 1:20<13.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 85% ━━━━━━━━━━── 226/265 2.9it/s 1:20<13.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 85% ━━━━━━━━━━── 227/265 2.8it/s 1:21<13.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 228/265 2.8it/s 1:21<13.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 229/265 2.9it/s 1:22<12.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 86% ━━━━━━━━━━── 230/265 2.8it/s 1:22<12.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━── 231/265 2.8it/s 1:22<12.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━╸─ 232/265 2.8it/s 1:23<11.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 87% ━━━━━━━━━━╸─ 233/265 2.8it/s 1:23<11.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 88% ━━━━━━━━━━╸─ 234/265 2.6it/s 1:23<11.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 88% ━━━━━━━━━━╸─ 235/265 2.6it/s 1:24<11.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 236/265 2.7it/s 1:24<10.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 237/265 2.7it/s 1:24<10.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 89% ━━━━━━━━━━╸─ 238/265 2.7it/s 1:25<9.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 239/265 2.8it/s 1:25<9.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 240/265 2.8it/s 1:26<8.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 90% ━━━━━━━━━━╸─ 241/265 2.9it/s 1:26<8.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 91% ━━━━━━━━━━╸─ 242/265 2.9it/s 1:26<8.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 91% ━━━━━━━━━━━─ 243/265 2.9it/s 1:27<7.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 92% ━━━━━━━━━━━─ 244/265 2.8it/s 1:27<7.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 92% ━━━━━━━━━━━─ 245/265 2.8it/s 1:27<7.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 92% ━━━━━━━━━━━─ 246/265 2.9it/s 1:28<6.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 93% ━━━━━━━━━━━─ 247/265 2.9it/s 1:28<6.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 93% ━━━━━━━━━━━─ 248/265 2.8it/s 1:28<6.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 93% ━━━━━━━━━━━─ 249/265 2.8it/s 1:29<5.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 94% ━━━━━━━━━━━─ 250/265 2.8it/s 1:29<5.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 94% ━━━━━━━━━━━─ 251/265 2.8it/s 1:29<4.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━─ 252/265 2.8it/s 1:30<4.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━─ 253/265 2.8it/s 1:30<4.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 95% ━━━━━━━━━━━╸ 254/265 2.8it/s 1:30<3.9s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 255/265 2.8it/s 1:31<3.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 256/265 2.8it/s 1:31<3.2s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 96% ━━━━━━━━━━━╸ 257/265 2.8it/s 1:32<2.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 97% ━━━━━━━━━━━╸ 258/265 2.8it/s 1:32<2.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 97% ━━━━━━━━━━━╸ 259/265 2.8it/s 1:32<2.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 260/265 2.8it/s 1:33<1.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 261/265 2.9it/s 1:33<1.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 98% ━━━━━━━━━━━╸ 262/265 2.9it/s 1:33<1.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 99% ━━━━━━━━━━━╸ 263/265 2.9it/s 1:34<0.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 99% ━━━━━━━━━━━╸ 264/265 2.9it/s 1:34<0.3s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 265/265 2.8it/s 1:34
+                   all       4240      86892      0.902      0.825      0.863      0.814
+                    A1        170        266      0.734      0.707      0.788      0.662
+                    A2         74         94      0.784      0.702      0.744      0.638
+                    A3         34         34      0.931      0.882      0.951      0.915
+                    A4         43         44      0.945       0.75      0.816      0.757
+                    A5         25         28      0.977          1      0.995      0.972
+                   A5a         22         22       0.97          1      0.995      0.979
+                    A6         17         18      0.978      0.889      0.964      0.921
+                    A7         27         29      0.981      0.931      0.964      0.913
+                    A8         25         25       0.98       0.96      0.955       0.95
+                    A9         30         32      0.912      0.967      0.968      0.933
+                   A10         23         27      0.972          1      0.995      0.995
+                   A11         28         28      0.961      0.964      0.965      0.953
+                   A12         25         27      0.958       0.84      0.917      0.893
+                   A13         30         34      0.983      0.941      0.982      0.961
+                   A14         24         24      0.819          1      0.995      0.985
+                  A14a         29         36      0.979      0.972      0.975      0.967
+                   A15         12         12      0.966      0.917      0.915       0.87
+                   A16         27         35      0.981      0.971      0.975       0.97
+                   A17         47         51      0.903      0.843      0.888      0.833
+                  A17a         18         26      0.923      0.846      0.882      0.865
+                   A18         22         24      0.976          1      0.995      0.966
+                   A19         38         39      0.875      0.897       0.92      0.914
+                   A20         15         18      0.832      0.827      0.897      0.842
+                   A21         40         44      0.895      0.777      0.842      0.781
+                   A22         26         27      0.962      0.926      0.949      0.907
+                   A23         31         31       0.99      0.871      0.921      0.916
+                   A24         48         54      0.959      0.868      0.903      0.875
+                   A25         36         40          1      0.962      0.993       0.98
+                   A26         28         28      0.905      0.964       0.97      0.952
+                   A27         22         25      0.943       0.84      0.863       0.84
+                   A28         38         38      0.792      0.816      0.791      0.745
+                   A29         29         32      0.976      0.969      0.965      0.962
+                   A30         38         38      0.851      0.921      0.964      0.896
+                   A31         44         56      0.987          1      0.995       0.99
+                   A32         14         17      0.894       0.99      0.983      0.974
+                   A33         33         35      0.992          1      0.995      0.991
+                   A34         30         34      0.988          1      0.995      0.983
+                   A35         28         31      0.972          1      0.995      0.979
+                   A36         38         38       0.97          1      0.995      0.992
+                   A37         49         58      0.974          1      0.995      0.984
+                   A38         44         46      0.989          1      0.995      0.977
+                   A39         53         59      0.991          1      0.995      0.991
+                   A40        213        327      0.755      0.697      0.765      0.628
+                  A40a         56         61      0.959      0.869       0.92      0.888
+                   A41         40         52      0.988      0.962      0.984       0.98
+                   A42         74         89       0.91      0.775      0.838      0.774
+                  A42a         41         43          1      0.972      0.993      0.982
+                   A43         64         68       0.99      0.971      0.978       0.95
+                  A43a         23         28      0.949          1      0.995      0.989
+                   A44         51         59        0.9      0.966      0.976      0.969
+                   A45         48         57      0.992      0.965      0.978      0.959
+                  A45a         57         63      0.914      0.921      0.977      0.952
+                   A46         58         69      0.994      0.986      0.995      0.963
+                   A47         52         59      0.961          1      0.995      0.993
+                   A48         52         59      0.966      0.952      0.983      0.974
+                   A49         53         58      0.913      0.931      0.971      0.963
+                   A50         52         54      0.942      0.909      0.923      0.906
+                   A51         62         72      0.984      0.866      0.895      0.878
+                   A52         92        113      0.843      0.788      0.874      0.792
+                   A53         56         68      0.975      0.956      0.972      0.956
+                   A54         51         54       0.99          1      0.995      0.982
+                   A55         53         62      0.954      0.992      0.993      0.988
+                   A59         46         51      0.985          1      0.995      0.987
+                   A68         44         48      0.981          1      0.995      0.982
+                   A84          6          6      0.918          1      0.995      0.973
+                   Aa1        221        313       0.77      0.607      0.709      0.599
+                   Aa2         62         64      0.932      0.938      0.943      0.911
+                   Aa3         61         68      0.989      0.971      0.975      0.973
+                   Aa4         42         51      0.985          1      0.995      0.976
+                   Aa5         53         59      0.988      0.983      0.991      0.984
+                  Aa5a          8          8      0.909          1      0.995      0.887
+                   Aa6         59         65      0.992          1      0.995      0.981
+                   Aa7         80         99      0.994          1      0.995      0.979
+                   Aa8         66         71      0.992      0.972       0.98      0.953
+                   Aa9         63         64      0.953      0.984      0.985      0.981
+                  Aa10         58         62       0.99      0.984      0.985       0.97
+                  Aa11        122        154       0.82      0.695      0.803        0.7
+                  Aa12         59         63      0.752      0.873      0.845      0.838
+                  Aa13         57         62      0.984      0.972      0.995      0.982
+                  Aa14         52         55      0.968      0.964      0.974       0.93
+                  Aa15        530        891      0.704      0.732      0.747      0.599
+                  Aa16         48         49       0.91      0.918      0.943      0.919
+                  Aa17         57         67      0.995          1      0.995      0.988
+                  Aa18         60         64      0.935          1      0.995      0.972
+                  Aa19         57         60          1      0.994      0.995      0.981
+                  Aa20         56         60      0.977      0.983      0.994      0.981
+                  Aa21         58         63      0.981          1      0.995       0.99
+                  Aa22         49         53      0.989      0.981      0.985      0.953
+                  Aa23         60         69      0.991          1      0.995      0.983
+                  Aa24         48         53      0.988          1      0.995      0.984
+                  Aa25         45         49      0.989      0.959      0.955      0.941
+                  Aa26         50         63      0.984      0.995      0.995      0.976
+                  Aa27         61         62          1      0.901      0.944      0.934
+                  Aa28         57         60      0.885          1      0.993      0.979
+                  Aa29         52         58      0.814      0.966      0.978      0.966
+                  Aa30         54         62      0.932      0.968      0.965      0.964
+                  Aa31         54         61       0.99          1      0.995      0.995
+                  Aa32         44         51      0.989          1      0.995      0.986
+                    B1        111        150      0.875      0.593      0.685      0.588
+                    B2         55         63      0.994      0.984      0.985      0.981
+                    B3         50         56      0.956      0.982      0.984      0.976
+                    B4         41         46      0.937          1      0.995      0.993
+                    B5         47         52      0.983          1      0.995      0.993
+                    B6         49         69      0.995          1      0.995      0.988
+                    B7         48         57       0.99      0.982      0.994      0.991
+                    C1         45         51      0.876      0.882      0.919      0.911
+                    C2        152        235      0.587      0.481      0.542      0.411
+                    C3         67         80      0.993      0.912      0.938      0.933
+                    C4         52         55      0.989      0.964      0.965      0.934
+                    C5         53         59      0.985          1      0.995      0.988
+                    C6         50         53      0.995      0.925      0.952      0.939
+                    C7         50         53      0.925      0.981      0.984      0.962
+                    C8         50         62      0.991          1      0.995      0.988
+                    C9         35         37      0.981          1      0.995      0.982
+                   C10         62         75      0.935      0.827       0.82       0.78
+                  C10a        144        197      0.809      0.406      0.623      0.523
+                   C11         51         59      0.982      0.966      0.965      0.945
+                   C12        101        163      0.758      0.441      0.591      0.438
+                   C17         39         43      0.977      0.995      0.995      0.995
+                   C18         50         53      0.989          1      0.995      0.991
+                   C19         45         50      0.984          1      0.995      0.978
+                   C20         47         59      0.991          1      0.995      0.993
+                    D1        133        161      0.625      0.298      0.493        0.4
+                    D2        316        392      0.757      0.611      0.724      0.571
+                    D3         21         23      0.975       0.87       0.94      0.928
+                    D4        568        801      0.745      0.713      0.737      0.572
+                    D5         15         16      0.989      0.938      0.935      0.877
+                    D6         24         24      0.958       0.75      0.849      0.809
+                    D7         19         22      0.972          1      0.995      0.987
+                   D7a          5          5      0.913          1      0.995      0.995
+                    D8         21         21      0.853      0.952       0.98       0.98
+                    D9         16         16      0.932          1      0.995      0.995
+                   D10         49         55      0.852      0.945      0.917      0.831
+                   D11         22         22      0.734      0.955       0.96      0.932
+                   D12        207        309      0.758      0.126      0.288      0.248
+                   D13         15         15      0.968          1      0.995      0.985
+                   D14         33         33      0.914      0.965      0.974      0.945
+                   D15         18         18      0.982          1      0.995      0.965
+                   D16         21         21      0.947          1      0.995      0.971
+                   D17         35         35      0.919        0.8      0.907      0.857
+                   D18         25         28      0.984          1      0.995      0.992
+                   D19         24         24      0.978          1      0.995      0.995
+                   D20         23         25      0.979          1      0.995       0.98
+                   D21       1272       2677      0.826      0.824      0.853      0.654
+                   D22         48         52      0.988      0.904      0.905      0.901
+                   D23         29         29      0.974      0.966      0.965      0.932
+                   D24         37         49      0.978       0.98      0.975      0.972
+                   D25         46         50      0.969       0.98      0.975      0.971
+                   D26         71         87      0.974      0.989      0.985      0.949
+                   D27         25         27      0.798      0.889      0.884      0.876
+                  D27a         34         42      0.872          1      0.991      0.971
+                   D28        163        219      0.853      0.667      0.768       0.58
+                   D29         57         58          1      0.981      0.985      0.972
+                   D30         19         19      0.971      0.947      0.945      0.904
+                   D31         34         36      0.958          1      0.994      0.988
+                   D32         34         41      0.973      0.886      0.901      0.888
+                   D33         24         25       0.91       0.96      0.955      0.922
+                   D34         21         24      0.877      0.917      0.933      0.845
+                  D34a         39         41      0.987          1      0.995      0.991
+                   D35        109        130      0.825      0.725      0.721      0.608
+                   D36        644        929      0.699      0.617      0.678      0.521
+                   D37        166        198       0.76      0.707       0.75      0.601
+                   D38         36         36      0.874      0.611      0.684      0.645
+                   D39         23         27      0.693      0.741      0.712      0.686
+                   D40        183        259      0.819      0.575      0.679      0.529
+                   D41         38         39      0.962      0.821      0.911      0.898
+                   D42         28         28      0.894      0.857      0.928      0.907
+                   D43         31         32      0.901      0.969      0.971      0.927
+                   D44         19         19      0.854          1      0.995       0.99
+                   D45         54         55      0.854      0.727       0.79      0.745
+                   D46        304        418      0.807       0.69      0.735      0.576
+                  D46a         30         32      0.983      0.969      0.965      0.914
+                   D47         33         55      0.922      0.891      0.903      0.769
+                   D48         11         11      0.955          1      0.995      0.995
+                   D49         14         14      0.945      0.857       0.92      0.904
+                   D50         24         25          1      0.955      0.955      0.922
+                   D51         26         26      0.984          1      0.995      0.995
+                   D52         55         63        0.9       0.57      0.662      0.625
+                   D53         16         22      0.963          1      0.995      0.918
+                   D54        188        240      0.577      0.504      0.577      0.432
+                   D55        132        179       0.53      0.264       0.43      0.372
+                   D56        146        181      0.642      0.525      0.613        0.5
+                   D57         17         17       0.97          1      0.995      0.979
+                   D58        227        285      0.724      0.533      0.663      0.514
+                   D59         41         44      0.975      0.886      0.972      0.905
+                   D60         68         71      0.834      0.817      0.876      0.778
+                   D61         28         30      0.945          1      0.995      0.962
+                   D62         21         21      0.866          1      0.995       0.99
+                   D63         29         29      0.984      0.966      0.965      0.945
+                  D140          5          5      0.906          1      0.995      0.895
+                  D251          6          6      0.796          1      0.901      0.812
+                    E1         69         90      0.605        0.5      0.553      0.426
+                    E2         43         46      0.924      0.739      0.819      0.763
+                    E3         30         34      0.854          1      0.995      0.993
+                    E4         26         29      0.981          1      0.995      0.983
+                    E5         26         27       0.98          1      0.995      0.974
+                    E6         27         28      0.991          1      0.995      0.986
+                    E7         29         30      0.977      0.933      0.935      0.929
+                    E8         29         33       0.95       0.97      0.983      0.969
+                   E8a         27         29       0.98          1      0.995      0.974
+                    E9         37         42      0.927      0.881      0.936      0.868
+                   E10         75         89      0.486       0.36      0.467      0.391
+                   E11         32         35      0.653      0.857       0.82      0.794
+                   E12         36         38      0.986          1      0.995      0.989
+                   E13         23         26      0.975          1      0.995      0.984
+                   E14         11         12      0.977          1      0.995      0.995
+                   E15         48         54      0.754      0.685       0.79      0.723
+                   E16         17         17        0.9      0.882      0.952       0.91
+                   E17         34         36       0.91      0.806       0.85      0.829
+                   E18         28         33      0.951       0.97      0.993      0.952
+                   E19         30         38      0.978          1      0.995      0.961
+                   E20         30         32      0.978      0.938      0.939       0.93
+                   E21         30         33          1      0.855      0.934      0.881
+                   E22         30         30      0.912      0.967      0.964      0.951
+                   E23        100        104       0.89      0.577      0.723      0.627
+                   E24         32         36      0.984          1      0.995      0.982
+                   E25         32         32      0.974          1      0.995      0.995
+                   E26         88        124      0.962      0.298      0.478      0.435
+                   E27         22         26      0.976          1      0.995      0.992
+                   E28         29         29      0.927      0.931      0.965      0.962
+                   E29         23         23      0.956          1      0.995       0.98
+                   E30         16         18      0.968          1      0.995      0.988
+                   E31         32         34      0.976          1      0.995      0.984
+                   E32         24         28      0.981          1      0.995      0.983
+                   E33         33         38      0.986          1      0.995       0.98
+                   E34        135        154      0.737       0.74       0.76      0.597
+                    F1         32         41      0.917      0.756      0.802      0.739
+                    F2         28         31      0.981      0.968      0.965      0.922
+                    F3         25         27      0.979          1      0.995      0.995
+                    F4         63         68      0.808      0.765      0.789      0.733
+                    F5         35         35      0.963      0.943      0.968      0.945
+                    F6         44         46      0.988          1      0.995      0.962
+                    F7         31         36      0.981      0.861      0.866      0.839
+                    F8         33         35      0.951      0.971      0.975      0.915
+                    F9         40         48      0.948      0.771      0.819      0.785
+                   F10         24         25       0.97          1      0.995       0.99
+                   F11         35         35          1      0.912      0.956      0.935
+                   F12        289        361      0.843      0.684      0.783      0.578
+                   F13         50         54       0.62      0.667      0.736       0.61
+                   F14         22         22      0.974          1      0.995      0.991
+                   F15         33         38       0.99          1      0.995      0.983
+                   F16         28         34      0.918      0.735      0.735      0.723
+                   F17         31         32       0.86      0.844      0.897       0.87
+                   F18         41         43      0.926      0.651      0.706      0.644
+                   F19         32         34      0.983      0.971      0.975      0.959
+                   F20         34         34      0.936      0.882      0.933      0.889
+                   F21         29         32      0.926      0.875      0.878      0.813
+                   F22         29         29      0.753      0.862      0.818      0.804
+                   F23         23         23      0.495      0.596      0.572       0.54
+                   F24         35         35      0.609        0.8      0.813      0.784
+                   F25         21         23      0.976      0.957      0.955      0.951
+                   F26         26         27      0.945      0.889      0.916      0.903
+                   F27         27         32      0.988          1      0.995      0.979
+                   F28         25         26      0.905      0.923      0.925      0.909
+                   F29         23         23      0.976          1      0.995      0.967
+                   F30         27         30      0.988        0.9      0.953      0.926
+                   F31        399        555       0.77      0.661      0.764      0.571
+                   F32         38         39      0.777      0.641      0.716       0.64
+                   F33         29         29      0.902          1      0.995      0.989
+                   F34         87        100      0.789      0.486      0.611      0.496
+                   F35        265        335      0.804      0.625      0.722      0.558
+                   F36         48         49      0.888      0.735       0.82      0.801
+                   F37         25         29      0.938      0.483      0.494      0.481
+                   F38         27         27          1      0.993      0.995      0.956
+                   F39         69         74      0.757      0.689      0.804      0.701
+                   F40        165        195      0.601      0.451       0.59      0.491
+                   F41         21         22      0.976          1      0.995      0.965
+                   F42         28         30      0.895      0.933      0.931      0.913
+                   F43         29         31      0.984          1      0.995      0.982
+                   F44         31         34      0.884      0.794      0.789      0.757
+                   F45         46         52      0.947      0.691      0.835      0.728
+                   F46         31         31      0.696      0.518      0.601      0.482
+                   F47         10         13      0.673      0.154       0.56      0.465
+                   F48          5          5      0.521        0.6      0.574      0.562
+                   F49          9          9      0.986      0.778      0.955      0.907
+                   F50         23         29      0.924      0.828      0.856      0.836
+                   F51         30         49      0.947      0.449      0.551      0.479
+                   F52         15         16      0.977      0.938      0.935      0.935
+                   F63         24         26      0.966      0.923      0.977      0.947
+                    G1        163        233      0.712      0.528      0.651      0.548
+                    G2         27         31      0.913      0.806      0.893      0.825
+                    G3         17         19      0.649      0.842      0.869      0.781
+                    G4         45         48      0.898      0.417      0.649       0.61
+                    G5        121        144      0.772      0.562      0.681      0.589
+                    G6         25         28      0.907      0.929      0.959       0.91
+                    G7         32         38          1      0.839      0.891      0.846
+                   G7a         37         38      0.979      0.895      0.907      0.897
+                   G7b         19         19      0.971          1      0.995      0.982
+                    G8         37         43      0.926      0.879       0.96      0.933
+                    G9         34         37      0.921      0.784      0.833      0.819
+                   G10         18         19      0.973          1      0.995      0.979
+                   G11         34         37      0.975      0.838      0.865      0.828
+                   G12         31         33      0.967          1      0.995      0.959
+                   G13         40         40      0.983      0.975      0.975      0.967
+                   G14         51         55      0.877      0.648       0.75      0.691
+                  G14a          2          3      0.461          1      0.753      0.656
+                   G15         44         47      0.911      0.875       0.92      0.893
+                   G16         43         43      0.932      0.814      0.873      0.828
+                   G17        303        512      0.728      0.613      0.699      0.594
+                   G18         25         30      0.973          1      0.995      0.983
+                   G19         32         34      0.975      0.941      0.991      0.983
+                   G20         38         50      0.974      0.739      0.797      0.753
+                   G21         45         45      0.909      0.893      0.933      0.905
+                   G22         29         29      0.967          1      0.995      0.991
+                   G23         43         51      0.925      0.941      0.968      0.929
+                   G24         27         28      0.977      0.964      0.965      0.927
+                   G25         70         81      0.947      0.704      0.778      0.713
+                   G26         48         53      0.705      0.755      0.826       0.74
+                  G26a         31         31      0.684      0.871      0.857      0.855
+                   G27         26         27      0.977          1      0.995      0.989
+                   G28         37         38      0.978          1      0.995      0.981
+                   G29         46         50      0.962       0.92      0.941      0.859
+                   G30         27         29       0.95      0.897      0.895      0.881
+                   G31         34         35          1      0.941      0.989      0.967
+                   G32         32         33      0.983          1      0.995      0.988
+                   G33         35         44      0.969       0.75      0.856      0.834
+                   G34         20         20      0.969        0.9      0.895       0.89
+                   G35         34         38      0.994      0.947      0.945      0.945
+                   G36        111        127      0.734      0.598      0.718      0.602
+                   G37         69         78      0.982      0.684       0.78      0.728
+                   G38         53         62      0.716       0.65      0.715       0.64
+                   G39        245        314      0.758      0.608      0.716      0.581
+                   G40         54         57      0.832      0.772      0.827      0.783
+                   G41         38         43      0.946      0.884      0.921      0.878
+                   G42         22         24      0.929      0.958      0.985      0.972
+                   G43        336        663      0.767      0.676       0.75      0.583
+                   G44         19         19      0.969          1      0.995      0.995
+                   G45         36         37      0.873      0.892      0.924      0.889
+                   G46         28         28      0.978      0.929      0.962      0.937
+                   G47         32         33      0.955      0.848      0.884      0.855
+                   G48         22         23      0.971          1      0.995      0.995
+                   G49         26         26      0.941      0.962      0.984      0.978
+                   G50         23         28      0.982          1      0.995      0.992
+                   G51         22         22      0.978          1      0.995      0.972
+                   G52         30         31      0.978          1      0.995      0.995
+                   G53         33         33      0.977          1      0.995      0.978
+                   G54         42         43      0.969      0.907      0.947      0.897
+                    H1         54         55      0.949      0.672      0.752      0.704
+                    H2         27         30      0.983        0.9      0.895       0.89
+                    H3         16         16      0.968          1      0.995      0.977
+                    H4         31         37      0.972      0.942      0.979      0.954
+                    H5         32         38      0.956      0.974      0.985      0.933
+                    H6        135        255      0.736      0.545        0.6      0.429
+                   H6a         10         10      0.952          1      0.995      0.995
+                    H7         20         21      0.974          1      0.995      0.995
+                    H8        221        289      0.807      0.566      0.674      0.527
+                    I1         46         46      0.954      0.911      0.963      0.907
+                    I2         36         43      0.993      0.977      0.975      0.959
+                    I3         20         22      0.971      0.818      0.815      0.804
+                    I4         17         21       0.97      0.905      0.942      0.938
+                    I5         31         36      0.956      0.417      0.512      0.493
+                   I5a         27         27      0.978          1      0.995      0.985
+                    I6         29         29      0.949      0.897      0.922      0.894
+                    I7         21         24      0.972      0.833      0.937      0.919
+                    I8         20         30      0.973        0.8      0.819      0.804
+                    I9        884       1521      0.823      0.778       0.82        0.6
+                   I10        558        803      0.779      0.744      0.797      0.603
+                   I11         28         28      0.959          1      0.995      0.971
+                   I12         74         92      0.692      0.563      0.598      0.501
+                   I13         87        108      0.687      0.259      0.497      0.421
+                   I14         38         40       0.85       0.85      0.943      0.847
+                   I15         23         29      0.853          1      0.987      0.983
+                   I64          6         13      0.621      0.923      0.857       0.69
+                    K1         55         70      0.895      0.529      0.592       0.57
+                    K2         44         48      0.992      0.938      0.941       0.91
+                    K3         30         31      0.982          1      0.995      0.983
+                    K4         27         30      0.927      0.841      0.936      0.901
+                    K5         32         34      0.962          1      0.995      0.982
+                    K6         20         21      0.973      0.952      0.984      0.981
+                    K7         23         24      0.977          1      0.995      0.988
+                    L1        148        169       0.86      0.762      0.828      0.661
+                    L2        284        367      0.758      0.494      0.702       0.56
+                    L3         17         17       0.97          1      0.995      0.974
+                    L4         24         26      0.953          1      0.995      0.947
+                    L5         32         33      0.981       0.97       0.98      0.967
+                    L6         26         28      0.496      0.774      0.632      0.623
+                    L7         20         23      0.977          1      0.995      0.995
+                    M1         34         34       0.88      0.861      0.924      0.902
+                   M1a         27         30       0.98          1      0.995      0.962
+                    M2         54         57      0.811      0.754      0.783      0.719
+                    M3         92         96       0.87      0.626      0.711      0.606
+                    M4         81        134      0.751        0.5      0.642      0.476
+                    M5         30         33      0.984       0.97      0.965      0.946
+                    M6         34         36      0.934      0.917      0.965      0.928
+                    M7         30         32      0.976      0.875       0.89       0.86
+                    M8         66         88      0.897      0.696      0.809      0.732
+                    M9         25         25      0.929       0.84      0.835       0.83
+                   M10         17         19      0.968          1      0.995      0.965
+                   M11         33         35      0.982      0.971      0.975       0.96
+                   M12         50         88      0.862      0.761      0.864      0.694
+                   M13         99        117      0.781      0.427      0.581      0.497
+                   M14         37         43      0.972      0.953      0.955      0.944
+                   M15         89         99      0.757       0.63      0.743      0.623
+                   M16         94        103      0.743      0.448      0.622      0.544
+                   M17       1108       2449      0.751      0.703      0.745      0.522
+                   M18         64         71      0.907      0.521      0.617        0.5
+                   M19         39         40          1      0.642      0.675      0.655
+                   M20         37         38      0.972      0.895      0.921      0.893
+                   M21        137        221      0.907     0.0886      0.194      0.167
+                   M22         64         85      0.904      0.557      0.663      0.591
+                   M23        616        866      0.795      0.699      0.755      0.554
+                   M24         31         32      0.963      0.812      0.896      0.858
+                   M25         27         30      0.871      0.933      0.929      0.909
+                   M26         34         34      0.956      0.941      0.976      0.969
+                   M27         42         49      0.971      0.672       0.78       0.72
+                   M28         18         20      0.933          1      0.995      0.987
+                   M29         36         36       0.99          1      0.995      0.971
+                   M30         27         29          1      0.961      0.975        0.9
+                   M31         17         18      0.971          1      0.995      0.995
+                   M32         27         27      0.983          1      0.995      0.972
+                   M33         30         33      0.974      0.758      0.771      0.759
+                   M34         24         26          1      0.991      0.995      0.985
+                   M35         29         37      0.982      0.946      0.991      0.983
+                   M36         36         43          1      0.742      0.838      0.784
+                   M37         36         41      0.977      0.634      0.752       0.73
+                   M38         25         25      0.971       0.92      0.915      0.902
+                   M39         29         29      0.976      0.931      0.976      0.968
+                   M40         20         21          1      0.894      0.925      0.914
+                   M41         29         29      0.979          1      0.995      0.971
+                   M42         41         43      0.872      0.792      0.871       0.82
+                   M43         24         28      0.985          1      0.995      0.989
+                   M44         25         26       0.95      0.962      0.959      0.934
+                  M163          8          8      0.932          1      0.995      0.995
+                    N1        159        189      0.762      0.487      0.622      0.504
+                    N2         32         33      0.849      0.788      0.845      0.822
+                    N3         15         16       0.55          1      0.943      0.943
+                    N4         33         36      0.987      0.972      0.975      0.948
+                    N5       1357       3177      0.736      0.647      0.734      0.538
+                    N6        157        190      0.796      0.526      0.665      0.536
+                    N7         21         22      0.971      0.955      0.955       0.95
+                    N8         51         53      0.953      0.585      0.716       0.66
+                    N9         31         31      0.995      0.903      0.981      0.954
+                   N10         12         12      0.944      0.917      0.915      0.915
+                   N11         23         25      0.952       0.88      0.934      0.909
+                   N12         23         24      0.969      0.875       0.94      0.925
+                   N13         14         14      0.964          1      0.995      0.983
+                   N14        163        471      0.889      0.597      0.777      0.592
+                   N15         35         39      0.957      0.795      0.891      0.859
+                   N16        194        275      0.839      0.516       0.66      0.522
+                   N17        366        834      0.728      0.424      0.537      0.343
+                   N18         64         71      0.663     0.0832       0.15      0.112
+                   N19         98        111      0.821      0.261      0.427       0.34
+                   N20         47         54      0.835      0.667      0.733      0.668
+                   N21        178        311      0.792      0.527      0.635      0.429
+                   N22         15         16      0.976      0.625      0.625      0.609
+                   N23         80         98      0.979      0.296      0.411       0.38
+                   N24         50         57      0.934      0.684      0.749      0.707
+                   N25        208        302      0.877      0.715      0.776      0.605
+                   N26         74         81      0.884      0.661      0.733      0.653
+                   N27         74         82      0.845      0.667      0.773      0.672
+                   N28        216        262      0.719      0.584       0.67      0.497
+                   N29        113        133      0.728      0.571      0.591      0.431
+                   N30         53         57      0.841      0.556      0.649      0.617
+                   N31        139        177      0.853      0.458       0.68      0.559
+                   N32         27         28      0.982          1      0.995      0.989
+                   N33         67        119      0.838      0.218      0.313      0.284
+                  N33a         43         61      0.689      0.473      0.477      0.409
+                   N34         24         25      0.975       0.92      0.915      0.899
+                  N34a         24         24      0.985          1      0.995      0.976
+                   N35       1657       4359      0.785      0.742      0.795       0.53
+                  N35a        103        121      0.746      0.661      0.723      0.578
+                   N36        355        497      0.776      0.598      0.692      0.503
+                   N37        170        221      0.629      0.389      0.478      0.348
+                   N38         27         28      0.927      0.911      0.946      0.884
+                   N39         29         36      0.947      0.806      0.825      0.818
+                   N40         36         36      0.887      0.944      0.964      0.922
+                   N41         75         95       0.86      0.411      0.475       0.44
+                   N42         35         36      0.973      0.722      0.788      0.764
+                   N64          7          7      0.875          1      0.995      0.796
+                    O1        265        372      0.827      0.593      0.753      0.572
+                    O2         27         28      0.977          1      0.995      0.982
+                    O3         47         58      0.948      0.914      0.955      0.941
+                    O4        133        181      0.846      0.773      0.811      0.668
+                    O5         14         18      0.444      0.621      0.476      0.476
+                    O6         35         49      0.885      0.837      0.878       0.74
+                    O7         37         39      0.814      0.718      0.831      0.731
+                    O8         44         46      0.978      0.804      0.887      0.863
+                    O9         27         30      0.902      0.926      0.925       0.89
+                   O10         48         51      0.965      0.627      0.729      0.683
+                   O11         35         36      0.976          1      0.995      0.991
+                   O12         26         28      0.987      0.929      0.976      0.946
+                   O13         35         35      0.986      0.971      0.975      0.945
+                   O14         32         33          1      0.995      0.995      0.962
+                   O15         24         25       0.98          1      0.995      0.995
+                   O16         26         32      0.981          1      0.995       0.99
+                   O17         28         29      0.996          1      0.995       0.98
+                   O18         29         31      0.981      0.968      0.965      0.965
+                   O19         29         29      0.981          1      0.995      0.979
+                   O20         15         15          1      0.982      0.995      0.959
+                   O21         25         26      0.982          1      0.995      0.983
+                   O22         38         43      0.948      0.884      0.936      0.879
+                   O23         49         54       0.86      0.682      0.763      0.706
+                   O24         29         32      0.979      0.844      0.845      0.818
+                   O25         39         45      0.945      0.622      0.691      0.661
+                   O26         33         38      0.813      0.895      0.925       0.88
+                   O27         18         20      0.978          1      0.995      0.971
+                   O28         63         88      0.773       0.42      0.579      0.437
+                   O29        134        144      0.868      0.458       0.63      0.533
+                  O29V         30         34       0.47     0.0794      0.293      0.204
+                   O30         29         29      0.976      0.897      0.906      0.899
+                   O31         17         19      0.972      0.895      0.936      0.929
+                   O32         28         30      0.982          1      0.995      0.974
+                   O33         54         70      0.701      0.443      0.604      0.506
+                   O34        492        804       0.79      0.709      0.777      0.565
+                   O35         42         47      0.955      0.936       0.98      0.929
+                   O36         24         24      0.963      0.875      0.913      0.902
+                   O37         31         31      0.983          1      0.995      0.991
+                   O38         20         21      0.962      0.857      0.855      0.847
+                   O39         43         52      0.951      0.372      0.516      0.466
+                   O40         25         25      0.983       0.96      0.992      0.988
+                   O41         31         34      0.895        0.5      0.564      0.554
+                   O42         38         38      0.978      0.974      0.975       0.97
+                   O43         25         25      0.972          1      0.995      0.983
+                   O44         21         24      0.936      0.958      0.953      0.929
+                   O45         34         38       0.97      0.895      0.936      0.868
+                   O46         19         20      0.972          1      0.995      0.983
+                   O47         32         37      0.762      0.514      0.624      0.584
+                   O48         16         17      0.939      0.647      0.791      0.756
+                   O49        317        406       0.85      0.695      0.803      0.642
+                  O49a          5          5      0.922          1      0.995      0.895
+                   O50         28         48      0.901      0.438      0.484      0.475
+                   O51          8          8      0.933      0.875      0.875      0.857
+                    P1         49         53      0.827      0.698      0.751      0.651
+                   P1a         38         39      0.983          1      0.995      0.972
+                    P2         23         23      0.974          1      0.995      0.925
+                    P3         30         32      0.945          1      0.981      0.956
+                   P3a         30         30      0.974          1      0.995      0.974
+                    P4         15         15       0.97      0.933      0.935      0.926
+                    P5         24         24      0.964      0.917      0.939      0.879
+                    P6         64         70      0.891      0.469      0.647      0.514
+                    P7         27         27      0.962      0.938      0.964      0.926
+                    P8         84        100       0.74       0.63      0.658      0.559
+                    P9         32         34      0.969      0.735      0.842      0.813
+                   P10         30         30      0.981          1      0.995      0.959
+                   P11         34         38      0.988          1      0.995      0.991
+                   P30          6          6      0.801          1      0.972      0.972
+                   P34          1          2      0.794          1      0.995      0.821
+                    Q1        358        512      0.835       0.77      0.822       0.63
+                    Q2         40         42      0.946      0.833      0.964      0.887
+                    Q3        646        905      0.801      0.682      0.738      0.531
+                    Q4         20         20      0.969          1      0.995      0.973
+                    Q5         95        112      0.729      0.575      0.639      0.529
+                    Q6         11         11      0.943          1      0.995      0.937
+                    Q7         23         30          1      0.618      0.819      0.716
+                    R1         11         11      0.946      0.909      0.905      0.905
+                    R2         21         22      0.987          1      0.995      0.975
+                    R3         43         49          1      0.464      0.585      0.547
+                    R4        114        144      0.705      0.507      0.647      0.518
+                    R5         16         16      0.958          1      0.995      0.969
+                    R6         23         24      0.974          1      0.995      0.967
+                    R7         36         36      0.933       0.75      0.861      0.802
+                    R8        585        920      0.798      0.718      0.754      0.564
+                    R9         15         16      0.965          1      0.995      0.963
+                   R10         21         21      0.976          1      0.995      0.976
+                   R11        124        148      0.838      0.664      0.759      0.574
+                   R12         13         13      0.959      0.923      0.925      0.904
+                   R13         26         26      0.972          1      0.995      0.995
+                   R14         61         80      0.865      0.483      0.597      0.455
+                   R15         17         17      0.958      0.824       0.87      0.848
+                   R16         18         18      0.955          1      0.995      0.986
+                   R17         21         21      0.972          1      0.995      0.985
+                   R18         26         29      0.987      0.966      0.994      0.972
+                   R19         51         59      0.936      0.748      0.824      0.791
+                   R20          9          9      0.875      0.889      0.968      0.936
+                   R21         10         10       0.95          1      0.995      0.981
+                   R22         10         10       0.91        0.9      0.895      0.884
+                   R23         11         11      0.954          1      0.995      0.981
+                   R24         32         32      0.969      0.906      0.905      0.863
+                   R25         30         32      0.985          1      0.995      0.958
+                   R50          4          4      0.733          1      0.995      0.995
+                    S1         54         63      0.873      0.762      0.821      0.787
+                    S2         30         31          1      0.951      0.965      0.962
+                    S3        210        279      0.839       0.67      0.728      0.577
+                    S4         33         35          1       0.94      0.979      0.957
+                    S5         22         22      0.887          1      0.983      0.927
+                    S6         33         33      0.975      0.939      0.963      0.942
+                    S7         30         32      0.978      0.875      0.897       0.88
+                    S8         53         67      0.979      0.507      0.714      0.673
+                    S9         29         34      0.984      0.971      0.975      0.959
+                   S10         19         21      0.964      0.952      0.955      0.955
+                   S11         18         19          1      0.981      0.995      0.973
+                   S12        123        181      0.661      0.503      0.605      0.508
+                  S12a         19         48      0.605      0.542      0.623      0.531
+                   S13         31         32      0.981      0.906      0.905      0.881
+                   S14         33         37      0.981      0.946      0.973      0.959
+                  S14a         38         42          1      0.976      0.995      0.976
+                   S15         32         36      0.985      0.833      0.835      0.818
+                   S16         30         33      0.981      0.848      0.861      0.838
+                   S17         30         30      0.994      0.967      0.965      0.957
+                  S17a         28         28      0.971          1      0.995      0.995
+                   S18         21         24      0.981          1      0.995      0.987
+                   S19         40         42      0.956      0.976      0.975      0.939
+                   S20         34         34       0.98          1      0.995      0.986
+                   S21         29         34      0.915      0.735       0.74       0.73
+                   S22         29         29      0.981      0.966      0.965      0.965
+                   S23         29         31      0.928       0.83      0.948      0.916
+                   S24         60         86      0.882      0.349      0.419      0.397
+                   S25         33         33      0.983       0.97      0.965      0.965
+                   S26         19         19      0.944          1      0.995      0.995
+                   S27         29         29      0.981      0.966      0.994      0.956
+                   S28         43         46      0.876      0.925      0.948      0.909
+                   S29        835       1337      0.836      0.754      0.814      0.617
+                   S30         27         30      0.978          1      0.995      0.995
+                   S31         27         27       0.98          1      0.995      0.981
+                   S32         35         35      0.969      0.943      0.945      0.939
+                   S33         16         16      0.971          1      0.995      0.988
+                   S34        865       1390      0.809      0.778      0.814      0.634
+                   S35         25         28      0.987          1      0.995      0.992
+                   S36         26         27      0.979          1      0.995      0.987
+                   S37         64         83      0.947      0.265       0.43      0.396
+                   S38        149        245      0.794      0.469      0.647      0.501
+                   S39        139        202      0.618       0.48      0.571      0.457
+                   S40        211        277      0.783      0.585      0.685      0.516
+                  S40a          6          6      0.653          1      0.972      0.735
+                   S41         49         55      0.969      0.455        0.6       0.56
+                   S42         67        107      0.965      0.762      0.857       0.79
+                   S43        126        168       0.86      0.405      0.566      0.397
+                   S44         25         28      0.891          1      0.985      0.966
+                   S45         28         31      0.965      0.901      0.908      0.876
+                    T1         73         76      0.879      0.697      0.822      0.784
+                    T2         34         34       0.98      0.941      0.945      0.937
+                    T3         49         54      0.875      0.648      0.781      0.681
+                    T4         26         32      0.983          1      0.995      0.995
+                    T5         39         40      0.974      0.725       0.76      0.712
+                    T6         21         22      0.976      0.864      0.865      0.842
+                    T7         16         16       0.97          1      0.995      0.995
+                   T7a         23         27      0.907      0.719      0.761      0.744
+                    T8         19         21      0.975      0.762      0.792      0.787
+                   T8a         11         18          1      0.483      0.576      0.552
+                    T9         17         17          1      0.399      0.604      0.492
+                   T9a         11         11      0.956          1      0.995      0.995
+                   T10         14         14      0.863      0.452      0.736      0.664
+                   T11         14         14      0.956          1      0.995      0.978
+                   T12         33         38      0.843      0.564      0.733      0.664
+                   T13         26         26      0.981      0.962      0.982      0.973
+                   T14         47         58      0.765      0.638      0.701      0.578
+                   T15         12         12          1      0.829      0.835      0.826
+                   T16         16         17      0.984      0.647      0.652       0.64
+                   T17         16         16      0.954      0.938      0.935      0.908
+                   T18         19         19      0.964      0.895       0.94      0.925
+                   T19         24         34      0.911      0.824      0.825      0.822
+                   T20         17         18      0.977      0.889      0.885      0.866
+                   T21         19         21      0.976      0.762      0.791      0.747
+                   T22         37         42          1      0.381      0.572       0.52
+                   T23         29         32      0.954      0.531      0.767      0.702
+                   T24         11         11      0.949      0.818      0.815      0.815
+                   T25         17         17          1      0.924      0.995      0.952
+                   T26          8          8      0.926          1      0.995      0.995
+                   T27          9          9      0.948          1      0.995       0.94
+                   T28         48         55      0.793      0.695      0.814      0.723
+                   T29          9         10      0.886          1      0.995      0.995
+                   T30         13         13      0.879      0.846      0.909      0.884
+                   T31         12         12       0.95          1      0.995      0.995
+                   T32         31         32      0.921      0.728      0.827      0.745
+                   T33         13         13       0.84          1      0.986       0.96
+                   T34         10         10      0.949          1      0.995      0.995
+                   T35         14         19      0.969          1      0.995      0.989
+                    U1        131        168       0.76      0.649      0.666      0.551
+                    U2         24         24          1      0.618       0.77      0.721
+                    U3         38         38      0.968      0.787      0.908      0.843
+                    U4         15         17       0.76      0.529      0.662      0.629
+                    U5         23         24      0.933      0.581      0.777      0.565
+                    U6        300        393      0.805      0.619       0.71      0.515
+                   U6a         16         16       0.99          1      0.995      0.988
+                    U7         62         71      0.846      0.451      0.668       0.52
+                   U7a          6          6      0.925          1      0.995      0.939
+                    U8         13         13      0.958      0.769      0.765       0.73
+                    U9         21         21      0.965          1      0.995      0.978
+                   U10         24         25      0.978          1      0.995      0.975
+                   U11         16         16      0.949          1      0.995      0.986
+                   U12         19         23      0.961          1      0.995      0.967
+                   U13         25         25      0.979       0.96      0.955      0.934
+                   U14         17         17      0.969          1      0.995      0.995
+                   U15         46         47      0.864      0.638      0.692      0.552
+                   U16         16         20          1      0.934      0.945      0.904
+                   U17         15         16      0.961      0.875      0.875      0.869
+                   U18         15         15      0.956          1      0.995      0.979
+                   U19         28         33      0.959      0.711      0.773      0.721
+                   U20         22         22      0.916      0.682      0.747      0.737
+                   U21        263        402      0.726      0.712      0.729      0.554
+                   U22         28         31      0.966      0.516      0.584      0.556
+                   U23         23         23       0.89      0.913       0.95      0.932
+                   U24         14         16      0.974          1      0.995      0.948
+                   U25          8          8      0.928      0.875      0.875      0.875
+                   U26         20         20      0.965          1      0.995      0.979
+                   U27          7          7      0.934          1      0.995      0.995
+                   U28         52         60      0.746      0.783      0.852      0.672
+                   U29         27         30      0.811      0.567      0.718      0.625
+                   U30         16         16          1      0.989      0.995      0.983
+                   U31         19         19      0.916      0.789      0.918      0.802
+                   U32         33         34      0.894      0.588       0.62      0.603
+                   U33         30         34      0.837      0.441      0.606       0.51
+                   U34         12         14       0.83      0.857      0.876      0.854
+                   U35         13         15      0.967          1      0.995      0.972
+                   U36         64         86      0.877      0.477       0.59      0.502
+                   U37         23         23      0.979          1      0.995      0.995
+                   U38         34         42      0.671      0.486      0.571      0.509
+                   U39         21         21      0.968      0.952      0.955      0.955
+                   U40         12         12      0.964          1      0.995      0.987
+                   U41         28         29      0.976          1      0.995      0.995
+                    V1         57        113       0.89      0.358      0.516      0.377
+                    V2         16         16          1       0.81      0.849      0.833
+                    V3          7          7      0.741          1      0.995      0.995
+                    V4         89         97      0.859      0.693      0.766      0.651
+                    V5         11         11      0.946          1      0.995      0.973
+                    V6         43         45      0.949      0.867      0.953      0.868
+                    V7         27         28      0.711      0.616       0.72       0.65
+                    V8         11         11      0.921      0.909      0.905      0.887
+                    V9         26         32      0.757      0.391      0.588      0.505
+                   V10        457        822      0.753      0.681      0.786      0.665
+                   V11         20         20      0.964          1      0.995      0.987
+                   V12         13         13      0.867      0.769      0.765      0.746
+                   V13        220        316      0.763      0.732      0.786      0.608
+                   V14         20         24      0.941      0.664       0.78      0.686
+                   V15         60         62      0.931      0.774      0.853      0.768
+                   V16         40         46      0.994      0.652      0.751      0.641
+                  V16a          6          6      0.724          1      0.995      0.995
+                   V17         43         44      0.883      0.516      0.696      0.594
+                   V18        133        159      0.616      0.454      0.555      0.441
+                   V19          6          6      0.924          1      0.995      0.995
+                   V20         36        165      0.893       0.76      0.783      0.565
+                   V21         18         18      0.968          1      0.995       0.97
+                   V22         23         23      0.889          1      0.995      0.979
+                   V23         53         58       0.66      0.302      0.401      0.322
+                   V24         30         30      0.908      0.933      0.941      0.901
+                   V25         21         24      0.953      0.708      0.828      0.789
+                   V26         15         15      0.966          1      0.995      0.983
+                   V27         11         11      0.956          1      0.995      0.995
+                   V28        340        478      0.706      0.634      0.667      0.474
+                   V29         44         55      0.978      0.545      0.622      0.594
+                   V30       1162       2348      0.768      0.656       0.75      0.547
+                   V31        525        986       0.79      0.742      0.796      0.596
+                  V31a         51         93      0.692     0.0645      0.113     0.0993
+                   V32         21         21      0.975          1      0.995      0.995
+                   V33         17         17      0.948      0.941      0.945      0.933
+                   V34         17         17      0.951          1      0.995      0.965
+                   V35         14         14      0.965          1      0.995      0.982
+                   V36         17         17      0.973          1      0.995      0.949
+                   V37         26         26      0.978          1      0.995      0.972
+                   V38          9          9      0.931      0.889      0.885      0.885
+                   V39         58         76      0.657      0.505      0.654      0.568
+                    W1         15         15      0.956      0.933       0.94       0.93
+                    W2         20         23      0.976          1      0.995      0.989
+                    W3         24         24       0.82      0.762      0.769      0.731
+                    W4         28         30      0.785      0.867      0.859       0.84
+                    W5         17         17       0.97          1      0.995      0.986
+                    W6         34         36      0.997      0.778      0.811        0.8
+                    W7         31         45      0.972      0.533      0.854      0.745
+                    W8         26         26      0.978      0.962      0.965      0.952
+                    W9         33         33      0.639      0.483      0.636      0.631
+                   W10        107        132      0.844      0.698      0.771      0.605
+                  W10a         17         17      0.963      0.882      0.885      0.856
+                   W11         91        120      0.774      0.417      0.588       0.48
+                   W12         34         39       0.96      0.513      0.606      0.564
+                   W13        137        204      0.617      0.353      0.481      0.375
+                   W14         50         52      0.823      0.596      0.659      0.579
+                   W15         46         50      0.833      0.499      0.607      0.531
+                   W16         27         29      0.946      0.966      0.988      0.963
+                   W17         34         34      0.951      0.676      0.783      0.724
+                   W18         62         72      0.827      0.639      0.749      0.618
+                   W19        270        349      0.794      0.576      0.703      0.537
+                   W20         15         18      0.974          1      0.995      0.995
+                   W21         23         23      0.952      0.867      0.939      0.887
+                   W22         33         39       0.96      0.623       0.75      0.702
+                   W23         29         31          1      0.712      0.868      0.801
+                   W24        187        314      0.699      0.455      0.546      0.394
+                  W24a         13         15      0.916      0.733      0.735      0.704
+                   W25        100        184      0.784      0.255      0.326      0.258
+                   W54          6          6      0.697          1      0.948      0.729
+                   W59          6          6      0.797          1      0.972      0.972
+                    X1       2126       6180       0.82      0.715      0.804       0.54
+                    X2         19         19      0.971      0.947      0.945      0.937
+                    X3         27         27          1      0.953      0.994      0.965
+                    X4          9          9      0.906          1      0.995      0.962
+                   X4a         10         12       0.95          1      0.995      0.995
+                    X5          9          9      0.968          1      0.995      0.995
+                    X6         19         19      0.973          1      0.995      0.995
+                    X7         83         89      0.685      0.472      0.588      0.491
+                    X8        448        631      0.854      0.776      0.819      0.608
+                    Y1        242        344      0.798      0.721      0.754      0.586
+                   Y1a          6          6      0.849        0.5      0.631      0.519
+                   Y1v         39         48       0.79      0.542      0.719      0.458
+                    Y2         96        115      0.691      0.661      0.655      0.537
+                    Y3         19         21       0.98      0.952      0.955      0.876
+                    Y4         50         64      0.904       0.59      0.704      0.627
+                    Y5        575        827      0.807      0.757        0.8      0.597
+                    Y6         13         13      0.974          1      0.995      0.995
+                    Y7         10         10      0.952          1      0.995       0.98
+                    Y8         14         14      0.888      0.929      0.925      0.915
+                    Z1        722       2218      0.754      0.392      0.554       0.31
+                    Z2        838       1550      0.758      0.626      0.689      0.475
+                   Z2a         24         27      0.396      0.259      0.294      0.281
+                   Z2b         13         13      0.554      0.769       0.56      0.549
+                   Z2c          2          2      0.828          1      0.995      0.845
+                    Z3        174        209      0.818       0.56      0.642      0.485
+                   Z3a          1          1          0          0          0          0
+                    Z4        228        292       0.87      0.541      0.649      0.478
+                   Z4a         88        112      0.706      0.339      0.442      0.327
+                    Z5          9          9      0.927      0.889      0.885      0.885
+                    Z6         13         13      0.948      0.923      0.982      0.962
+                    Z7        226        328      0.732      0.576      0.675      0.466
+                    Z8         18         18      0.896      0.722      0.773      0.748
+                    Z9         39         49      0.712       0.51       0.54      0.447
+                   Z10         47         54      0.827      0.593      0.781      0.656
+                   Z11        135        168      0.852      0.649      0.715      0.581
+Speed: 0.5ms preprocess, 19.1ms inference, 0.0ms loss, 1.2ms postprocess per image
+Results saved to [1m/home/msm/Documents/Projects/Khemet/AI_services/hieroglyph_translator/runs/detect/val-3[0m
+💡 Learn more at https://docs.ultralytics.com/modes/val

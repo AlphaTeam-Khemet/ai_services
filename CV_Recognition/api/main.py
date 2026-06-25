@@ -14,6 +14,7 @@ import os
 import signal
 import sys
 from contextlib import asynccontextmanager
+import asyncio
 
 # ── Ensure project root (CV_Recognition/) is on sys.path ─────────────────────
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -126,7 +127,7 @@ async def predict(file: UploadFile = File(...)):
         if not image_bytes:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
 
-        result = predict_image(image_bytes)
+        result = await asyncio.to_thread(predict_image, image_bytes)
         logger.info(
             "Prediction complete",
             extra={"class_name": result.get("class_name"), "confidence": result.get("confidence")},
@@ -153,7 +154,7 @@ async def translate(file: UploadFile = File(...)):
         image_bytes = await file.read()
         if not image_bytes:
             raise HTTPException(status_code=400, detail="Uploaded file is empty.")
-        result = predict_image(image_bytes)
+        result = await asyncio.to_thread(predict_image, image_bytes)
         result["note"] = (
             "CLIP zero-shot classification result. "
             "A dedicated hieroglyph translation model is not yet integrated."

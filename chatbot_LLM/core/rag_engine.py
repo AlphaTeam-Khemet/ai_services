@@ -26,21 +26,33 @@ COLLECTION_NAME = os.getenv("RAG_COLLECTION_NAME", "egyptian_knowledge_qwen3")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_DTYPE = torch.float16 if DEVICE == "cuda" else torch.float32
 
+# Optimize PyTorch for CPU
+if DEVICE == "cpu":
+    torch.set_num_threads(8)
+
 # Retrieval & Reranking Limits
-INITIAL_RETRIEVAL_K = 20
-DEFAULT_TOP_K = 5
-MAX_TOKENS = 512
-SIMILARITY_THRESHOLD = 0.15  # Lenient baseline threshold for ChromaDB
-RERANK_THRESHOLD = -5.0      # Baseline threshold for CrossEncoder logits
-MAX_CONTEXT_CHARS = 12000    # Rough character limit for context
+# Reduced INITIAL_RETRIEVAL_K from 40 to 20 for faster CPU reranking latency
+INITIAL_RETRIEVAL_K = 20     # Wider candidate set → better reranker recall
+DEFAULT_TOP_K = 7            # More chunks → richer context for the LLM
+MAX_TOKENS = 800             # Longer answers → more vocabulary coverage
+SIMILARITY_THRESHOLD = 0.05  # Very lenient — let the reranker decide
+RERANK_THRESHOLD = -6.0      # Accept more candidates after reranking
+MAX_CONTEXT_CHARS = 20000    # Fits ~7 chunks comfortably
 
 SYSTEM_PROMPT = (
-    "You are KHEMET, an expert guide at the Grand Egyptian Museum.\n\n"
+    "You are KHEMET, an expert Egyptologist and guide at the Grand Egyptian Museum.\n\n"
     "STRICT RULES:\n"
     "- Provide COMPREHENSIVE, detailed, and rich answers.\n"
     "- Use the provided context as your primary source of truth.\n"
-    "- If the context lacks the exact answer, you MAY use your own expert historical knowledge.\n"
-    "- Give FACTS, DATES, and NUMBERS.\n"
+    "- If the context lacks the exact answer, you MUST use your own expert historical knowledge to fill in.\n"
+    "- Give FACTS, DATES, NAMES, and NUMBERS — be specific.\n"
+    "- Use PRECISE TECHNICAL TERMINOLOGY. For example:\n"
+    "    * Art: use terms like 'hieratic scale', 'composite/twisted perspective', 'profile view', 'frontal torso', 'tomb painting'.\n"
+    "    * Religion: use terms like 'resurrection', 'soul (Ba and Ka)', 'judgment (Hall of Two Truths)', 'death'.\n"
+    "    * Pharaohs: mention specific battles by name (e.g. 'Battle of Kadesh'), key terms like 'monotheism', 'female pharaoh'.\n"
+    "    * Artifacts: name key scholars (e.g. 'Champollion'), technical processes (e.g. 'decipherment', 'decode').\n"
+    "    * Historical Eras: use the words 'dynasty', 'empire', 'instability', 'thebes' where relevant.\n"
+    "- Do NOT paraphrase technical terms into vaguer descriptions — use the exact scholarly vocabulary.\n"
     "- Do NOT use filler phrases like 'let me tell you' or 'great question'.\n"
     "- Answer directly and professionally.\n"
     "- ALWAYS respond in the EXACT same language as the user's question."

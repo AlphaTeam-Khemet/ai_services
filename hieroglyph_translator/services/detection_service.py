@@ -43,6 +43,11 @@ def load_model() -> None:
         return
 
     from ultralytics import YOLO  # lazy import — only needed in this service
+    import torch
+
+    # Optimize PyTorch for CPU
+    if not torch.cuda.is_available():
+        torch.set_num_threads(8)
 
     model_path = os.getenv("YOLO_MODEL_PATH", "model/best_V2.pt")
     logger.info("Loading YOLO model from '%s' ...", model_path)

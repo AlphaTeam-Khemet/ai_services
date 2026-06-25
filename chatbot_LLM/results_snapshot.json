@@ -1,0 +1,702 @@
+[
+  {
+    "question": "What are the main characteristics of Ancient Egyptian painting, especially regarding how they drew people?",
+    "answer": "The main characteristics of Ancient Egyptian painting, especially regarding how they drew people, include the use of a strict set of artistic conventions, notably the composite perspective, also known as the twisted perspective. This technique involves drawing the human figure using the most recognizable view of each body part simultaneously. The head is consistently shown in profile view, while the eye is depicted from the front, the shoulders and torso are represented frontally, and the legs and feet return to the profile view. Additionally, figures in Ancient Egyptian painting adhere to a standard set of proportions, measuring 18 \"fists\" from the ground to the hair-line on the forehead. The depiction of people also varies in size according to their importance, rather than their location, and is often characterized by parted legs, when not seated, and a head shown in profile view, but with the torso seen from the front. This distinctive figure convention was applied consistently in all tomb paintings, temple reliefs, and papyrus scrolls, and was a hallmark of Ancient Egyptian art.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Painting Style and Conventions",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.9775
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Characteristics",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.6578
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Painting",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.5175
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.4377
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Painting",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Cosmetics",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.2645
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Sculpture",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.2645
+      }
+    ],
+    "elapsed": 16.476656913757324
+  },
+  {
+    "question": "Why is the Rosetta Stone important and who deciphered it?",
+    "answer": "The Rosetta Stone is important because it features a trilingual inscription, consisting of hieroglyphic, Demotic, and Greek scripts, which provided the key to deciphering ancient Egyptian hieroglyphs. The stone was discovered in 1799 by French soldiers in Egypt, and it sparked a significant interest in Egyptology. \n\nThe decipherment of the Rosetta Stone was a gradual process that involved the contributions of several scholars. The initial breakthrough was made by Thomas Young, an English physicist and linguist, who recognized that the hieroglyphs on the stone were a combination of phonetic and logographic symbols. However, it was Jean-Fran\u00e7ois Champollion, a French linguist, who ultimately cracked the code of hieroglyphic writing. \n\nChampollion's work, particularly his paper \"Lettre \u00e0 M. Dacier\" (1822), demonstrated that the hieroglyphs were a combination of alphabetic and symbolic signs, and he successfully deciphered the names of Ptolemy and Cleopatra on the stone. His subsequent work, \"Pr\u00e9cis du syst\u00e8me hi\u00e9roglyphique\" (1824), further elaborated on his discoveries and provided a comprehensive understanding of the hieroglyphic writing system. \n\nThe decipherment of the Rosetta Stone marked a significant milestone in the development of Egyptology, enabling scholars to read and interpret ancient Egyptian texts, and thereby uncovering the language, culture, and history of ancient Egypt.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Legacy, translation and interpretation",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.3114
+      },
+      {
+        "topic_name": "Amenemhat I",
+        "topic_id": "amenemhat_i",
+        "category": "pharaoh",
+        "section": "In the view of Egyptologist Frank J. Yurco,",
+        "period": "Middle Kingdom, 12th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0047
+      },
+      {
+        "topic_name": "Amarna (Akhetaten)",
+        "topic_id": "amarna",
+        "category": "geography",
+        "section": "The Amarna letters",
+        "period": "New Kingdom, c. 1346\u20131332 BC",
+        "location": "Tell el-Amarna, Middle Egypt",
+        "similarity": 0.0027
+      },
+      {
+        "topic_name": "Amarna (Akhetaten)",
+        "topic_id": "amarna",
+        "category": "geography",
+        "section": "Archaeology",
+        "period": "New Kingdom, c. 1346\u20131332 BC",
+        "location": "Tell el-Amarna, Middle Egypt",
+        "similarity": 0.0024
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Legacy, translation and interpretation",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.0018
+      },
+      {
+        "topic_name": "Alabaster Chalice",
+        "topic_id": "alabaster_chalice",
+        "category": "royal_treasure",
+        "section": "Introduction",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Grand Egyptian Museum, Giza, Egypt",
+        "similarity": 0.0016
+      },
+      {
+        "topic_name": "Amarna (Akhetaten)",
+        "topic_id": "amarna",
+        "category": "geography",
+        "section": "Archaeology",
+        "period": "New Kingdom, c. 1346\u20131332 BC",
+        "location": "Tell el-Amarna, Middle Egypt",
+        "similarity": 0.0013
+      }
+    ],
+    "elapsed": 17.618546962738037
+  },
+  {
+    "question": "Who was Hatshepsut and what did she achieve?",
+    "answer": "Hatshepsut was a female pharaoh of the Eighteenth Dynasty of Ancient Egypt, who ruled from approximately 1479 to 1458 BCE. She was the daughter of Thutmose I and the wife of Thutmose II, and after his death, she became the regent for her stepson, Thutmose III. However, she eventually took on the full powers of pharaoh, adopting the traditional symbols of kingship, including the khat head cloth and the false beard.\n\nDuring her reign, Hatshepsut achieved numerous accomplishments, including significant architectural and artistic innovations. She made substantial additions to the temple at Karnak, one of the greatest temple complexes in Egypt, located in Thebes, which showcased the skills of Egyptian artisans in the use of limestone, granite, and sandstone. Her most notable architectural achievement was the construction of her magnificent mortuary temple at Deir el-Bahri, which was designed by her architect, Senenmut. This temple featured unique and innovative architectural styles, including the use of colonnaded halls, ramps, and plumed pillars, and is considered one of the greatest architectural achievements in ancient Egypt.\n\nHatshepsut's reign also saw extensive trade expeditions, which brought great wealth to Egypt. She sent a successful trade mission to the land of Punt, a region in eastern Africa, which resulted in the importation of vast quantities of myrrh, ivory, and other valuable commodities. This expedition was commemorated in intricate reliefs and paintings at her temple at Deir el-Bahri, featuring the use of hieratic scale and composite perspective to convey the significance of the event.\n\nIn addition to her architectural and economic achievements, Hatshepsut also implemented various reforms and innovations, including the reorganization of the Egyptian government and the establishment of a strong and efficient administrative system. She also promoted the arts, encouraging the work of sculptors, painters, and other craftsmen, which led to the creation of numerous works of art, including statues, reliefs, and tomb paintings.\n\nOverall, Hatshepsut's reign was marked by significant cultural, economic, and architectural achievements, which had a lasting impact on ancient Egyptian society and contributed to the development of the New Kingdom period. Her legacy has endured for millennia, and she remains one of the most fascinating and influential female figures of the ancient world.",
+    "sources": [
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.1504
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Pre-Amarna",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.0949
+      },
+      {
+        "topic_name": "Ahmose-Nefertari",
+        "topic_id": "ahmose_nefertari",
+        "category": "queen",
+        "section": "Introduction",
+        "period": "18th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0085
+      },
+      {
+        "topic_name": "Ahmose-Nefertari",
+        "topic_id": "ahmose_nefertari",
+        "category": "queen",
+        "section": "Introduction",
+        "period": "18th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0062
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Introduction",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.0019
+      },
+      {
+        "topic_name": "Amenhotep III",
+        "topic_id": "amenhotep_iii",
+        "category": "pharaoh",
+        "section": "Attestations",
+        "period": "New Kingdom, 18th Dynasty, c. 1391\u20131353 BC",
+        "location": "Thebes, Egypt",
+        "similarity": 0.0018
+      },
+      {
+        "topic_name": "Ahmose-Nefertari",
+        "topic_id": "ahmose_nefertari",
+        "category": "queen",
+        "section": "Introduction",
+        "period": "18th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0014
+      }
+    ],
+    "elapsed": 22.144437789916992
+  },
+  {
+    "question": "Describe the Ancient Egyptian belief in the afterlife and the Hall of Two Truths.",
+    "answer": "The Ancient Egyptian belief in the afterlife was a complex and multifaceted concept, deeply intertwined with their funerary practices and theology. The afterlife, also known as the Duat, was a mystical realm where the deceased would journey to, guided by the Book of the Dead, a collection of spells and prayers. The ultimate goal was to achieve eternal life, where the individual's Ka (life-force) and Ba (spiritual characteristics) would be reunited, allowing the person to exist in a state of paradise, known as the Fields of Aaru.\n\nA crucial aspect of the afterlife was the judgment of the deceased, which took place in the Hall of Two Truths, also known as the Hall of Ma'at. Ma'at, the goddess of truth, justice, and morality, presided over this tribunal, where the heart of the deceased was weighed against the feather of truth. The heart, which was believed to contain the individual's conscience and moral character, was placed on one side of the scales, while the feather of Ma'at, symbolizing truth and justice, was placed on the other.\n\nAnubis, the god of mummification and the afterlife, would oversee the weighing ceremony, while Thoth, the god of wisdom and writing, would record the verdict. If the heart was lighter than or equal to the feather, the individual was deemed worthy and allowed to proceed to the afterlife, where they would be greeted by Osiris, the god of the afterlife. However, if the heart was heavier, it would be devoured by the monster Ammit, a creature with the body of a lion, the head of a crocodile, and the hindquarters of a hippopotamus, symbolizing the destruction of the individual's soul.\n\nThe Ancient Egyptians believed that the Hall of Two Truths was a place of ultimate reckoning, where the deceased would be held accountable for their actions during life. The judgment was based on the individual's adherence to the principles of Ma'at, which included honesty, kindness, and respect for the gods and the natural order. The outcome of the judgment would determine the individual's fate in the afterlife, with the ultimate goal of achieving eternal life and reunification with their Ka and Ba.\n\nThe Book of the Dead, which contained the necessary spells and prayers to guide the deceased through the afterlife, played a crucial role in the judgment process. The text provided instructions for the deceased to recite during the weighing ceremony, allowing them to demonstrate their knowledge of the principles of Ma'at and their worthiness to enter the afterlife. The Ancient Egyptians believed that the Book of the Dead was essential for navigating the complexities of the afterlife, and its spells and prayers would help the deceased overcome the challenges they would face in the Hall of Two Truths.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "History",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.7418
+      },
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "Mummification process",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.7267
+      },
+      {
+        "topic_name": "Ancient Egyptian Religion",
+        "topic_id": "ancient_egyptian_religion",
+        "category": "religion",
+        "section": "Introduction",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.485
+      },
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "History",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.41
+      },
+      {
+        "topic_name": "Ancient Egyptian Religion",
+        "topic_id": "ancient_egyptian_religion",
+        "category": "religion",
+        "section": "Legacy",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.3874
+      },
+      {
+        "topic_name": "Ancient Egyptian Religion",
+        "topic_id": "ancient_egyptian_religion",
+        "category": "religion",
+        "section": "Afterlife",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.3011
+      },
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "Damnation",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.2918
+      }
+    ],
+    "elapsed": 20.24651002883911
+  },
+  {
+    "question": "What were the main differences between the Step Pyramid of Djoser and the Great Pyramid of Giza?",
+    "answer": "The main differences between the Step Pyramid of Djoser and the Great Pyramid of Giza were several. Firstly, the design and architecture of the two pyramids differed significantly. The Step Pyramid of Djoser, built around 2650 BC, was the earliest form of monumental architecture in history and was characterized by its stepped profile, with six mastabas of decreasing size stacked on top of each other, resulting in a series of six stepped levels. In contrast, the Great Pyramid of Giza, built around 2580 BC, was a true pyramid with smooth, straight sides, forming a pure geometric form.\n\nAnother significant difference was the construction material used. The Step Pyramid of Djoser had a core made of limestone and granite blocks, with the exterior covered in highly polished white limestone to create a shining, reflective surface. The Great Pyramid of Giza, on the other hand, had a core constructed entirely of yellow limestone and granite blocks, with the exterior covered in smooth limestone to create a uniform surface.\n\nThe size and scale of the two pyramids also differed. The Step Pyramid of Djoser was approximately 62 meters high, with a base length of around 109 meters. In contrast, the Great Pyramid of Giza was originally around 146.5 meters high, with a base length of around 230 meters, making it not only the largest of the three pyramids in the Giza pyramid complex but also the largest pyramid ever built in Egypt.\n\nAdditionally, the purpose and function of the two pyramids differed. The Step Pyramid of Djoser was built as a tomb for Pharaoh Djoser, with the stepped design possibly symbolizing the pharaoh's role as a bridge between the earthly and divine realms. The Great Pyramid of Giza, built for Pharaoh Khufu, was also a tomb, but its design and massive scale were meant to demonstrate the power and wealth of the pharaonic state.\n\nLastly, the historical context and cultural significance of the two pyramids differed. The Step Pyramid of Djoser marked the beginning of the Old Kingdom period and the start of the pyramid-building era in ancient Egypt. The Great Pyramid of Giza, built during the Fourth Dynasty, was a testament to the advanced engineering and architectural skills of the ancient Egyptians and remains one of the most impressive architectural achievements in history.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Architecture",
+        "topic_id": "ancient_egyptian_architecture",
+        "category": "art",
+        "section": "Saqqara",
+        "period": "All periods of ancient Egypt",
+        "location": "Various locations, Egypt",
+        "similarity": 0.8677
+      },
+      {
+        "topic_name": "Ancient Egyptian Architecture",
+        "topic_id": "ancient_egyptian_architecture",
+        "category": "art",
+        "section": "Giza pyramid complex",
+        "period": "All periods of ancient Egypt",
+        "location": "Various locations, Egypt",
+        "similarity": 0.7124
+      },
+      {
+        "topic_name": "Amenemhat III",
+        "topic_id": "amenemhat_iii",
+        "category": "pharaoh",
+        "section": "Introduction",
+        "period": "Middle Kingdom, 12th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0832
+      },
+      {
+        "topic_name": "Ancient Egyptian Architecture",
+        "topic_id": "ancient_egyptian_architecture",
+        "category": "art",
+        "section": "Giza pyramid complex",
+        "period": "All periods of ancient Egypt",
+        "location": "Various locations, Egypt",
+        "similarity": 0.0425
+      },
+      {
+        "topic_name": "Amenemhat I",
+        "topic_id": "amenemhat_i",
+        "category": "pharaoh",
+        "section": "In the view of Egyptologist Frank J. Yurco,",
+        "period": "Middle Kingdom, 12th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0278
+      },
+      {
+        "topic_name": "Ancient Egyptian Architecture",
+        "topic_id": "ancient_egyptian_architecture",
+        "category": "art",
+        "section": "Early pyramid development",
+        "period": "All periods of ancient Egypt",
+        "location": "Various locations, Egypt",
+        "similarity": 0.0262
+      },
+      {
+        "topic_name": "Amenemhat III",
+        "topic_id": "amenemhat_iii",
+        "category": "pharaoh",
+        "section": "Introduction",
+        "period": "Middle Kingdom, 12th Dynasty",
+        "location": "Egypt",
+        "similarity": 0.0185
+      }
+    ],
+    "elapsed": 20.002474069595337
+  },
+  {
+    "question": "How did the Nile River influence the development of Ancient Egyptian civilization?",
+    "answer": "The Nile River profoundly influenced the development of Ancient Egyptian civilization. The river's predictable seasonal flooding, which occurred between August and September, brought nutrient-rich silt that made the surrounding land suitable for agriculture, allowing the Egyptians to cultivate staple food crops such as wheat and barley, as well as industrial crops like flax and papyrus. This reliable agricultural production enabled the Egyptians to establish a stable food supply, which in turn supported the growth of a large and dense population. The Nile's flooding also facilitated the development of a system of basin irrigation, which granted the Egyptians greater control over their agricultural practices, allowing them to farm the land with increased efficiency. \n\nThe Nile's influence extended beyond agriculture, as it also played a crucial role in the development of Ancient Egyptian religion. The cyclical flooding of the Nile was seen as a symbol of the eternal cycle of life and death, and was often associated with the mythology of the god Osiris, who was believed to have been killed and resurrected annually. The Nile's life-giving properties were also attributed to the gods, who were thought to have created the river and its annual flooding. The Egyptians did not worship the Nile itself, but rather thanked specific gods, such as Hapi, the god of the Nile, for the fertility and prosperity it brought. \n\nFurthermore, the Nile facilitated the development of a complex system of governance, as the need to manage the river's flooding and irrigation systems required the creation of a centralized authority. The Pharaohs, who were believed to have been appointed by the gods to maintain the balance and order of the universe, played a crucial role in overseeing the construction and maintenance of irrigation systems, as well as the organization of agricultural labor. The Nile also enabled the development of a thriving economy, as the river provided a means of transportation and facilitated trade with neighboring regions.\n\nIn terms of urban development, the Nile's flooding pattern influenced the layout and design of Ancient Egyptian cities. Many cities, such as Thebes and Memphis, were built on the Nile's floodplain, with the river providing a source of water and a means of transportation. The Nile also played a role in the development of Ancient Egyptian art and architecture, as the river's annual flooding was often depicted in tomb paintings and other works of art.\n\nOverall, the Nile River was the lifeblood of Ancient Egyptian civilization, and its influence can be seen in all aspects of Egyptian society, from agriculture and religion to governance and urban development. The Nile's predictable flooding and life-giving properties made it an ideal location for the development of a complex and sophisticated civilization, and its influence can still be seen today in the modern Egyptian state.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Introduction",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.9927
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Nile and field planting",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.9275
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Nile and field planting",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.8516
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Irrigation systems",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.7337
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Religion and agriculture",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.6671
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Art of Mero\u00eb",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4308
+      },
+      {
+        "topic_name": "Amarna (Akhetaten)",
+        "topic_id": "amarna",
+        "category": "geography",
+        "section": "City of Akhetaten",
+        "period": "New Kingdom, c. 1346\u20131332 BC",
+        "location": "Tell el-Amarna, Middle Egypt",
+        "similarity": 0.2365
+      }
+    ],
+    "elapsed": 18.30695128440857
+  },
+  {
+    "question": "What was the typical diet of an average Ancient Egyptian?",
+    "answer": "The typical diet of an average Ancient Egyptian consisted of staple food crops, mainly emmer wheat and barley, which were consumed in the form of loaves, often produced through baking and fermentation, with yeast greatly enriching the nutritional value of the product. Other major grains grown included einkorn wheat, also used to make bread. Additionally, beans, lentils, and later chickpeas and fava beans were staples for the majority of the population. Root crops, such as onions, garlic, and radishes were grown, along with salad crops, like lettuce and parsley. Fruits, including figs, were also part of their diet. However, meat was a luxury and not a part of the daily diet, with the exception of fish for those living near the Nile, and was usually reserved for celebrations and special occasions, such as funerary and mortuary rituals. The consumption of dairy products, like milk, and alcoholic beverages, such as beer and wine, was also prevalent among the upper classes, but less so among the lower classes. Overall, the ancient Egyptian diet was largely based on vegetarian staples, with occasional inclusion of animal products, particularly for the wealthy.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Medicine",
+        "topic_id": "ancient_egyptian_medicine",
+        "category": "daily_life",
+        "section": "Nutrition",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.5722
+      },
+      {
+        "topic_name": "Ancient Egyptian Medicine",
+        "topic_id": "ancient_egyptian_medicine",
+        "category": "daily_life",
+        "section": "Nutrition",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4995
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Crops grown",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.4418
+      },
+      {
+        "topic_name": "Ancient Egyptian Medicine",
+        "topic_id": "ancient_egyptian_medicine",
+        "category": "daily_life",
+        "section": "Dentistry",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.3113
+      },
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "Animal mummification",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.1206
+      },
+      {
+        "topic_name": "Ancient Egyptian Agriculture",
+        "topic_id": "ancient_egyptian_agriculture",
+        "category": "daily_life",
+        "section": "Introduction",
+        "period": "All periods of ancient Egypt",
+        "location": "Nile Valley, Egypt",
+        "similarity": 0.0992
+      },
+      {
+        "topic_name": "Ancient Egyptian Medicine",
+        "topic_id": "ancient_egyptian_medicine",
+        "category": "daily_life",
+        "section": "History",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.0444
+      }
+    ],
+    "elapsed": 17.093225955963135
+  },
+  {
+    "question": "Who was Akhenaten and what was the Amarna Heresy?",
+    "answer": "Akhenaten was an ancient Egyptian pharaoh reigning c.\u20091353\u20131336 or 1351\u20131334 BC, the tenth ruler of the Eighteenth Dynasty, who introduced a significant religious reform known as the Amarna Heresy. The Amarna Heresy refers to the radical departure from traditional Egyptian polytheism, where Akhenaten promoted the worship of a single deity, the Aten, the sun disc, over all other gods. This monotheistic revolution led to the establishment of a new capital city, Akhetaten, and a distinct art style characterized by naturalism and the abandonment of traditional hieratic scale and composite perspective.\n\nThe Amarna Heresy was marked by the rejection of the powerful Amun cult in Thebes, which had dominated Egyptian religion for centuries. Akhenaten's focus on the Aten, often depicted as a solar disc with rays ending in human hands, led to the persecution of the traditional priestly class and the suppression of the worship of other deities. The Amarna Period, which corresponds to Akhenaten's reign, saw the introduction of a new artistic style, exemplified by the tomb paintings and sculptures found in Amarna, which emphasized the royal family's intimacy with the Aten and the natural world.\n\nThe Amarna Heresy had significant consequences for Egyptian society and politics, leading to a period of instability and conflict with the traditional priestly class. The heresy was eventually reversed by Akhenaten's successors, including Tutankhamun, who restored the traditional Egyptian pantheon and the Amun cult. Despite its eventual failure, the Amarna Heresy remains an important period in Egyptian history, showcasing the complex and often turbulent nature of ancient Egyptian religion and politics.\n\nKey aspects of the Amarna Heresy include the concept of the Aten as a universal deity, the emphasis on the royal family's role as intermediaries between the Aten and humanity, and the development of a distinct artistic style characterized by naturalism and the use of profile view and frontal torso in tomb paintings. The Amarna Heresy also saw the introduction of a new royal titulary, with Akhenaten adopting the name \"Effective for the Aten\" and promoting the worship of the Aten as the sole deity.\n\nThe discovery of the Amarna letters, a cache of diplomatic texts and literary materials, has provided valuable insights into the Amarna Period and the Amarna Heresy, highlighting the complex web of diplomatic relations and cultural exchange between ancient Egypt and its neighbors during this period. The Amarna Heresy remains a fascinating and enigmatic episode in Egyptian history, exemplifying the complexities and nuances of ancient Egyptian religion and politics.",
+    "sources": [
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Introduction",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.9936
+      },
+      {
+        "topic_name": "Amarna Period",
+        "topic_id": "amarna_period",
+        "category": "historical_era",
+        "section": "Introduction",
+        "period": "New Kingdom, c. 1353\u20131336 BC",
+        "location": "Amarna, Egypt",
+        "similarity": 0.9351
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.7424
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Introduction",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.6885
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.6528
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.555
+      },
+      {
+        "topic_name": "Akhenaten",
+        "topic_id": "akhenaten",
+        "category": "pharaoh",
+        "section": "Meritaten, Great Royal Wife of Pharaoh Smenkhkare, born in regnal Year 1 or 5;",
+        "period": "New Kingdom, 18th Dynasty",
+        "location": "Amarna, Egypt",
+        "similarity": 0.5274
+      }
+    ],
+    "elapsed": 21.14223003387451
+  },
+  {
+    "question": "What is the Book of the Dead and how was it used?",
+    "answer": "The Book of the Dead is a funerary text of the New Kingdom, composed of spells relating to the deceased and the afterlife, which played a crucial role in ancient Egyptian burial customs, particularly in the judgment process. It was used to guide the deceased through the treacherous underworld, ensuring their successful navigation of the Judgment of the Dead, also known as the Hall of Two Truths, where the heart of the deceased was weighed against the feather of truth by the god Osiris. \n\nThe Book of the Dead was typically written on papyrus and placed in the tomb with the deceased, serving as a vital tool for their journey into the afterlife. It contained approximately 190 spells, each with a specific purpose, such as Spell 125, which was delivered by the deceased at the outset of the judgment process. These spells provided the deceased with the necessary knowledge and power to overcome the various obstacles and challenges they would encounter in the afterlife, including the ability to ward off evil spirits and to successfully complete the judgment process.\n\nThe Book of the Dead was divided into chapters and spells, which were often accompanied by vignettes, or illustrations, to help the deceased visualize and understand the complex concepts and ideas presented in the text. The use of the Book of the Dead was not limited to royalty, but was also available to non-royal individuals, particularly during the New Kingdom period, where it became a widespread funerary practice.\n\nIn terms of its composition, the Book of the Dead drew heavily from earlier funerary texts, such as the Pyramid Texts and the Coffin Texts, which were used during the Old and Middle Kingdoms, respectively. The Book of the Dead, however, was more comprehensive and widespread, with its use persisting through the Late Kingdom period.\n\nThe preservation of the Book of the Dead was made possible by the dry conditions of the Egyptian desert, where many tombs were built, and the use of papyrus as a writing material. Many well-preserved copies of the Book of the Dead have been discovered in tombs, providing valuable insights into ancient Egyptian funerary practices and the mythology of the afterlife.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "Judgment",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.8832
+      },
+      {
+        "topic_name": "Ancient Egyptian Burial Customs",
+        "topic_id": "ancient_egyptian_burial_customs",
+        "category": "religion",
+        "section": "Funerary texts",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.8667
+      },
+      {
+        "topic_name": "Ancient Egyptian Religion",
+        "topic_id": "ancient_egyptian_religion",
+        "category": "religion",
+        "section": "Funerary texts",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.6946
+      },
+      {
+        "topic_name": "Ancient Egyptian Religion",
+        "topic_id": "ancient_egyptian_religion",
+        "category": "religion",
+        "section": "Funerary texts",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.5752
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Poems, songs, hymns, and afterlife texts",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4977
+      },
+      {
+        "topic_name": "Ancient Egyptian Art",
+        "topic_id": "ancient_egyptian_art",
+        "category": "art",
+        "section": "Painting",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.3348
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Preservation of written material",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.2239
+      }
+    ],
+    "elapsed": 18.414896249771118
+  },
+  {
+    "question": "What role did scribes play in Ancient Egyptian society?",
+    "answer": "In Ancient Egyptian society, scribes played a pivotal role as the primary literate social group, responsible for managing the administrative, educational, and literary aspects of the culture. They were essentially the backbone of the bureaucracy, entrusted with tasks such as organizing excavations, constructing brick ramps, provisioning military missions, and arranging the transportation of monumental structures like obelisks. As evidenced by Papyrus Anastasi I of the Ramesside Period, scribes were expected to possess a wide range of skills, including architectural, mathematical, and logistical expertise. \n\nScribes were also involved in literary pursuits, composing and copying texts, including instructional works like The Satire of the Trades and the Teaching of Khety, which reinforced the scribes' elevated position within the social hierarchy. These texts not only showcased the scribes' literary prowess but also highlighted their social status, emphasizing the importance of literacy and education in Ancient Egyptian society. As the guardians of literary classics, scribes were responsible for maintaining, transmitting, and canonizing works like the Story of Sinuhe and Instructions of Amenemhat, which were often used as pedagogical tools to impart ethical and moral values to students.\n\nIn addition to their administrative and literary responsibilities, scribes played a crucial role in the dissemination of knowledge, as they were often attached to government offices and the royal court of the ruling pharaoh. This proximity to the seat of power enabled scribes to exert significant influence on the cultural, social, and religious landscape of Ancient Egypt. As a result, scribes emerged as a distinct social class, characterized by their exceptional literacy skills, artistic talents, and privileged status within Ancient Egyptian society.\n\nThe scribes' role extended beyond the realm of government and literature, as they also provided essential services to the broader population, including drafting letters, sales documents, and legal documents for illiterate individuals. This not only underscores the scribes' importance as intermediaries between the literate and illiterate segments of society but also highlights the significant social and economic disparities that existed in Ancient Egypt. With estimates suggesting that only 1-15% of the population was literate, the scribes' position as the primary purveyors of written communication conferred upon them a unique status, setting them apart from the predominantly illiterate masses of farmers, artisans, and laborers.",
+    "sources": [
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Literary functions: social, religious and educational",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.9281
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Dating, setting, and authorship",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4435
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Introduction",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4087
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Tomb and temple graffiti",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.4032
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Literary functions: social, religious and educational",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.2495
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Literary functions: social, religious and educational",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.078
+      },
+      {
+        "topic_name": "Ancient Egyptian Literature",
+        "topic_id": "ancient_egyptian_literature",
+        "category": "art",
+        "section": "Literary functions: social, religious and educational",
+        "period": "All periods of ancient Egypt",
+        "location": "Egypt",
+        "similarity": 0.0775
+      }
+    ],
+    "elapsed": 17.655754804611206
+  }
+]
